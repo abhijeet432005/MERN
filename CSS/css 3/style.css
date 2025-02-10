@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Noto+Sans+JP:wght@100..900&family=Pochaevsk&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  width: 100%;
+  height: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+.navbar button {
+  border-radius: 45px;
+  font-size: 0.9rem;
+  border: 1.2px solid black;
+  background-color: white;
+  padding: 5px 15px;
+}
+.navbar #bt-2 {
+  background-color: orangered;
+}
+.navbar span, .navbar i {
+  border: 2px solid grey;
+  border-radius: 45px;
+  gap: 10px;
+  padding: 5px 15px;
+}
+.navbar .nav-2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.cntr .content h1 {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 9rem;
+  transform: translate(-50%, -50%);
+}
+.cntr .img img {
+  height: 400px;
+  width: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+}
+.cntr #img1 {
+  transform: translate(-50%, -50%) rotate(-9deg);
+}
+.cntr #img2 {
+  transform: translate(-50%, -50%) rotate(9deg);
+}
+.cntr #img3 {
+  transform: translate(-50%, -50%) rotate(-9deg);
+}
+.cntr #img4 {
+  transform: translate(-50%, -50%) rotate(9deg);
+}
+
+.footer {
+  width: 100%;
+  height: 4vh;
+  position: absolute;
+  top: 90%;
+}
+.footer .bot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+.footer .prt2 {
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 30px 30px;
+}
+.footer .prt2 i {
+  font-size: 3rem;
+}/*# sourceMappingURL=style.css.map */

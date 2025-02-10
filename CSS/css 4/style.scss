@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Darumadrop+One&family=Noto+Sans+JP:wght@100..900&family=Pochaevsk&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #0e0e0e;
+}
+
+.nav{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    
+    
+    .mid{
+        width: 40vmax;
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border: 1px solid rgb(255, 255, 255);
+        gap: 2vmax;
+        margin-top: 2vmax;
+        padding: 0px 15px;
+
+    }
+
+    .mid a{
+        display: none;
+    }
+
+    button{
+        background-color: yellow;
+        padding: 10px 20px;
+        border-radius: 1.5px;
+    }
+
+    .logo{
+        color: white;
+    }
+
+    .corner{
+        display: flex;
+        align-items: center;
+    }
+
+    .corner i{
+        font-size: 1.5rem;
+        color: white;
+    }
+}
+
+
+.hero{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .image img{
+        width: 43vmax;
+        height: 45vmax;
+        margin-left: 5px;
+    }
+
+    .cntr h1{
+        color: white;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 300;
+    }
+    
+    .cntr p{
+        color: white;
+        text-align: center;
+        line-height: 2;
+    }
+}

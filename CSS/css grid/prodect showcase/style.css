@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+}
+.head h1 {
+  font-size: 2rem;
+}
+
+.cntr {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 20px;
+}
+.cntr .card {
+  width: 40vh;
+  border: 0.9px solid rgb(186, 182, 182);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.cntr img {
+  width: 34vh;
+  height: 30vh;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.cntr br {
+  display: none;
+}
+.cntr h2 {
+  margin-top: 3.5vh;
+  font-size: 2rem;
+}
+.cntr p {
+  font-weight: 800;
+  font-size: 1em;
+  line-height: 2;
+}
+.cntr .paisa {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.footer {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgb(210, 200, 200);
+  margin-top: 1rem;
+}
+.footer .copy {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 675px) {
+  .cntr {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 1020px) {
+  .cntr {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .cntr .card {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .cntr h2 {
+    font-size: 2rem;
+  }
+  .cntr p {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .cntr .paisa {
+    font-size: 1rem;
+  }
+  .card {
+    width: 500vw;
+  }
+}/*# sourceMappingURL=style.css.map */

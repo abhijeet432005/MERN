@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(61, 59, 59);
+    color: white;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: rgb(241, 244, 246);
+    width: 100%;
+    height: 40px;
+}
+
+.nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500px;
+    font-size: 18px;
+}
+
+#cntr{
+    width: 100%;
+    height: 87%;
+    display: flex;
+}
+
+.left{
+    width: 20%;
+    height: 100%;
+    background-color: rgb(238, 233, 233);
+
+}
+
+#cntr h2{
+    padding-top: 10px;
+    padding-left: 12px;
+    padding-bottom: 10px;
+    /* margin-left: 12px; */
+}
+
+.more{
+    display: flex;
+    flex-direction: column;
+}
+
+hr{
+    border: 1px dashed rgb(186, 185, 185);
+    width: 90%;
+    margin-left: 11px;
+}
+
+.more a{
+    text-decoration: none;
+    color: black;
+    line-height: 2.5;
+    margin-left: 12px;
+}
+
+.right{
+    width: 80%;
+    height: 100%;
+}
+
+.right h2{
+    margin: 5px;
+}
+
+.parent{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card1{
+    width: 350px;
+    height: 300px;
+    background-image: url(https://plus.unsplash.com/premium_photo-1674327105074-46dd8319164b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29mZmVlfGVufDB8fDB8fHww);
+    background-size: cover;
+    background-position: center;
+}
+.card2{
+    width: 350px;
+    height: 300px;
+    background-image: url(https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+.card3{
+    width: 350px;
+    height: 300px;
+    background-image: url(https://plus.unsplash.com/premium_photo-1669374537810-f88d8ad82818?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+
+.content .top p{
+    margin-left: 12px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.mid p{
+    font-weight: bolder;
+    margin-top: 5px;
+    margin-left: 12px;
+    font-size: 30px;
+    
+}
+
+.mid ul{
+    margin-left: 65px;
+    margin-top: 10px;
+    line-height: 1.7;
+}
+
+.mid ul span{
+    font-weight: bolder;
+}
+
+.bott{
+    margin-left: 12px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+#bottom{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(61, 59, 59);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy{
+    color: white;
+    
+}
