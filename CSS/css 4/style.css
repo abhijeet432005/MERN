@@ -11,64 +11,411 @@ body {
   width: 100%;
   height: 100%;
   background-color: #0e0e0e;
+  color: #dac5a7;
+  overflow-x: hidden;
 }
 
-.nav {
-  width: 100vw;
+.container {
+  width: 100%;
+  height: 11vmax;
   display: flex;
   justify-content: center;
+  position: fixed;
+  z-index: 3;
 }
-.nav .mid {
-  width: 40vmax;
-  height: 8vh;
+.container nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  border: 1px solid rgb(255, 255, 255);
-  gap: 2vmax;
-  margin-top: 2vmax;
-  padding: 0px 15px;
+  gap: 15px;
+  border: 1px solid rgba(218, 197, 167, 0.5921568627);
+  background-color: rgba(24, 23, 22, 0.7568627451);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  margin-top: 1vmax;
+  width: 80%;
+  margin: 18px 10px;
+  padding: 25px 10px;
 }
-.nav .mid a {
+.container nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.container .nav-links a {
+  text-decoration: none;
   display: none;
 }
-.nav button {
-  background-color: yellow;
-  padding: 10px 20px;
-  border-radius: 1.5px;
-}
-.nav .logo {
-  color: white;
-}
-.nav .corner {
-  display: flex;
-  align-items: center;
-}
-.nav .corner i {
-  font-size: 1.5rem;
-  color: white;
+.container .btn button {
+  border-radius: 2px;
+  padding: 8px 15px;
+  background-color: #dac5a7;
 }
 
-.hero {
+.head-container {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.head-container .hero {
+  width: 100%;
+  height: 60vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4vmax;
+}
+.head-container .hero img {
+  width: 40vmax;
+  height: 60vmax;
+  margin-top: 4vmax;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.head-container .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
-.hero .image img {
-  width: 43vmax;
-  height: 45vmax;
-  margin-left: 5px;
-}
-.hero .cntr h1 {
-  color: white;
-  text-align: center;
+.head-container h1 {
   font-size: 3rem;
   font-weight: 300;
-}
-.hero .cntr p {
-  color: white;
   text-align: center;
-  line-height: 2;
+  margin: 0px 15px;
+}
+.head-container p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px 15px;
+  font-weight: 300;
+}
+.head-container .my-service {
+  gap: 50px;
+  margin: 5vmax 0px;
+}
+.head-container span {
+  text-transform: uppercase;
+}
+.head-container span i {
+  border: 1px solid #dac5a7;
+  border-radius: 50%;
+  padding: 12px 12px;
+  font-size: 1.2rem;
+  margin: 10px 15px;
+}
+
+.center {
+  width: 100vw;
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: center;
+}
+.center .marquee {
+  display: flex;
+  width: 50vmax;
+  overflow: hidden;
+  position: relative;
+}
+.center .marquee::after {
+  content: "";
+  height: 100%;
+  width: 50%;
+  background-image: linear-gradient(to right, #0e0e0e, transparent);
+  position: absolute;
+  top: 0;
+  left: 0%;
+  z-index: 2;
+}
+.center .marquee::before {
+  content: "";
+  height: 100%;
+  width: 50%;
+  background-image: linear-gradient(to left, #0e0e0e, transparent);
+  position: absolute;
+  top: 0;
+  right: -5%;
+  z-index: 2;
+}
+.center .marquee .text {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 1.5rem;
+  animation: marquee 10s linear infinite both;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.cntr-card {
+  width: 100%;
+}
+.cntr-card .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: center;
+  gap: 1rem;
+}
+.cntr-card .grid-container .card {
+  padding: 2rem;
+  border: 1px solid #181716;
+  border-radius: 10px;
+  background-color: #181716;
+  text-align: start;
+}
+.cntr-card .grid-container .card h1 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 10px 0;
+}
+.cntr-card .grid-container .card p {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.cntr-card .grid-container .card .more {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+.cntr-card .grid-container .card .more p {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.cntr-card .grid-container .card .more i {
+  border: 1px solid yellow;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  padding: 8px 8px;
+  margin: 0 5px;
+}
+.cntr-card .work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.cntr-card .work h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.cntr-card .work .more {
+  display: flex;
+  align-items: center;
+  margin: 0.9rem 0;
+}
+.cntr-card .work .more p {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.cntr-card .work .more i {
+  border: 1px solid yellow;
+  border-radius: 50%;
+  font-size: 1rem;
+  padding: 5px 5px;
+  margin: 0 5px;
+}
+.cntr-card .grid2 {
+  margin-top: 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+.cntr-card .grid2 .card1 {
+  background-image: url(./laptop.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.cntr-card .grid2 .card2 {
+  background-image: url(./p1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.cntr-card .grid2 .card3 {
+  background-image: url(./l2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.cntr-card .grid2 .card4 {
+  background-image: url(./p2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.cntr-card .grid2 .card {
+  height: 35vh;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  margin: 0 1rem;
+}
+.cntr-card .grid2 .card .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  width: 90%;
+  border: 0.7px solid rgba(78, 77, 77, 0.721);
+  background-color: rgba(0, 0, 0, 0.53);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.cntr-card .grid2 .card .content h1 {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.cntr-card .grid2 .card .content p1 {
+  font-weight: 300;
+}
+
+@media (min-width: 1020px) {
+  .container {
+    height: 7vmax;
+  }
+  .container nav {
+    margin-top: 1vmax;
+    width: 40%;
+    margin: 25px 0px;
+    padding: 10px 10px;
+  }
+  .container .logo {
+    font-size: 1.2rem;
+  }
+  .container nav ul {
+    font-size: 0.9rem;
+    gap: 15px;
+  }
+  .container .nav-links a {
+    text-decoration: none;
+    color: #dac5a7;
+    display: block;
+  }
+  .container .btn i {
+    display: none;
+  }
+  .head-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .head-container .hero {
+    width: 100%;
+    height: 35vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .head-container .hero img {
+    width: 30vmax;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .head-container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+  .head-container h1 {
+    font-size: 7.2rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 0px 15px;
+  }
+  .head-container p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 3vmax 15px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  .head-container .my-service {
+    width: 100%;
+    height: 1vmax;
+    display: flex;
+    justify-content: center;
+    margin-top: 1vmax;
+  }
+  .center {
+    align-items: center;
+  }
+  .center .marquee {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 4vw;
+    overflow: hidden;
+  }
+  .center .marquee .text {
+    display: flex;
+    gap: 8rem;
+    padding: 0 3rem;
+    font-size: 2rem;
+    animation: marquee 8s linear infinite both;
+  }
+  .center .text p {
+    gap: 4rem;
+  }
+  .cntr-card {
+    width: 100%;
+    height: 20vmax;
+  }
+  .cntr-card .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 450px);
+    gap: 2rem;
+  }
+  .cntr-card .grid-container .card {
+    margin-top: 1rem;
+    height: 18vw;
+    padding: 2em;
+    border: 1px solid #181716;
+    border-radius: 10px;
+    background-color: #181716;
+    text-align: start;
+  }
+  .cntr-card .work {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    padding: 0 3rem;
+  }
+  .cntr-card .work .more i {
+    font-size: 1.5rem;
+  }
+  .cntr-card .work .more p {
+    font-size: 1.5rem;
+  }
+  .cntr-card .grid2 {
+    grid-template-columns: repeat(2, 600px);
+    justify-content: center;
+    gap: 4rem;
+  }
+  .cntr-card .grid2 .card {
+    width: 85vh;
+    margin-top: 1rem;
+    height: 28vw;
+    padding: 2em;
+    border: 1px solid #181716;
+    border-radius: 10px;
+    background-color: #181716;
+    text-align: start;
+  }
 }/*# sourceMappingURL=style.css.map */
