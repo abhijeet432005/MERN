@@ -1,0 +1,621 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #FDFBF5;
+  padding: 1rem;
+}
+
+main {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.seprater {
+  display: none;
+}
+
+hr {
+  margin: 1rem;
+  border-color: black;
+}
+
+.view-1 {
+  width: 100%;
+  padding: 2rem;
+}
+.view-1 nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.view-1 nav .logo img {
+  width: 8rem;
+}
+.view-1 .line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin-top: 1rem;
+}
+.view-1 .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  position: relative;
+}
+.view-1 .links a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  display: none;
+}
+.view-1 .links a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+}
+.view-1 .links a:hover::after {
+  animation-name: line;
+  animation-duration: 1s;
+}
+@keyframes line {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0%;
+    left: 100%;
+  }
+}
+.view-1 .links .btn {
+  display: none;
+}
+.view-1 .links .btn button {
+  padding: 0.4rem 1rem;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: black;
+  color: white;
+  letter-spacing: 0.2rem;
+}
+.view-1 .links .line {
+  width: 1px;
+  height: 3rem;
+  background-color: black;
+  margin: -1.5rem;
+  display: none;
+}
+.view-1 .links .btn-2 {
+  display: flex;
+  display: none;
+}
+.view-1 .links .btn-2 .same {
+  padding: 11px 14px;
+}
+.view-1 .links .btn-2 button {
+  padding: 11px 10px;
+  margin: 0.1rem;
+  font-size: 0.8rem;
+  border-radius: 8rem;
+  border: 1px solid black;
+  background-color: #FDFBF5;
+  transition: all 0.3s ease;
+}
+.view-1 .links .btn-2 button:hover {
+  font-weight: 400;
+  background-color: black;
+  color: white;
+}
+.view-1 .links .line {
+  width: 1px;
+  height: 3rem;
+  background-color: black;
+  margin: -1.5rem;
+  display: none;
+}
+.view-1 .links .sun i {
+  font-size: 1.2rem;
+  border: 1px solid black;
+  padding: 0.6rem;
+  padding-right: 2.2rem;
+  border-radius: 4rem;
+}
+.view-1 .links .nav-line {
+  margin: -2rem;
+  margin-right: 0.1rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.view-1 hr {
+  margin-top: 1.5rem;
+  border: 0.5px solid black;
+}
+.view-1 .hero {
+  margin-top: 3rem;
+  width: 100%;
+}
+.view-1 .hero h2 {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.view-1 .hero h1 {
+  width: 90%;
+  font-size: 4.2rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-left: -0.5rem;
+}
+.view-1 .hero h1 br {
+  display: none;
+}
+.view-1 .hero .h-img {
+  width: 100%;
+  margin-top: 2.5rem;
+}
+.view-1 .hero .h-img img {
+  width: 100%;
+  border-radius: 1.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.view-2 {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.view-2 .lft h2 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.view-2 .lft h1 {
+  margin-top: 0.5rem;
+  font-size: 2.8rem;
+  line-height: 1;
+  font-weight: 400;
+}
+.view-2 .lft .btn {
+  margin-top: 1.5rem;
+}
+.view-2 .lft .btn button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  background-color: black;
+  color: white;
+  letter-spacing: 0.2rem;
+}
+.view-2 .line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin-top: 2rem;
+}
+.view-2 hr {
+  margin-top: 2rem;
+  border-color: black;
+}
+.view-2 .rght {
+  margin-top: 2rem;
+}
+.view-2 .rght .box {
+  width: 100%;
+}
+.view-2 .rght .box img {
+  width: 10vmax;
+}
+.view-2 .rght .box h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 0.8rem;
+}
+.view-2 .rght .box p {
+  margin-top: 0.8rem;
+  width: 100%;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+.view-2 .rght .box-2 {
+  margin-top: 2rem;
+}
+.view-2 .rght .box-3 {
+  margin-top: 2rem;
+}
+
+.view-3 {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.view-3 .line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+.view-3 .team h3 {
+  width: 50%;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1;
+}
+.view-3 .team p {
+  font-size: 1.5rem;
+  margin-top: 0.8rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+.view-3 .line-2 {
+  margin-top: 2rem;
+}
+.view-3 .box {
+  margin-top: 1rem;
+  width: 100%;
+}
+.view-3 .box video {
+  width: 100%;
+  border-radius: 1rem;
+  margin-top: 1.9rem;
+}
+.view-3 .box h1 {
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+}
+.view-3 .box p {
+  letter-spacing: 0.1rem;
+}
+
+.view-4 {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.view-4 .text-1 {
+  width: 100%;
+}
+.view-4 .text-1 .image-1 img {
+  width: 5rem;
+}
+.view-4 .text-1 .image {
+  display: none;
+}
+.view-4 .text-1 .content h3 {
+  font-weight: 300;
+  margin-top: 1rem;
+  line-height: 2;
+}
+.view-4 .text-1 .content p {
+  font-size: 3.8rem;
+  line-height: 4.2rem;
+  text-transform: uppercase;
+}
+.view-4 .text-2 {
+  width: 100%;
+}
+.view-4 .text-2 .content p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-top: 0.8rem;
+}
+.view-4 .text-2 .btn {
+  margin-top: 2rem;
+}
+.view-4 .text-2 .btn button {
+  padding: 0.3rem 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+.view-5 {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.view-5 .box {
+  display: flex;
+  flex-direction: column;
+}
+.view-5 .box .text img {
+  width: 11rem;
+}
+.view-5 .box .text p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+.view-5 .box .btn {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.view-5 .box .btn .same {
+  padding: 11px 14px;
+}
+.view-5 .box .btn button {
+  font-size: 1rem;
+  padding: 11px 10px;
+  font-size: 0.8rem;
+  border-radius: 8rem;
+  border: 1px solid black;
+  background-color: #FDFBF5;
+  transition: all 0.2s ease;
+}
+.view-5 .box .btn button:hover {
+  font-weight: 400;
+  background-color: black;
+  color: white;
+}
+.view-5 .box h1 {
+  margin-top: 1.8rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.view-5 .box .links ul {
+  list-style: none;
+}
+.view-5 .box .links ul li {
+  padding-top: 1.2rem;
+}
+.view-5 .box .links ul a {
+  text-decoration: none;
+  color: black;
+}
+.view-5 .box .btn-2 {
+  margin-top: 1.8rem;
+}
+.view-5 .box .btn-2 button {
+  padding: 0.4rem 1rem;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: black;
+  color: white;
+  letter-spacing: 0.2rem;
+}
+.view-5 .line {
+  margin-top: 2rem;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+.footer {
+  padding: 2rem;
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer .lft h1 {
+  font-weight: 400;
+  font-size: 1rem;
+  word-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+.footer .lft h1 span {
+  font-weight: 400;
+}
+.footer .lft h1 a {
+  color: black;
+}
+.footer .rght h1 {
+  word-spacing: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1020px) {
+  hr {
+    display: block;
+    margin: 1.5rem;
+    height: 0.5px;
+    border-color: black;
+  }
+  .seprater {
+    display: block;
+  }
+  .view-1 nav .links a {
+    display: block;
+  }
+  .view-1 nav .links .btn {
+    display: block;
+  }
+  .view-1 nav .links .btn-2 {
+    display: block;
+  }
+  .view-1 nav .links .line {
+    display: block;
+  }
+  .view-1 nav .nav-line {
+    display: none;
+  }
+  .view-1 .hero h2 {
+    font-size: 1rem;
+  }
+  .view-1 .hero h1 {
+    font-size: 6rem;
+    font-weight: 500;
+  }
+  .view-1 .hero h1 br {
+    display: block;
+  }
+  .view-1 .hero .h-img {
+    margin-top: 3rem;
+  }
+  .view-1 .hero .h-img img {
+    height: 42vmax;
+  }
+  .view-2 {
+    flex-direction: row;
+    width: 100%;
+  }
+  .view-2 .lft {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .view-2 .lft h2 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .view-2 .lft h1 {
+    font-size: 5rem;
+    font-weight: 400;
+  }
+  .view-2 .line {
+    width: 1px;
+    height: initial;
+    background-color: black;
+    margin-right: 2rem;
+  }
+  .view-2 .line-2 {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+  }
+  .view-2 .box-3 .line-3 {
+    display: none;
+  }
+  .view-2 .rght {
+    width: 30%;
+  }
+  .view-2 .rght .box img {
+    width: 4vmax;
+  }
+  .view-3 {
+    width: 100%;
+    flex-direction: row;
+    gap: 2rem;
+    position: relative;
+    height: auto;
+    overflow: visible;
+  }
+  .view-3 .team {
+    width: 40%;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+  }
+  .view-3 .team h3 {
+    width: 100%;
+    font-size: 4rem;
+  }
+  .view-3 .team p {
+    font-weight: 300;
+  }
+  .view-3 .main-1 {
+    width: 30%;
+  }
+  .view-3 .main-2 {
+    width: 30%;
+  }
+  .view-3 .line {
+    width: 0.8px;
+    height: 40vmax;
+    background-color: black;
+    display: block;
+  }
+  .view-4 {
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: row;
+  }
+  .view-4 .text-1 {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10rem;
+  }
+  .view-4 .text-1 .image-1 {
+    display: none;
+  }
+  .view-4 .text-1 .content {
+    width: 80%;
+  }
+  .view-4 .text-1 .content h3 {
+    font-size: 500;
+  }
+  .view-4 .text-1 .content p {
+    font-size: 5.5rem;
+    line-height: 1.2;
+  }
+  .view-4 .text-1 .image {
+    display: block;
+  }
+  .view-4 .text-1 .image img {
+    width: 8rem;
+  }
+  .view-4 .line {
+    width: 1.2px;
+    height: initial;
+    background-color: black;
+    margin-right: 2rem;
+  }
+  .view-4 .text-2 {
+    margin-top: 2rem;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .view-4 .text-2 .content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .view-5 {
+    width: 100%;
+    flex-direction: row;
+  }
+  .view-5 .box-1 {
+    justify-content: space-between;
+    width: 30%;
+  }
+  .view-5 .line {
+    display: none;
+  }
+  .view-5 .line-2 {
+    width: 1.2px;
+    height: initial;
+    background-color: rgb(0, 0, 0);
+    display: block;
+  }
+  .footer {
+    padding: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=style.css.map */
