@@ -1,0 +1,997 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 1rem;
+  background-color: #FDFBF5;
+}
+
+.btn {
+  position: relative;
+}
+.btn button {
+  background-color: #000000;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 2rem;
+  color: rgb(255, 252, 252);
+  padding: 0.5rem 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+  z-index: 1;
+  transition: 0.3s ease all;
+  position: relative;
+}
+.btn button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #FDFBF5;
+  top: 0;
+  left: 0;
+  border-radius: 2rem;
+  transform: scaleX(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.btn button:hover::before {
+  transform: scaleX(0.9);
+}
+.btn button:hover {
+  color: black;
+}
+
+.line-2, .line-4 {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin-top: 1rem;
+}
+
+.line-4 {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin-top: 1rem;
+}
+
+hr {
+  margin: 2rem;
+  border-color: black;
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.view-1 {
+  width: 100%;
+  padding: 1rem;
+}
+.view-1 nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.view-1 nav .logo img {
+  width: 8rem;
+}
+.view-1 nav .navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.view-1 nav .navigation .links {
+  display: flex;
+  gap: 4rem;
+  margin-right: 1rem;
+  display: none;
+}
+.view-1 nav .navigation .links a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+.view-1 nav .navigation .links a::after {
+  content: "";
+  width: 0%;
+  height: 1.5px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.view-1 nav .navigation .links a:hover::after {
+  animation-name: line;
+  animation-duration: 1s;
+}
+@keyframes line {
+  0% {
+    width: 0%;
+    left: 0%;
+  }
+  50% {
+    width: 100%;
+    left: 0%;
+  }
+  100% {
+    width: 0%;
+    left: 100%;
+  }
+}
+.view-1 nav .navigation .btn {
+  display: none;
+  position: relative;
+}
+.view-1 nav .navigation .btn button {
+  background-color: #000000;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 2rem;
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+  z-index: 1;
+  transition: 0.3s ease all;
+  position: relative;
+}
+.view-1 nav .navigation .btn button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #FDFBF5;
+  top: 0;
+  left: 0;
+  border-radius: 2rem;
+  transform: scaleX(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.view-1 nav .navigation .btn button:hover::before {
+  transform: scaleX(0.9);
+}
+.view-1 nav .navigation .btn button:hover {
+  color: black;
+}
+.view-1 nav .navigation .btn-2 {
+  display: flex;
+  gap: 1rem;
+  display: none;
+}
+.view-1 nav .navigation .btn-2 .same {
+  padding: 0.6rem 0.8rem;
+}
+.view-1 nav .navigation .btn-2 button {
+  padding: 0.6rem 0.6rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  border: 1px solid black;
+  background-color: #FDFBF5;
+  text-transform: uppercase;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.view-1 nav .navigation .btn-2 :hover {
+  background-color: black;
+  color: white;
+}
+.view-1 nav .navigation .line {
+  width: 1.1px;
+  height: 3rem;
+  background-color: black;
+  display: none;
+}
+.view-1 nav .navigation .sun {
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 0.4rem 2.2rem 0.4rem 0.5rem;
+}
+.view-1 nav .navigation .sun i {
+  font-size: 1.2rem;
+}
+.view-1 nav .navigation .menu i {
+  font-size: 1.5rem;
+}
+.view-1 .hero {
+  display: flex;
+  flex-direction: column;
+}
+.view-1 .hero .top .image {
+  display: none;
+}
+.view-1 .hero .top .image-1 {
+  width: 100%;
+}
+.view-1 .hero .top .image-1 img {
+  width: 5rem;
+}
+.view-1 .hero .top h1 {
+  width: 90%;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 1rem;
+}
+.view-1 .hero .top p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+.view-1 .hero .bottom {
+  width: 100%;
+  margin-top: 1rem;
+}
+.view-1 .hero .bottom video {
+  width: 100%;
+  border-radius: 2.5rem;
+}
+
+.view-2 {
+  padding: 1rem;
+  width: 100%;
+}
+.view-2 .marquee {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.view-2 .marquee .client {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.view-2 .marquee .client h1 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.view-2 .marquee .line {
+  width: 1.2px;
+  height: 5rem;
+  background-color: black;
+  display: none;
+}
+.view-2 .marquee .animate {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.view-2 .marquee .animate .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0 1.5rem;
+  animation: marquee 10s linear infinite both;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.view-2 .marquee .animate:hover .image {
+  animation-play-state: paused;
+}
+.view-2 .bottom .left {
+  display: none;
+}
+.view-2 .bottom .line-3 {
+  display: none;
+}
+.view-2 .bottom .right {
+  width: 100%;
+}
+.view-2 .bottom .right .box {
+  display: flex;
+  flex-direction: column;
+}
+.view-2 .bottom .right .box .content {
+  margin-top: 1.8rem;
+}
+.view-2 .bottom .right .box .content .image img {
+  width: 4rem;
+}
+.view-2 .bottom .right .box .content .text h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.view-2 .bottom .right .box .content .text p {
+  margin-top: 0.5rem;
+}
+.view-2 .bottom .right .box .line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin-top: 0.8rem;
+}
+
+.view-3 {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.view-3 .stick {
+  position: relative;
+  height: auto;
+  overflow: visible;
+}
+.view-3 .stick .top {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  top: 1.5rem;
+  position: sticky;
+}
+.view-3 .stick .top .text h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.view-3 .stick .top .text p {
+  margin-top: 0.8rem;
+  width: 80%;
+}
+.view-3 .stick .top .btn {
+  margin-top: 2rem;
+}
+.view-3 .bottom {
+  width: 100%;
+  margin-top: 2rem;
+}
+.view-3 .bottom .img-a img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 2rem;
+}
+.view-3 .bottom .img-a .text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.view-3 .bottom .img-a .text h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.view-3 .bottom .image img {
+  margin-top: 2.5rem;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 2rem;
+}
+.view-3 .bottom .image .text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.view-3 .bottom .image .text h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.view-4 {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.view-4 .top .image {
+  display: none;
+}
+.view-4 .top .text {
+  margin-top: 1rem;
+  width: 100%;
+}
+.view-4 .top .text h1 {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+.view-4 .top .text p {
+  margin-top: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: 3.5rem;
+}
+.view-4 .line-2 {
+  display: none;
+}
+.view-4 .bottom {
+  margin-top: 1rem;
+}
+.view-4 .bottom p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.view-5 {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.view-5 .box {
+  display: flex;
+  flex-direction: column;
+}
+.view-5 .box .text img {
+  width: 11rem;
+}
+.view-5 .box .text p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+.view-5 .box .btn-3 {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.view-5 .box .btn-3 .same {
+  padding: 11px 14px;
+}
+.view-5 .box .btn-3 button {
+  font-size: 1rem;
+  padding: 11px 10px;
+  font-size: 0.8rem;
+  border-radius: 10rem;
+  border: 1px solid black;
+  background-color: #FDFBF5;
+  transition: all 0.2s ease;
+}
+.view-5 .box .btn-3 button:hover {
+  font-weight: 400;
+  background-color: black;
+  color: white;
+}
+.view-5 .box .box-2 {
+  display: flex;
+  flex-direction: row;
+}
+.view-5 .box h1 {
+  margin-top: 1.8rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.view-5 .box .links ul {
+  list-style: none;
+}
+.view-5 .box .links ul li {
+  padding-top: 1.2rem;
+}
+.view-5 .box .links ul a {
+  text-decoration: none;
+  color: black;
+}
+.view-5 .box .btn-2 {
+  margin-top: 1.8rem;
+}
+.view-5 .box .btn-2 button {
+  padding: 0.4rem 1rem;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: black;
+  color: white;
+  letter-spacing: 0.2rem;
+}
+.view-5 .line {
+  margin-top: 2rem;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+.footer {
+  padding: 2rem;
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer .lft h1 {
+  font-weight: 400;
+  font-size: 1rem;
+  word-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+.footer .lft h1 span {
+  font-weight: 400;
+}
+.footer .lft h1 a {
+  color: black;
+}
+.footer .rght h1 {
+  word-spacing: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 810px) {
+  .view-1 {
+    padding: 2rem;
+  }
+  .view-1 nav .navigation {
+    display: flex;
+    align-items: center;
+  }
+  .view-1 nav .navigation .btn {
+    display: block;
+  }
+  .view-1 nav .navigation .line {
+    display: block;
+  }
+  .view-1 nav .navigation .btn-2 {
+    display: block;
+  }
+  .view-1 .hero .top .text {
+    margin-top: 2rem;
+  }
+  .view-1 .hero .top .text h1 {
+    width: 90%;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .view-1 .hero .top .text p {
+    width: 60%;
+    font-size: 1.5rem;
+  }
+  .view-1 .hero .bottom {
+    margin-top: 1.5rem;
+  }
+  .view-2 {
+    padding: 2rem;
+    width: 100%;
+    margin-top: -1rem;
+  }
+  .view-2 .marquee {
+    flex-direction: row;
+    margin-bottom: 2rem;
+  }
+  .view-2 .marquee .client {
+    width: 25%;
+  }
+  .view-2 .marquee .client h1 {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .view-2 .marquee .line {
+    display: block;
+  }
+  .view-2 .marquee .animate .image img {
+    margin: 0 3rem;
+    width: 5rem;
+  }
+  .view-2 .bottom {
+    display: flex;
+    margin-top: 2rem;
+    width: 100%;
+    gap: 2rem;
+  }
+  .view-2 .bottom .left {
+    display: block;
+    width: 25%;
+  }
+  .view-2 .bottom .left h1 {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .view-2 .bottom .line-3 {
+    display: block;
+    width: 1px;
+    height: initial;
+    background-color: black;
+  }
+  .view-2 .bottom .right .box .content {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: start;
+  }
+  .view-2 .bottom .right .box .content .text h1 {
+    text-transform: uppercase;
+  }
+  .view-3 {
+    padding: 2rem;
+  }
+  .view-3 .stick {
+    position: relative;
+    height: auto;
+    overflow: visible;
+  }
+  .view-3 .stick .top {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    top: 1.5rem;
+    position: sticky;
+  }
+  .view-3 .stick .top .text h1 {
+    font-size: 5rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .view-3 .stick .top .text p {
+    margin-top: 0.8rem;
+    width: 80%;
+  }
+  .view-3 .bottom {
+    justify-content: center;
+  }
+  .view-3 .bottom .image {
+    display: grid;
+    flex: none;
+    gap: 2rem;
+    grid-template-areas: "b b c c" "b b c c" "d d e e" "d d e e";
+  }
+  .view-3 .bottom .image .img {
+    width: 100%;
+  }
+  .view-3 .bottom .image .img img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .view-3 .bottom .image .img-b {
+    grid-area: b;
+  }
+  .view-3 .bottom .image .img-c {
+    grid-area: c;
+  }
+  .view-3 .bottom .image .img-d {
+    grid-area: d;
+  }
+  .view-3 .bottom .image .img-e {
+    grid-area: e;
+  }
+  .view-3 .line-4 {
+    display: block;
+  }
+  .view-4 {
+    padding: 2rem;
+  }
+  .view-4 .top {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .view-4 .top .image-1 {
+    display: none;
+  }
+  .view-4 .top .text p {
+    font-size: 3.5rem;
+  }
+  .view-4 .top .image {
+    display: block;
+  }
+  .view-5 {
+    width: 100%;
+    flex-direction: row;
+  }
+  .view-5 .box-1 {
+    justify-content: space-between;
+    width: 30%;
+  }
+  .view-5 .box-2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .view-5 .line {
+    display: none;
+  }
+  .view-5 .line-2 {
+    width: 1.2px;
+    height: initial;
+    background-color: rgb(0, 0, 0);
+    display: block;
+  }
+}
+@media (min-width: 1250px) {
+  .view-1 {
+    padding: 2rem;
+  }
+  .view-1 nav .logo img {
+    width: 11rem;
+  }
+  .view-1 nav .navigation .links {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+  .view-1 nav .navigation .links a {
+    font-size: 1.3rem;
+    margin-left: 4rem;
+  }
+  .view-1 nav .navigation .btn {
+    display: block;
+  }
+  .view-1 nav .navigation .line {
+    display: block;
+  }
+  .view-1 nav .navigation .btn-2 {
+    display: block;
+  }
+  .view-1 nav .navigation .menu {
+    display: none;
+  }
+  .view-1 .hero {
+    flex-direction: row;
+    width: 100%;
+    margin-top: 2rem;
+    height: 50vmax;
+    margin-bottom: 3rem;
+  }
+  .view-1 .hero .top {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 50%;
+  }
+  .view-1 .hero .top .image {
+    display: block;
+  }
+  .view-1 .hero .top .image img {
+    width: 8rem;
+  }
+  .view-1 .hero .top .image-1 {
+    display: none;
+  }
+  .view-1 .hero .top .text h1 {
+    width: 100%;
+    font-size: 6rem;
+    font-weight: 400;
+  }
+  .view-1 .hero .top .text p {
+    width: 60%;
+    font-size: 1.5rem;
+  }
+  .view-1 .hero .bottom {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .view-1 .hero .bottom video {
+    width: 90%;
+    height: 100%;
+    border-radius: 2rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .view-2 {
+    padding: 2rem;
+    width: 100%;
+    margin-top: -2rem;
+  }
+  .view-2 .marquee {
+    flex-direction: row;
+    margin-bottom: 2rem;
+  }
+  .view-2 .marquee .client {
+    width: 10%;
+  }
+  .view-2 .marquee .client h1 {
+    font-size: 1.2rem;
+  }
+  .view-2 .marquee .line {
+    display: block;
+    margin-right: 0.8rem;
+  }
+  .view-2 .marquee .animate .image {
+    animation: marquee 20s linear infinite both;
+  }
+  .view-2 .marquee .animate .image img {
+    width: 4rem;
+    margin: 0 3rem;
+  }
+  .view-2 .bottom {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+  }
+  .view-2 .bottom .left {
+    width: 35%;
+    display: block;
+  }
+  .view-2 .bottom .line-3 {
+    display: block;
+    width: 1px;
+    height: initial;
+    background-color: black;
+  }
+  .view-2 .bottom .right {
+    width: 65%;
+  }
+  .view-2 .bottom .right .box {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .view-2 .bottom .right .box .line {
+    width: 1.2px;
+    height: initial;
+  }
+  .view-2 .bottom .right .box .content {
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+  }
+  .view-3 {
+    width: 100%;
+    padding: 2rem;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .view-3 .line-2 {
+    display: none;
+  }
+  .view-3 .line {
+    width: 1px;
+    height: initial;
+    background-color: black;
+  }
+  .view-3 .stick {
+    position: relative;
+    height: auto;
+    overflow: visible;
+    width: 35%;
+  }
+  .view-3 .stick .top {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    top: 1.5rem;
+    position: sticky;
+  }
+  .view-3 .stick .top .text h1 {
+    font-size: 5rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    width: 20%;
+    font-weight: 400;
+  }
+  .view-3 .stick .top .text p {
+    margin-top: 0.8rem;
+    width: 100%;
+  }
+  .view-3 .stick .top .btn {
+    position: relative;
+  }
+  .view-3 .stick .top .btn button {
+    background-color: #000000;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 2rem;
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
+    z-index: 1;
+    transition: 0.3s ease all;
+    position: relative;
+  }
+  .view-3 .stick .top .btn button::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #FDFBF5;
+    top: 0;
+    left: 0;
+    border-radius: 2rem;
+    transform: scaleX(0);
+    z-index: -1;
+    transition: transform 0.3s ease;
+  }
+  .view-3 .stick .top .btn button:hover::before {
+    transform: scaleX(0.9);
+  }
+  .view-3 .stick .top .btn button:hover {
+    color: black;
+  }
+  .view-3 .bottom {
+    width: 65%;
+    justify-content: center;
+  }
+  .view-3 .bottom .image {
+    display: grid;
+    flex: none;
+    gap: 1rem;
+    grid-template-areas: "b b c c" "b b c c" "d d e e" "d d e e";
+  }
+  .view-3 .bottom .image .img {
+    width: 100%;
+  }
+  .view-3 .bottom .image .img img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .view-3 .bottom .image .img-b {
+    grid-area: b;
+  }
+  .view-3 .bottom .image .img-c {
+    grid-area: c;
+  }
+  .view-3 .bottom .image .img-d {
+    grid-area: d;
+  }
+  .view-3 .bottom .image .img-e {
+    grid-area: e;
+  }
+  .view-4 {
+    padding: 2rem;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .view-4 .top {
+    width: 65%;
+    gap: 17rem;
+  }
+  .view-4 .line {
+    width: 1px;
+    height: initial;
+    background-color: black;
+  }
+  .view-4 .bottom {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 22rem;
+  }
+  .view-5 {
+    width: 100%;
+    flex-direction: row;
+  }
+  .view-5 .box-1 {
+    justify-content: space-between;
+    width: 30%;
+  }
+  .view-5 .line {
+    display: none;
+  }
+  .view-5 .line-2 {
+    width: 1.2px;
+    height: initial;
+    background-color: rgb(0, 0, 0);
+    display: block;
+  }
+  .footer {
+    padding: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=style.css.map */
