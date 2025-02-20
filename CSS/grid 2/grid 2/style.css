@@ -1,0 +1,58 @@
+body {
+  width: 100%;
+  background-color: rgb(173, 173, 173);
+}
+
+.container {
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 150px);
+  grid-template-areas: "head" "yello" "pu" "re" "sign" "cont";
+}
+.container .header {
+  background-color: lightblue;
+  font-size: 2rem;
+  grid-area: head;
+}
+.container .yello {
+  background-color: yellow;
+  font-size: 2rem;
+  grid-area: yello;
+}
+.container .purple {
+  background-color: rgb(187, 12, 187);
+  font-size: 2rem;
+  grid-area: pu;
+}
+.container .red {
+  background-color: red;
+  font-size: 2rem;
+  grid-area: re;
+}
+.container .sign-up {
+  background-color: aqua;
+  font-size: 2rem;
+  grid-area: sign;
+}
+.container .content {
+  background-color: white;
+  font-size: 2rem;
+  grid-area: cont;
+}
+
+@media (min-width: 760px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px auto repeat(2, 150px);
+    grid-template-areas: "head head" "cont cont" "sign yello" "re pu";
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px) 150px 300px;
+    grid-template-areas: "head head head" "yello pu re" "sign sign sign" "cont cont cont";
+  }
+}/*# sourceMappingURL=style.css.map */

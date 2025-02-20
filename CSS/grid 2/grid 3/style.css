@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(134, 134, 134);
+}
+
+.grid-layout {
+  padding: 2rem;
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: 400px 400px 300px;
+  grid-template-areas: "a b c" "a b c" "d d c";
+}
+.grid-layout .card {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.grid-layout .card img {
+  width: 100%;
+  border-radius: 2rem;
+}
+.grid-layout .card-1 {
+  grid-area: a;
+}
+.grid-layout .card-2 {
+  grid-area: b;
+}
+.grid-layout .card-3 {
+  grid-area: c;
+}
+.grid-layout .card-4 {
+  grid-area: d;
+}
+.grid-layout .image {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  gap: 2rem;
+  grid-template-areas: ". . b b" "a a b b" "a a b b" "a a c c" "a a c c" ". . c c";
+}
+.grid-layout .image .img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border: 1px solid red;
+  border-radius: 2rem;
+}
+.grid-layout .image .img-a {
+  grid-area: a;
+  aspect-ratio: 2/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.grid-layout .image .img-b {
+  grid-area: b;
+}
+.grid-layout .image .img-c {
+  grid-area: c;
+}/*# sourceMappingURL=style.css.map */
