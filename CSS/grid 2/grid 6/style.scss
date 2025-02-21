@@ -1,0 +1,422 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: #2C1E11;
+}
+
+main{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container{
+        width: 100%;
+        display: grid;
+        gap: 1rem;
+        justify-content: center;
+        // grid-template-columns: repeat(auto-fit, 300px);
+        grid-template-areas: 
+        "a a"
+        "b b"
+        "c c"
+        "d d"
+        "e e"
+        ;
+    
+        .card{
+            width: 100%;
+            background-color: #2C1E11;
+            border-radius: 1rem;
+        }
+    
+        .card-1{
+            grid-area: a;
+            padding: .8rem;
+            background-image: url(https://plus.unsplash.com/premium_photo-1682309761340-3f8b1cbaa655?q=80&w=2112&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-color: rgb(167, 74, 74);
+            background-blend-mode: hard-light;
+            gap: 3rem;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .t1{
+                font-size: 2rem;
+                line-height: 1;
+            }
+
+            .t2{
+                display: flex;
+                align-items: center;
+                gap: 4rem;
+
+                .left{
+                    display: flex;
+                    font-weight: 800;
+                    gap: .2rem;
+
+                    .bolt{
+                        background-color: rgb(0, 0, 0);
+                        border-radius: 1rem .5rem .8rem;
+
+                    }
+                }
+
+                .right{
+                    font-weight: 300;
+                }
+            }
+        }
+        .card-2{
+            grid-area: b;
+            width: 100%;
+            background-image: url("https://images.unsplash.com/photo-1546379753-abb7fd8cfb93?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29mZmVlJTIwY3VwfGVufDB8fDB8fHww");
+                background-size: cover;
+                background-position: center;
+            overflow: hidden;
+            img{
+                width: 100%;
+                aspect-ratio: 16/9;
+                object-fit: cover;
+            }
+        }
+        .card-3{
+            grid-area: c;
+            width: 100%;
+            background-image: url("https://plus.unsplash.com/premium_photo-1664809961408-1137acc5e895?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIxfHxncmVlbiUyMHRzaGlydCUyMGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D");
+                background-size: cover;
+                background-position: center;
+            overflow: hidden;
+            img{
+                width: 100%;
+                aspect-ratio: 16/9;
+                object-fit: cover;
+            }
+            
+        }
+        .card-4{
+            grid-area: d;
+            background-color: #4B3528;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            .text{
+                font-size: .8rem;
+                color: white;
+
+                .bolt{
+                    margin-left: -2rem;
+                }
+
+                span{
+                    color: #FF822D;
+                }
+            }
+        }
+        .card-5{
+            grid-area: e;
+            padding: .5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            background-color: #4D5B2A;
+            color: #E6C85E;
+            gap: 1rem;
+
+            .t1{
+                font-size: .6rem;
+                margin-top: 1rem;
+            }
+
+        }
+    }
+
+}
+
+@media (min-width:768px) {
+    main{
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .container{
+            width: 100%;
+            display: grid;
+            gap: 1rem;
+            // align-items: center;
+            justify-content: center;
+            grid-template-columns: repeat(4,100px) 120px auto;
+            grid-template-rows: auto 100px 120px;
+            grid-template-areas: 
+            "a a a a b b"
+            "c c d d b b"
+            "c c d d e e"
+            ;
+        
+            .card{
+                width: 100%;
+                background-color: #2C1E11;
+                border-radius: 1rem;
+            }
+        
+            .card-1{
+                grid-area: a;
+                padding: .8rem;
+                background-image: url("https://plus.unsplash.com/premium_photo-1682309761340-3f8b1cbaa655?q=80&w=2112&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+                background-color: rgb(167, 74, 74);
+                background-blend-mode: hard-light;
+                gap: 3rem;
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+    
+                .t1{
+                    font-size: 2rem;
+                    line-height: 1;
+                }
+    
+                .t2{
+                    display: flex;
+                    align-items: center;
+                    gap: 4rem;
+    
+                    .left{
+                        display: flex;
+                        font-weight: 800;
+                        gap: .2rem;
+    
+                        .bolt{
+                            background-color: rgb(0, 0, 0);
+                            border-radius: 1rem .5rem .8rem;
+    
+                        }
+                    }
+    
+                    .right{
+                        font-weight: 300;
+                    }
+                }
+            }
+            .card-2{
+                grid-area: b;
+                width: 100%;
+                background-image: url("https://images.unsplash.com/photo-1546379753-abb7fd8cfb93?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29mZmVlJTIwY3VwfGVufDB8fDB8fHww");
+                background-size: cover;
+                background-position: center;
+                overflow: hidden;
+                img{
+                    display: none;
+                    width: 100%;
+                    // aspect-ratio: 9/12;
+                    object-fit: cover;
+                }
+            }
+            .card-3{
+                grid-area: c;
+                width: 100%;
+                background-image: url("https://plus.unsplash.com/premium_photo-1664809961408-1137acc5e895?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIxfHxncmVlbiUyMHRzaGlydCUyMGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D");
+                background-size: cover;
+                background-position: center;
+                overflow: hidden;
+                img{
+                    display: none;
+                    width: 100%;
+                    aspect-ratio: 9/16;
+                    object-fit: cover;
+                }
+                
+            }
+            .card-4{
+                grid-area: d;
+                background-color: #4B3528;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+    
+                .text{
+                    font-size: .8rem;
+                    color: white;
+    
+                    .bolt{
+                        margin-left: -2rem;
+                    }
+    
+                    span{
+                        color: #FF822D;
+                    }
+                }
+            }
+            .card-5{
+                grid-area: e;
+                padding: .5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: center;
+                background-color: #4D5B2A;
+                color: #E6C85E;
+    
+                .t1{
+                    font-size: .6rem;
+                    margin-top: 1rem;
+                }
+    
+            }
+        }
+    
+    }
+}
+@media (min-width:1020px) {
+    main{
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .container{
+            width: 100%;
+            display: grid;
+            gap: 1rem;
+            justify-content: center;
+            grid-template-columns: repeat(4,100px) 120px auto;
+            grid-template-rows: auto 100px 120px;
+            grid-template-areas: 
+            "a a a a b b"
+            "c c d d b b"
+            "c c d d e e"
+            ;
+        
+            .card{
+                width: 100%;
+                background-color: #2C1E11;
+                border-radius: 1rem;
+            }
+        
+            .card-1{
+                grid-area: a;
+                padding: .8rem;
+                background-image: url(https://plus.unsplash.com/premium_photo-1682309761340-3f8b1cbaa655?q=80&w=2112&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+                background-color: rgb(167, 74, 74);
+                background-blend-mode: hard-light;
+                gap: 3rem;
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+    
+                .t1{
+                    font-size: 2rem;
+                    line-height: 1;
+                }
+    
+                .t2{
+                    display: flex;
+                    align-items: center;
+                    gap: 4rem;
+    
+                    .left{
+                        display: flex;
+                        font-weight: 800;
+                        gap: .2rem;
+    
+                        .bolt{
+                            background-color: rgb(0, 0, 0);
+                            border-radius: 1rem .5rem .8rem;
+    
+                        }
+                    }
+    
+                    .right{
+                        font-weight: 300;
+                    }
+                }
+            }
+            .card-2{
+                grid-area: b;
+                width: 100%;
+                overflow: hidden;
+                background-color: red;
+                img{
+                    width: 100%;
+                    max-height: 24rem;
+                    // aspect-ratio: 9/16;
+                    object-fit: cover;
+                }
+            }
+            .card-3{
+                grid-area: c;
+                width: 100%;
+                background-image: url("https://plus.unsplash.com/premium_photo-1664809961408-1137acc5e895?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIxfHxncmVlbiUyMHRzaGlydCUyMGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D");
+                background-size: cover;
+                background-position: center;
+                // overflow: hidden;
+                // img{
+                //     width: 100%;
+                //     aspect-ratio: 9/16;
+                //     object-fit: cover;
+                // }
+                
+            }
+            .card-4{
+                grid-area: d;
+                background-color: #4B3528;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+    
+                .text{
+                    font-size: .8rem;
+                    color: white;
+    
+                    .bolt{
+                        margin-left: -2rem;
+                    }
+    
+                    span{
+                        color: #FF822D;
+                    }
+                }
+            }
+            .card-5{
+                grid-area: e;
+                padding: .5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: center;
+                background-color: #4D5B2A;
+                color: #E6C85E;
+    
+                .t1{
+                    font-size: .6rem;
+                    margin-top: 1rem;
+                }
+    
+            }
+        }
+    
+    }
+}
