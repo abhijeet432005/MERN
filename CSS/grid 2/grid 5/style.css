@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(196, 195, 195);
+}
+
+main {
+  width: 100%;
+}
+
+.view-1 {
+  padding: 2rem;
+  width: 100%;
+}
+.view-1 nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.view-1 nav .logo h1 {
+  font-size: 1.5rem;
+  line-height: 0.8;
+  font-weight: 500;
+}
+.view-1 nav .links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+}
+.view-1 nav .links a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  position: relative;
+}
+.view-1 nav .links .btn button {
+  background-color: black;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid black;
+  border-radius: 2rem;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+.view-1 nav .links .btn button::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  border-radius: 2rem;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+.view-1 nav .links .btn button:hover::after {
+  transform: scaleX(0.8);
+}
+.view-1 nav .links .btn button:hover {
+  color: black;
+}
+.view-1 nav .links a::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 0%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+}
+.view-1 nav .links a:hover::after {
+  animation-name: line;
+  animation-duration: 0.5s;
+}
+@keyframes line {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0%;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+.view-1 .line {
+  width: 100%;
+  height: 1.2px;
+  background-color: black;
+  margin-top: 1rem;
+}
+.view-1 .hero {
+  display: flex;
+  flex-direction: column;
+}
+.view-1 .hero .top {
+  margin-top: 2rem;
+  width: 100%;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(2, 300px) auto repeat(2, 100px);
+  grid-template-rows: repeat(5, 90px);
+  grid-template-areas: "a a a . . ." "b b c c c c" "b b d d d d" ". . d d d d";
+}
+.view-1 .hero .top .card {
+  border-radius: 2rem;
+  width: 100%;
+  overflow: hidden;
+}
+.view-1 .hero .top .card img {
+  width: 100%;
+  height: 13rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.view-1 .hero .top .card-1 {
+  grid-area: a;
+  padding: 1rem;
+  font-size: 3rem;
+  font-weight: 500;
+}
+.view-1 .hero .top .card-2 {
+  grid-area: b;
+}
+.view-1 .hero .top .card-3 {
+  grid-area: c;
+  padding: 1rem;
+}
+.view-1 .hero .top .card-4 {
+  grid-area: d;
+  padding: 1rem;
+  font-size: 3.7rem;
+}
+.view-1 .hero .bottom {
+  width: 100%;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(4, 100px) auto repeat(2, 100px);
+  grid-template-rows: repeat(5, 80px);
+  grid-template-areas: "a a b b b c c" "a a b b b c c" ". . d d . c c" ". . d d . c c";
+}
+.view-1 .hero .bottom .card {
+  border-radius: 2rem;
+  width: 100%;
+  overflow: hidden;
+}
+.view-1 .hero .bottom .card img {
+  width: 100%;
+  height: 11rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.view-1 .hero .bottom .card-1 {
+  grid-area: a;
+}
+.view-1 .hero .bottom .card-2 {
+  grid-area: b;
+  padding: 1rem;
+}
+.view-1 .hero .bottom .card-3 {
+  grid-area: c;
+}
+.view-1 .hero .bottom .card-3 img {
+  width: 100%;
+  height: 100%;
+}
+.view-1 .hero .bottom .card-4 {
+  grid-area: d;
+}/*# sourceMappingURL=style.css.map */
