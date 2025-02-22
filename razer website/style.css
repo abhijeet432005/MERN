@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+main {
+  width: 100%;
+}
+
+.view-1 {
+  width: 100%;
+}
+.view-1 nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0.8rem;
+  border-bottom: 2px solid #37802B;
+}
+.view-1 nav .logo img {
+  height: 2rem;
+}
+.view-1 nav .links {
+  display: flex;
+  gap: 3rem;
+}
+.view-1 nav .links a {
+  display: none;
+  color: white;
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.view-1 nav .icon {
+  color: white;
+  display: flex;
+  gap: 3rem;
+}
+.view-1 .hero {
+  width: 100%;
+}
+.view-1 .hero .top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #555555;
+  padding: 0.5rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.view-1 .hero .heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.view-1 .hero .heading .text {
+  text-align: center;
+  text-transform: uppercase;
+}
+.view-1 .hero .heading .text h1 {
+  font-size: 2rem;
+}
+.view-1 .hero .heading .text p {
+  font-size: 2rem;
+}
+.view-1 .hero .heading .btn {
+  display: flex;
+  gap: 3rem;
+}
+.view-1 .hero .heading .btn span {
+  color: #37802B;
+}
+.view-1 .hero .bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+.view-1 .hero .bottom .image {
+  width: 100%;
+  position: relative;
+}
+.view-1 .hero .bottom .image img {
+  width: 100%;
+  height: 45vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,129 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+main{
+    width: 100%;
+}
+
+.view-1{
+    width: 100%;
+
+    nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        padding: .8rem;
+        border-bottom: 2px solid #37802B;
+
+        .logo{
+
+            img{
+                height: 2rem;
+            }
+        }
+
+        .links{
+            display: flex;
+            gap: 3rem;
+            a{
+                display: none;
+                color: white;
+                font-size: .9rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+
+        .icon{
+            color: white;
+            display: flex;
+            gap: 3rem;
+        }
+    }
+
+    .hero{
+        width: 100%;
+
+        .top{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #555555;
+            padding: .5rem;
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        
+        .heading{
+        // position: absolute;
+            // top: 10%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+
+            .text{
+                text-align: center;
+                text-transform: uppercase;
+
+                h1{
+                    font-size: 2rem;
+                }
+
+                p{
+                    font-size: 2rem;
+                }
+            }
+
+
+            .btn{
+                display: flex;
+                gap: 3rem;
+
+                span{
+                    color: #37802B;
+                }
+            }
+        }
+        .bottom{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            
+            .image{
+                width: 100%;
+                position: relative;
+                
+                img{
+                    width: 100%;
+                    height: 45vh;
+                    // aspect-ratio: 9/12;
+                    object-fit: cover;
+                }
+                
+                
+            }
+        }
+        
+    }
+}
