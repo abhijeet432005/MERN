@@ -44,11 +44,50 @@ nav .links {
   gap: 3rem;
 }
 nav .links a {
+  position: relative;
   display: none;
   color: white;
   font-size: 0.9rem;
   text-decoration: none;
   text-transform: uppercase;
+}
+nav .links a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1.2px;
+  background-color: #37802B;
+  top: 0;
+  left: 0;
+  margin-top: -0.2rem;
+}
+nav .links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1.2px;
+  background-color: #37802B;
+  bottom: 0;
+  left: 0;
+  margin-bottom: -0.2rem;
+}
+@keyframes line {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+nav .links a:hover::before, nav .links a:hover::after {
+  animation-name: line;
+  animation-duration: 0.8s;
 }
 nav .icon {
   color: white;

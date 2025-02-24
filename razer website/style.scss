@@ -57,19 +57,71 @@ nav{
         display: flex;
         gap: 3rem;
         a{
+            position: relative;
             display: none;
             color: white;
             font-size: .9rem;
             text-decoration: none;
             text-transform: uppercase;
         }
+        a::before{
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 1.2px;
+            background-color: #37802B;
+            top: 0;
+            left: 0;
+            margin-top: -.2rem;
+            
+        }
+        a::after{
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 1.2px;
+            background-color: #37802B;
+            bottom: 0;
+            left: 0;
+            margin-bottom: -.2rem;
+            
+        }
+
+        @keyframes line {
+
+            0%{
+                width: 0;
+                left: 0;
+            }
+
+            50%{
+                width: 100%;
+                left: 0;
+            }
+
+            100%{
+                width: 0;
+                left: 100%;
+            }
+            
+        }
+
+        a:hover::before, a:hover::after{
+            animation-name: line;
+            animation-duration: .8s;
+        }
     }
+
+
+    
 
     .icon{
         color: white;
         display: flex;
         gap: .8rem;
     }
+
+
 }
 
 
