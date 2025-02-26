@@ -1,0 +1,423 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+hr {
+  opacity: 0.5;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+main .view-1 nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .view-1 .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  display: none;
+}
+main .view-1 .links a {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: -0.05rem;
+  position: relative;
+}
+main .view-1 .links a::after {
+  width: 0%;
+  height: 1.2px;
+  content: "";
+  position: absolute;
+  background-color: black;
+  bottom: 0;
+  left: 0;
+}
+main .view-1 .links a::before {
+  width: 0%;
+  height: 1.8px;
+  content: "";
+  position: absolute;
+  background-color: black;
+  top: 0;
+  left: 0;
+}
+main .view-1 .links a:hover::before, main .view-1 .links a:hover::after {
+  animation-name: line;
+  animation-duration: 0.6s;
+}
+@keyframes line {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+main .view-1 .links .btn button {
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 0.6rem 1rem;
+  letter-spacing: 0.2rem;
+}
+main .view-1 .fashion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+main .view-1 .fashion .top {
+  width: 100%;
+}
+main .view-1 .fashion .top img {
+  width: 100%;
+}
+main .view-1 .fashion .bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .view-1 .fashion .bottom p {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+main .view-1 .hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .view-1 .hero .right {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+main .view-1 .hero .right img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .view-1 .hero .left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .view-1 .hero .left .lft-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view-1 .hero .left .lft-text h1 {
+  font-size: 2.8rem;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+main .view-1 .hero .left .lft-text p {
+  width: 100%;
+  font-family: monospace;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+main .view-1 .hero .left .brand {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view-1 .hero .left .brand .text {
+  display: flex;
+  justify-content: space-between;
+}
+main .view-1 .hero .left .brand .text h1 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+main .view-2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+main .view-2 .left {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+main .view-2 .left img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .view-2 .right {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+main .view-2 .right .rotate {
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+}
+main .view-2 .right .rotate p {
+  font-family: monospace;
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+main .view-2 .right .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view-2 .right .text h1 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 0.9;
+}
+main .view-2 .right .text p {
+  font-family: monospace;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  line-height: 1.5;
+}
+main .view-3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+main .view-3 .left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .view-3 .left h1 {
+  width: 80%;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 0.9;
+}
+main .view-3 .left .grid-container {
+  width: 100%;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+main .view-3 .left .grid-container .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view-3 .left .grid-container .card .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+main .view-3 .left .grid-container .card .text h1 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+main .view-3 .left .grid-container .card .text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: monospace;
+  opacity: 0.5;
+}
+main .view-3 .left .grid-container .card .btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+main .view-3 .left .grid-container .card .btn .arrow {
+  padding: 0.4rem 0.5rem;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+}
+main .view-3 .right {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+main .view-3 .right img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .view-4 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 2rem;
+}
+main .view-4 .work {
+  width: 100%;
+}
+main .view-4 .work img {
+  width: 100%;
+}
+main .view-4 .img-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .view-4 .img-container .top, main .view-4 .img-container .bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .view-4 .img-container .top .image-1, main .view-4 .img-container .top .image-2, main .view-4 .img-container .bottom .image-1, main .view-4 .img-container .bottom .image-2 {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+main .view-4 .img-container .top .image-1 img, main .view-4 .img-container .top .image-2 img, main .view-4 .img-container .bottom .image-1 img, main .view-4 .img-container .bottom .image-2 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .view-4 .img-container .top .image-2, main .view-4 .img-container .bottom .image-2 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  main {
+    gap: 4rem;
+  }
+  main .view-3 {
+    padding: 3rem;
+  }
+  main .view-3 .left .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1000px) {
+  main {
+    gap: 4rem;
+  }
+  main .view-1 {
+    gap: 4rem;
+    padding: 3rem;
+  }
+  main .view-1 nav .links {
+    display: inline-flex;
+  }
+  main .view-1 nav .menu {
+    display: none;
+  }
+  main .view-1 .hero {
+    flex-direction: row-reverse;
+    gap: 4rem;
+    width: 100%;
+  }
+  main .view-1 .hero .right {
+    width: 100%;
+  }
+  main .view-1 .hero .right img {
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+  main .view-1 .hero .left .lft-text h1 {
+    width: 100%;
+    font-size: 4.6rem;
+    letter-spacing: 0.5rem;
+  }
+  main .view-1 .hero .left .lft-text p {
+    font-size: 1.6rem;
+  }
+  main .view-1 .hero .left .brand {
+    margin-top: auto;
+  }
+  main .view-1 .hero .left .brand .text h1 {
+    font-size: 2rem;
+  }
+  main .view-2 {
+    flex-direction: row;
+    padding: 3rem;
+    gap: 4rem;
+  }
+  main .view-2 .left {
+    width: 30%;
+  }
+  main .view-2 .right {
+    width: 70%;
+    flex-direction: row-reverse;
+  }
+  main .view-2 .right .text {
+    gap: 5rem;
+  }
+  main .view-2 .right .text h1 {
+    font-size: 7rem;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  main .view-2 .right .text p {
+    width: 80%;
+  }
+  main .view-3 {
+    width: 100%;
+    flex-direction: row;
+    gap: 3rem;
+    padding: 3rem;
+  }
+  main .view-3 .left {
+    gap: 1rem;
+  }
+  main .view-3 .left h1 {
+    font-size: 7rem;
+    font-weight: 300;
+  }
+  main .view-3 .left .grid-container {
+    margin-top: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}/*# sourceMappingURL=style.css.map */
