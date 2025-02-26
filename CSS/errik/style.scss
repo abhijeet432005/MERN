@@ -34,84 +34,85 @@ main{
             display: flex;
             align-items: center;
             justify-content: space-between;
-        }
 
-        .links{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 3rem;
-            display: none;
-
-            a{
-                color: black;
-                text-transform: uppercase;
-                text-decoration: none;
-                letter-spacing: -.05rem;
-                position: relative;
-            }
-
-            a::after{
-                width: 0%;
-                height: 1.2px;
-                content: "";
-                position: absolute;
-                background-color: black;
-                bottom: 0;
-                left: 0;
-            }
-
-            a::before{
-                width: 0%;
-                height: 1.8px;
-                content: "";
-                position: absolute;
-                background-color: black;
-                top: 0;
-                left: 0;
-            }
-
-            a:hover::before, a:hover::after{
-                animation-name: line;
-                animation-duration: .6s;
-            }
-
-            @keyframes line {
-                0%{
-                    width: 0;
-                    left: 0;
-                }
-
-                50%{
-                    width: 100%;
-                    left: 0;
-                }
-
-                100%{
-                    width: 0;
-                    left: 100%;
-                }
-            }
-
-            .btn{
-                button{
+            .links{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 3rem;
+                display: none;
+    
+                a{
+                    color: black;
                     text-transform: uppercase;
+                    text-decoration: none;
+                    letter-spacing: -.05rem;
+                    position: relative;
+                }
+    
+                a::after{
+                    width: 0%;
+                    height: 1.2px;
+                    content: "";
+                    position: absolute;
                     background-color: black;
-                    color: white;
-                    border: 1px solid black;
-                    border-radius: 2rem;
-                    padding: .6rem 1rem;
-                    letter-spacing: .2rem;
+                    bottom: 0;
+                    left: 0;
+                }
+    
+                a::before{
+                    width: 0%;
+                    height: 1.8px;
+                    content: "";
+                    position: absolute;
+                    background-color: black;
+                    top: 0;
+                    left: 0;
+                }
+    
+                a:hover::before, a:hover::after{
+                    animation-name: line;
+                    animation-duration: .6s;
+                }
+    
+                @keyframes line {
+                    0%{
+                        width: 0;
+                        left: 0;
+                    }
+    
+                    50%{
+                        width: 100%;
+                        left: 0;
+                    }
+    
+                    100%{
+                        width: 0;
+                        left: 100%;
+                    }
+                }
+    
+                .btn{
+                    button{
+                        text-transform: uppercase;
+                        background-color: black;
+                        color: white;
+                        border: 1px solid black;
+                        border-radius: 2rem;
+                        padding: .6rem 1rem;
+                        letter-spacing: .2rem;
+                    }
                 }
             }
         }
+
 
         .fashion{
 
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: .2rem;
+            gap: .8rem;
 
             .top{
                 width: 100%;
@@ -258,7 +259,7 @@ main{
                 p{
                     font-family: monospace;
                     font-size: 1.2rem;
-                    opacity: 0.7;
+                    opacity: 0.5;
                     line-height: 1.5;
                 }
             }
@@ -392,6 +393,48 @@ main{
 
                 .image-2{
                     display: none;
+                }
+
+                .text{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: .8rem;
+
+                    h1{
+                        font-size: 2rem;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                    }
+
+                    p{
+                        font-family: monospace;
+                        opacity: 0.7;
+                        font-size: 1.1rem;
+                    }
+
+                    .btn{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        text-transform: uppercase;
+                        margin-top: 1rem;
+
+                        .arrow{
+                            padding: .4rem .5rem;
+                            border-radius: 50%;
+                            background-color: black;
+                            color: white;
+                        }
+
+                        .about{
+                            p{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+
                 }
             }
         }
@@ -528,6 +571,52 @@ main{
                     margin-top: auto;
                     grid-template-columns: 1fr 1fr;
                     gap: 4rem;
+                }
+            }
+        }
+
+        .view-4{
+            padding: 3rem;
+            gap: 3rem;
+
+            .img-container{
+                .top,.bottom{
+                    flex-direction: row;
+                    gap: 3rem;
+
+                    .text{
+                        width: 33.3%;
+                        padding: 1rem;
+
+                        h1{
+                            font-size: 4rem;
+                        }
+
+                        .btn{
+                            margin-top: auto;
+                        }
+                    }
+
+                    .image-1{
+                        width: 33.33%;
+
+                        img{
+                            width: 100%;
+                        }
+                    }
+
+                    .image-2{
+                        width: 33.33%;
+                        display: block;
+
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .bottom{
+                    flex-direction: row-reverse;
                 }
             }
         }
