@@ -19,9 +19,9 @@ main{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    
 
-    .view-1{
+    .view-1{    
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -439,16 +439,470 @@ main{
             }
         }
     }
+
+    .view-5{
+        width: 100%;
+        gap: 2rem;
+        padding: 1.5rem;
+        
+        .content{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+
+            .client{
+                width: 100%;
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+        .client-bottom{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .text{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: .6rem;
+                text-transform: uppercase;
+                opacity: 0.7;
+
+                p{
+                    font-family: monospace;
+                    font-size: 1rem;
+                }
+
+                .date{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: .6rem;
+
+                    h1{
+                        font-size: 1.8rem;
+                        font-weight: 400;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+    .view-6{
+        width: 100%;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 3.5rem;
+
+        .Top-content{
+            width: 100%;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "a"
+            "b"
+            ;
+
+            .text-1{
+                grid-area: a;
+
+                h1{
+                    text-transform: uppercase;
+                    font-size: 2.5rem;
+                    font-weight: 400;
+                }
+            }
+
+            .text-2{
+                grid-area: b;
+
+                p{
+                    font-family: monospace;
+                    line-height: 1.5;
+                    font-size: 1.2rem;
+                    opacity: 0.8;
+                }
+            }
+
+        }
+
+        .mid-content{
+            width: 100%;
+            gap: 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "c-1"
+            "c-2"
+            "c-3"
+            "c-4"
+            ;
+
+            .card{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: .8rem;
+
+
+                .text{
+                    width: 100%;
+
+                    h1{
+                        text-transform: uppercase;
+                        font-weight: 400;
+                        font-size: 1.8rem;
+                    }
+                }
+
+                .image{
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                    
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .text-container{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    
+
+                    .top{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        text-transform: uppercase;
+                        
+                        .left{
+                            p{
+                                font-family: monospace;
+                                font-size: 1rem;
+                                letter-spacing: .1rem;
+
+                            }
+                        }
+
+                        .right{
+                            display: flex;
+                            gap: 0.8rem;
+                            i{
+                                opacity: 0.6;
+                                font-size: 1.1rem;
+                            }
+                        }
+                        
+                    }
+
+                    .bottom{
+                        width: 100%;
+
+                        p{
+                            width: 100%;
+                            font-family: monospace;
+                            font-size: 1.1rem;
+                            line-height: 1.5;
+                            opacity: 0.6;
+                        }
+                    }
+                }
+            }
+
+            .card-1{
+                grid-area: c-1;
+            }
+            .card-2{
+                grid-area: c-2;
+            }
+            .card-3{
+                grid-area: c-3;
+            }
+            .card-2{
+                grid-area: c-2;
+            }
+        }
+
+        .bottom-content{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            grid-template-areas: "b-1";
+
+            .bot-container{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .container{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    text-transform: uppercase;
+
+                    .text{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.5rem;
+
+                        p{
+                            font-family: monospace;
+                            font-size: 0.9rem;
+                        }
+
+                        h1{
+                            font-size: 2.5rem;
+                            font-weight: 400;
+                            line-height: 1;
+                        }
+                    }
+
+                    .btn{
+                        width: 100%;
+                        display: flex;
+                        gap: 1rem;
+                        align-items: center;
+
+                        .arrow{
+                            background-color: black;
+                            color: white;
+                            border: 1px solid black;
+                            border-radius: 50%;
+                            padding: 0.4rem 0.5rem;
+
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        .bottom-content{
+            grid-area: b-1;
+        }
+    }
+
+    .view-7{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        padding: 1.5rem;
+        gap: 2rem;
+        text-transform: uppercase;
+        
+
+        .image{
+            width: 100%;
+            margin-top: 2rem;
+            img{
+                width: 100%;
+            }
+        }
+        
+        .text{
+            width: 100%;
+            text-align: center;
+            
+            p{
+                color: white;
+                font-size: 2.5rem;
+                font-weight: 300;
+                letter-spacing: 0.1rem;
+                line-height: 1;
+
+            }
+        }
+
+        .btn{
+            background-color: white;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid white;
+            border-radius: 2rem;
+            padding: 0.3rem 1rem;
+            letter-spacing: 0.1rem;
+            
+            .about{
+                p{
+                    font-family: monospace;
+                    font-size: 1rem;
+                }
+            }
+
+            .arrow{
+                i{
+                    font-size: 1rem;
+                }
+            }
+        }
+
+
+
+    }
+
+    
+    .seprate{
+        height: 1px;
+        background-color: rgb(111, 108, 114);
+    }
+
+    .view-8{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "c-1"
+        "c-2"
+        "c-3"
+        "c-4"
+        ;
+        background-color: black;
+        gap: 2rem;
+        padding: 1.5rem;
+        color: white;
+
+        .card{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-transform: uppercase;
+
+            .text{
+                width: 100%;
+                h1{
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    letter-spacing: 0.1rem;
+                }
+
+                
+            }
+            
+            .links{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                
+                a{
+                    color: white;
+                    text-decoration: none;
+                    font-family: monospace;
+                    font-size: 1rem;
+                    letter-spacing: .1rem;
+                }
+            }
+
+            .btn{
+                width: fit-content;
+                background-color: #FFFFFF;
+                color: black;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                border: 1px solid white;
+                border-radius: 2rem;
+                padding: 0.3rem 1rem;
+                letter-spacing: 0.1rem;
+                
+                .about{
+                    p{
+                        font-family: monospace;
+                        font-size: 1rem;
+                    }
+                }
+    
+                .arrow{
+                    i{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        .card-1{
+            width: 100%;
+            display: flex;
+            grid-area: c-1;
+            .links{
+                width: 100%;
+                
+                .l-1, .l-2, .l-3{
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    i{
+                        background-color: white;
+                        color: gray;
+                        padding: 0.3rem .3rem;
+                        border: 1px solid white;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+
+        .card-2{
+            grid-area: c-2;
+        }
+        .card-3{
+            grid-area: c-3;
+        }
+        .card-4{
+            grid-area: c-4;
+        }
+    }
 }
+
+
+
 
 
 @media (min-width:768px){
     main{
-        gap: 4rem;
+        
+
+        .view-1{
+            padding: 3rem;
+            gap: 4rem;
+        }
+
+        .view-2{
+            padding: 3rem;
+            gap: 4rem;
+        }
         
 
         .view-3{
             padding: 3rem;
+            gap: 4rem;
             .left{
 
                 .grid-container{
@@ -456,13 +910,79 @@ main{
                 }
             }
         }
+
+        .view-4{
+            padding: 3rem;
+            gap: 4rem;
+        }
+
+        .view-5{
+            padding: 3rem;
+            gap: 4rem;
+        }
+
+        .view-6{
+            padding: 3rem;
+            gap: 4rem;
+            .Top-content{
+                
+            }
+            .mid-content{
+                gap: 2rem;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 
+                "c-1 c-2"
+                "c-3 c-4"
+                ;
+            }
+
+            .bottom-content{
+
+                .bot-container{
+
+                    
+                    .container{
+                        .text{
+                            
+                            h1{
+                                font-size: 3.2rem;
+                                font-weight: 400;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+        .view-7{
+            padding: 3rem;
+            gap: 4rem;
+        }
+
+        .view-8{
+            padding: 3rem;
+            gap: 4rem;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "c-1 c-2"
+            "c-3 c-4"
+            ;
+
+            .card-1{
+                .links{
+                    margin-top: auto;
+                }
+            }
+        }
+
+
     }
 }
 
 
 @media (min-width:1000px) {
     main{
-        gap: 4rem;
 
         .view-1{
             gap: 4rem;
@@ -552,7 +1072,7 @@ main{
         .view-3{
             width: 100%;
             flex-direction: row;
-            gap: 3rem;
+            gap: 4rem;
             padding: 3rem;
 
             .right{
@@ -577,7 +1097,7 @@ main{
 
         .view-4{
             padding: 3rem;
-            gap: 3rem;
+            gap: 4rem;
 
             .img-container{
                 .top,.bottom{
@@ -618,6 +1138,124 @@ main{
                 .bottom{
                     flex-direction: row-reverse;
                 }
+            }
+        }
+
+        .view-5{
+            gap: 4rem;
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: 0.50fr 1fr;
+            grid-template-areas: ". a";
+
+            .content{
+                grid-area: a;
+                gap: 4rem;
+
+                .client{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: ". b";
+
+                    .img-a{
+                        grid-area: b;
+                    }
+                }
+
+                .text{
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .date{
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 2rem;
+
+                        h1{
+                            font-size: 2rem;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+
+        .view-6{
+            padding: 3rem;
+            gap: 4rem;
+            .Top-content{
+                align-items: center;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "a b";
+
+                .text-1{
+
+                    h1{
+                        font-size: 8rem;
+                        font-weight: 300;
+
+                    }
+                }
+                
+            }
+            .mid-content{
+                gap: 4rem;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-areas: 
+                "c-1 c-2 c-3 c-4"
+                ;
+            }
+
+            .bottom-content{
+                width: 100%;
+                display: grid;
+                gap: 4rem;
+                grid-template-columns: 0.9fr 1fr;
+                grid-template-areas: ". b-1";
+
+                .bot-container{
+                    width: 100%;
+                    .container{
+                        .text{
+                            width: 100%;
+                            h1{
+                                width: 100%;
+                                font-size: 5.5rem;
+                                line-height: 0.9;
+                                font-weight: 300;
+                            }
+                        }
+                        
+                    }
+                }
+
+                
+            }
+
+            .bottom-content{
+                grid-area: b-1;
+            }
+        }
+
+        .view-7{
+            gap: 4rem;
+            padding: 3rem;
+        }
+
+        .view-8{
+            gap: 4rem;
+            padding: 3rem;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+            "c-1 c-2 c-3 c-4"
+            ;
+
+            .card-1{
+                .links{
+                    margin-top: auto;
+                }
+
             }
         }
     }
