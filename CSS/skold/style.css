@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 html, body {
@@ -10,12 +11,66 @@ html, body {
   height: 100%;
 }
 
+@keyframes move {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0%;
+  }
+  100% {
+    width: 0%;
+    left: 100%;
+  }
+}
 main {
   width: 100%;
 }
 main .view-1 {
   width: 100%;
   border-bottom: 1px solid black;
+}
+main .view-1 .top {
+  width: 100%;
+  background-color: #EBFB48;
+  border-bottom: 1px solid black;
+}
+main .view-1 .top .animation {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+main .view-1 .top .animation .text {
+  position: relative;
+  z-index: 1;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0.5rem;
+  animation: marquee 20s linear infinite both;
+}
+main .view-1 .top .animation .text p {
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+  letter-spacing: 0.1rem;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 main .view-1 nav {
   width: 100%;
@@ -56,6 +111,29 @@ main .view-1 nav .links .menu a {
   color: black;
   text-decoration: none;
 }
+main .view-1 nav .links .menu a {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+main .view-1 nav .links .menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  width: 0%;
+  height: 1.5px;
+}
+main .view-1 nav .links .menu a:hover::after {
+  animation-name: move;
+  animation-duration: 0.5s;
+}
 main .view-1 nav .links .cart {
   font-family: monospace;
   text-transform: uppercase;
@@ -68,15 +146,40 @@ main .view-1 nav .links .btn {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-left: 1px solid black;
+  position: relative;
+  transition: 0.3s ease all;
+  z-index: 1;
 }
 main .view-1 nav .links .btn button {
   background-color: transparent;
-  color: white;
+  color: rgb(253, 253, 253);
   border: transparent;
   white-space: nowrap;
   padding: 0.5rem 1rem;
   text-transform: uppercase;
+  height: 6rem;
   letter-spacing: 0.1rem;
+}
+main .view-1 nav .links .btn ::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  background-color: #EBFB48;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scalex(0);
+  transition: transform 0.3s ease;
+  transition: 0.3s ease all;
+  z-index: -1;
+}
+main .view-1 nav .links .btn :hover::after {
+  transform: scaleX(0.9);
+}
+main .view-1 nav .links .btn :hover {
+  color: black;
 }
 main .view-2 {
   width: 100%;
@@ -112,11 +215,14 @@ main .view-2 .scroll {
   align-items: center;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  position: relative;
 }
 main .view-2 .scroll span {
   font-size: 0.8rem;
   text-transform: uppercase;
   padding: 0.7rem;
+  white-space: nowrap;
+  position: relative;
 }
 main .view-2 .bottom {
   width: 100%;
@@ -300,6 +406,7 @@ main .view-5 .text {
   padding: 1.5rem;
 }
 main .view-5 .text h1 {
+  text-align: center;
   letter-spacing: 0.11rem;
   font-size: 1.8rem;
 }
@@ -346,8 +453,6 @@ main .view-5 .grid-container .card .image .overlay {
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
 }
 main .view-5 .grid-container .card-1 {
   grid-area: c-1;
@@ -891,13 +996,12 @@ main .view-11 {
   display: flex;
   flex-direction: column;
   border-top: 1px solid black;
-  margin-top: 3rem;
 }
 main .view-11 .top {
   border-bottom: 1px solid black;
 }
 main .view-11 .top .text {
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex;
   justify-content: center;
 }
@@ -984,11 +1088,27 @@ main .view-12 .card .links {
   gap: 1.5rem;
 }
 main .view-12 .card .links a {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
   color: rgb(0, 0, 0);
   text-decoration: none;
   font-family: monospace;
   font-size: 1rem;
   letter-spacing: 0.1rem;
+}
+main .view-12 .card .links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  width: 0%;
+  height: 1.5px;
+}
+main .view-12 .card .links a:hover::after {
+  animation-name: move;
+  animation-duration: 0.5s;
 }
 main .view-12 .card .btn {
   width: -moz-fit-content;
@@ -1170,9 +1290,9 @@ main .view-12 .card-4 {
     bottom: 0;
     left: 0;
     opacity: 0;
-    transform: translateY(20px);
-    transition: 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
+    transform: translateY(50px);
+    transition: 0.5s ease all;
+    transition: transform 0.5s ease;
   }
   main .view-5 .grid-container .image img:hover {
     transform: scale(1.1);
@@ -1291,6 +1411,12 @@ main .view-12 .card-4 {
     border-top: none;
     width: 50%;
     background-color: #E7E9ED;
+    height: 100vh;
+  }
+  main .view-8 .bottom img {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
   }
   main .view-9 {
     gap: 0;
@@ -1350,7 +1476,7 @@ main .view-12 .card-4 {
     height: -moz-fit-content;
     height: fit-content;
     margin-right: 5rem;
-    margin-top: auto;
+    margin-top: 10rem;
     justify-content: center;
   }
   main .view-10 .bottom .b-bottom button {
@@ -1373,13 +1499,19 @@ main .view-12 .card-4 {
     border-right: 1px solid black;
   }
   main .view-11 .bottom .card .image {
+    overflow: hidden;
     width: 100%;
     display: flex;
     justify-self: center;
+    border-bottom: 1px solid black;
   }
   main .view-11 .bottom .card .image img {
     width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: none;
+    transition: transform 0.5s;
+  }
+  main .view-11 .bottom .card .image img:hover {
+    transform: scale(1.1);
   }
   main .view-11 .bottom .card .text {
     padding: 1.5rem;
@@ -1412,7 +1544,7 @@ main .view-12 .card-4 {
   main .view-12 {
     width: 100%;
     gap: 4rem;
-    grid-template-columns: 1.25fr 1fr 1fr 1fr;
+    grid-template-columns: 1.1fr 1fr 1fr 1fr;
     grid-template-areas: "c-1 c-2 c-3 c-4";
   }
   main .view-12 .card-1 {
