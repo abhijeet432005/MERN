@@ -11,7 +11,7 @@
 
 
 
-//******************************************************************************
+//************************************************************************************************************************************
 
 // 2. log the datatype 
 
@@ -21,7 +21,7 @@
 // console.log(typeof(null))
 
 
-//******************************************************************************
+//************************************************************************************************************************************
 
 // 3. swap the vlaue of two variable
 
@@ -60,18 +60,83 @@
 // console.log(`a: ${a} , b: ${b}`);
 
 
-//******************************************************************************
+//************************************************************************************************************************************
 
 
-// use console.group()
+//4. use console.group()
 
 // console.group("Week Days")  // bydefault open 
-console.groupCollapsed("Week Days")
-    console.log("Monday")
-    console.log("Tuesday")
-    console.log("Wednesday")
-    console.log("Thursday")
-    console.log("Friday")
-    console.log("Saturday")
-    console.log("Sunday")
-console.groupEnd()
+// console.groupCollapsed("Week Days")
+//     console.log("Monday")
+//     console.log("Tuesday")
+//     console.log("Wednesday")
+//     console.log("Thursday")
+//     console.log("Friday")
+//     console.log("Saturday")
+//     console.log("Sunday")
+// console.groupEnd()
+
+
+
+
+//************************************************************************************************************************************
+
+
+// 6. Declare a const object, modify its properties, and log the update object
+
+// Imp: const variable can be update but it can't be reassign 
+
+// const obj = {
+//     name: 'abhi',
+//     age: '22',
+//     email: 'test@test.com'
+// };
+
+// Object.freeze(obj);  // this function helps to prevent to update the value
+
+// obj.age = 20;
+// obj.email = 'huihui'
+
+
+//************************************************************************************************************************************
+
+// 7. convert the string into number in different ways
+
+// // console.log(Number('50'))
+// console.log(parseInt('50'))
+// console.log(+'50')
+
+
+//************************************************************************************************************************************
+
+// 8. check if "JavaScript" contains "Script" without using .include()
+
+// let str = "JavaScript"
+// console.log(str.includes("Script"))
+
+// if (str.search("Script") === -1){
+//     console.log("False")
+// }
+
+
+// if (str.indexOf("Script") === -1){
+//     console.log("False")
+// }
+
+// else{
+//     console.log("True")
+// }
+
+
+
+var x = Number(prompt("Enter the number"));
+var sum, remainder;
+sum = 0;
+
+while(x != 0){
+    remainder = x % 10;
+    sum = sum + remainder;
+    x = parseInt(x/10);
+}
+
+console.log(sum);
