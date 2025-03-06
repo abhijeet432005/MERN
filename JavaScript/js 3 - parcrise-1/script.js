@@ -111,21 +111,21 @@
 
 // 8. check if "JavaScript" contains "Script" without using .include()
 
-// let str = "JavaScript"
-// console.log(str.includes("Script"))
+let str = "JavaScript"
+console.log(str.includes("Script"))
 
-// if (str.search("Script") === -1){
-//     console.log("False")
-// }
+if (str.search("Script") === -1){
+    console.log("False")
+}
 
 
-// if (str.indexOf("Script") === -1){
-//     console.log("False")
-// }
+if (str.indexOf("Script") === -1){
+    console.log("False")
+}
 
-// else{
-//     console.log("True")
-// }
+else{
+    console.log("True")
+}
 
 
 
@@ -134,9 +134,9 @@ var sum, remainder;
 sum = 0;
 
 while(x != 0){
-    remainder = x % 10;
+    remainder = x % 10;  
     sum = sum + remainder;
     x = parseInt(x/10);
 }
 
-console.log(sum);
+console.log(sum); 
