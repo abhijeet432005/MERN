@@ -86,25 +86,25 @@
 
 // Imp: const variable can be update but it can't be reassign 
 
-// const obj = {
-//     name: 'abhi',
-//     age: '22',
-//     email: 'test@test.com'
-// };
+const obj = {
+    name: 'abhi',
+    age: '22',
+    email: 'test@test.com'
+};
 
-// Object.freeze(obj);  // this function helps to prevent to update the value
+Object.freeze(obj);  // this function helps to prevent to update the value
 
-// obj.age = 20;
-// obj.email = 'huihui'
+obj.age = 20;
+obj.email = 'huihui'
 
 
 //************************************************************************************************************************************
 
 // 7. convert the string into number in different ways
 
-// // console.log(Number('50'))
-// console.log(parseInt('50'))
-// console.log(+'50')
+// console.log(Number('50'))
+console.log(parseInt('50'))
+console.log(+'50')
 
 
 //************************************************************************************************************************************
