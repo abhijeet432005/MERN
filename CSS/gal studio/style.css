@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  background-color: #FDF9EC;
+  width: 100%;
+}
+main .view-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+main .view-1 nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .view-1 nav .logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .view-1 nav .logo h1 {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.05rem;
+}
+main .view-1 nav .links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  display: none;
+}
+main .view-1 nav .links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  background-color: #FAEBC5;
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+  z-index: 1;
+  transition: 0.3s all;
+}
+main .view-1 nav .links a:nth-child(1):hover {
+  background-color: #FEADD2;
+}
+main .view-1 nav .links a:nth-child(2):hover {
+  background-color: #D8D800;
+}
+main .view-1 nav .links a:nth-child(3):hover {
+  background-color: #FFDF2B;
+}
+main .view-1 nav .links a:nth-child(4):hover {
+  background-color: #EDBBF9;
+}
+main .view-1 nav .links a:nth-child(5):hover {
+  background-color: #FFBE81;
+}
+main .view-1 .design {
+  display: none;
+  width: 100%;
+}
+main .view-1 .design img {
+  width: 100%;
+}
+main .view-1 .hero {
+  width: 100%;
+  margin-top: 1.6rem;
+  padding: 1.5rem;
+  background-color: #F889E7;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+main .view-1 .hero .left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  z-index: 9999;
+}
+main .view-1 .hero .left .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view-1 .hero .left .text h1 {
+  width: 100%;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.1rem;
+}
+main .view-1 .hero .left .text p {
+  width: 80%;
+  font-size: 1rem;
+  font-weight: 400;
+}
+main .view-1 .hero .left .btn {
+  width: 100%;
+  display: flex;
+}
+main .view-1 .hero .left .btn button {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+main .view-1 .hero .right {
+  width: 100%;
+  position: absolute;
+  right: -50vw;
+  bottom: -10vh;
+}
+main .view-1 .hero .right img {
+  width: 60%;
+  aspect-ratio: 1/1;
+}
+main .view-1 .hero-2 {
+  width: 100%;
+}
+main .view-1 .hero-2 img {
+  border-radius: 1rem;
+  width: 100%;
+}
+main .view-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+main .view-2 .marquee {
+  background-color: #D8D800;
+  aspect-ratio: 16/1;
+  border-radius: 1rem;
+  width: 100%;
+  display: flex;
+}
+main .view-2 .marquee .animate {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  gap: 2rem;
+}
+main .view-2 .marquee .animate .image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0 1.5rem;
+  animation: marquee 10s linear infinite both;
+}
+main .view-2 .marquee .animate .image img {
+  height: 4rem;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (min-width: 768px) {
+  main .view-1 {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  main .view-1 nav .logo {
+    display: none;
+  }
+  main .view-1 nav .links {
+    display: inline-flex;
+  }
+  main .view-1 nav .menu {
+    display: none;
+  }
+  main .view-1 .design {
+    display: block;
+  }
+  main .view-1 .hero {
+    width: 100%;
+    border-radius: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  main .view-1 .hero .left {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  main .view-1 .hero .left .text {
+    width: 100%;
+  }
+  main .view-1 .hero .left .text h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  main .view-1 .hero .left .text p {
+    width: 90%;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  main .view-1 .hero .left .btn button {
+    font-size: 1.2rem;
+    padding: 0.8rem 1rem;
+  }
+  main .view-1 .hero .right {
+    width: 100%;
+    position: absolute;
+    bottom: -25vh;
+  }
+  main .view-1 .hero .right img {
+    width: 60%;
+  }
+  main .view-1 .hero-2 {
+    width: 100%;
+  }
+  main .view-1 .hero-2 img {
+    border-radius: 1.5rem;
+    width: 100%;
+    aspect-ratio: 16/5;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media (min-width: 1080px) {
+  main .view-1 .hero .left .text h1 {
+    width: 70%;
+    font-size: 3.5rem;
+    line-height: 1;
+  }
+  main .view-1 .hero .left .text p {
+    width: 60%;
+  }
+  main .view-1 .hero .right {
+    right: -70vw;
+  }
+  main .view-1 .hero .right img {
+    width: 40%;
+  }
+}/*# sourceMappingURL=style.css.map */

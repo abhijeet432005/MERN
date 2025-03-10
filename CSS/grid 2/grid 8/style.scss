@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+
+}
+
+main{
+    width: 100%;
+    padding: 1rem;
+
+    .container{
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+
+        .card{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border: 8px solid rgb(241, 241, 241);
+            border-radius: 2rem;
+            outline: 2px solid red;
+            
+            img{
+                width: 100%;
+                aspect-ratio: 16/9;
+                border: 1px solid white;
+                border-radius: 2rem;
+            }
+        }
+    }
+}
+
+@media (min-width:768px) {
+    main{
+        .container{
+            grid-template-columns: repeat(2, 400px);
+            grid-template-areas:
+            "a b"
+            "c d"
+            "e f"
+            "g h"
+            "i j" 
+            ;
+
+            .card-1{
+                grid-area: a;
+            }
+            .card-2{
+                grid-area: b;
+            }
+            .card-3{
+                grid-area: c;
+            }
+            .card-4{
+                grid-area: d;
+            }
+            .card-5{
+                grid-area: e;
+            }
+            .card-6{
+                grid-area: f;
+            }
+            .card-7{
+                grid-area: g;
+            }
+            .card-8{
+                grid-area: h;
+            }
+            .card-9{
+                grid-area: i;
+            }
+            .card-10{
+                grid-area: j;
+            }
+
+        }
+    }
+    
+}
+
+
+@media (min-width:1024px) {
+    main{
+        .container{
+            grid-template-columns: repeat(5, 200px);
+            grid-template-areas:
+            "a a b c c"
+            "d e e f g"
+            "h h i i j" 
+            ;
+
+            
+        }
+    }
+}

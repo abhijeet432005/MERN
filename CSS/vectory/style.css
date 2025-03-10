@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+main .view-3 {
+  width: 100%;
+}
+main .view-3 .service {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-areas: "l r";
+  height: 1000px;
+}
+main .view-3 .service .service-l {
+  grid-area: l;
+  height: auto;
+  position: sticky;
+  top: 0;
+  height: auto;
+}
+main .view-3 .service .service-l .service-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 12rem;
+  position: sticky;
+  top: 10%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 14rem;
+}
+main .view-3 .service .service-l .service-wrapper .serv_num {
+  font-size: 12rem;
+  scroll-snap-type: start;
+  height: 14rem;
+  align-items: center;
+  justify-content: center;
+}
+main .view-3 .service .service-r {
+  grid-area: r;
+  width: 100%;
+  display: grid;
+  grid-row-gap: 5rem;
+  grid-template-columns: 1fr;
+}
+main .view-3 .service .service-r .service-content {
+  width: 100%;
+}
+main .view-3 .service .service-r .service-content .text {
+  width: 100%;
+}
+main .view-3 .service .service-r .service-content .text :nth-child(1) {
+  font-size: 2rem;
+}/*# sourceMappingURL=style.css.map */

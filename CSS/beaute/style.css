@@ -156,69 +156,32 @@ main .view-3 .bottom .marquee .card .image-3 {
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
   }
   main .view-2 .container {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     gap: 2rem;
-    padding: 2rem 0 2rem 8rem;
-    perspective: 1000px;
+    align-items: center;
+    flex-direction: column;
   }
   main .view-2 .container .card {
     width: 100%;
     display: flex;
-    gap: 3rem;
     align-items: center;
+    justify-content: center;
+    gap: 3rem;
   }
-  main .view-2 .container .card .left h1 {
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    position: relative;
-    color: #8F8F8C;
+  main .view-2 .container .card img {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 10rem;
+    display: flex;
+    flex: 1;
   }
-  main .view-2 .container .card .left h1::after {
-    width: 0%;
-    position: absolute;
-    content: "";
-    height: 1.2px;
-    background-color: black;
-    bottom: 0;
-    left: 0;
-  }
-  main .view-2 .container .card .left h1:hover::after {
-    animation: line 0.6s ease;
-  }
-  main .view-2 .container .card .left h1:hover {
-    color: black;
-  }
-  @keyframes line {
-    0% {
-      width: 0;
-      left: 0;
-    }
-    50% {
-      width: 100%;
-      left: 0%;
-    }
-    100% {
-      width: 0%;
-      left: 100%;
-    }
-  }
-  main .view-2 .container .card .left:hover + .right {
-    opacity: 1;
-  }
-  main .view-2 .container .card .right {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  main .view-2 .container .card .right img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 2rem;
+  main .view-2 .container .card img:hover {
+    flex: 0;
   }
   main .view-3 {
     flex-direction: row;

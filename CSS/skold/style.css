@@ -281,7 +281,7 @@ main .view-3 .marquee .animate .image :nth-child(6) {
 }
 @keyframes marquee {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-100%);
@@ -501,7 +501,6 @@ main .view-6 .top .text :nth-child(3) {
   display: none;
 }
 main .view-6 .bottom {
-  width: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;

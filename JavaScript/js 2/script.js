@@ -14,7 +14,7 @@
 //**********************************************************************************************
 
 
-// replace -> this will not change in original string , it makes a copy of that string than changes and it only replace first occurence of character 
+// replace -> it will not change in original string , it makes a copy of that string than changes and it only replace first occurence of character 
 
 // let x = "Hello World";
 // console.log(x.replace('o', 's'))

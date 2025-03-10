@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size: 5rem;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+main{
+    padding: 2rem;
+    width: 100%;
+    
+    .container{
+        width: 100%;
+        display: grid;
+        gap: 1rem;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        // grid-template-columns: 100px 180px 200px;
+
+        // grid-template-rows: 100px 180px 150px;
+        grid-template-areas: 
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        // "a a b"
+        // "a a e"
+        // "c d e"
+        ;
+
+
+        .item{
+            background-color: rgb(169, 30, 30);
+            color: white;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 1rem;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                aspect-ratio: 16/9;
+                object-position: bottom;
+            }
+        }
+
+        .item-1{
+            grid-area: a;
+        }
+        .item-2{
+            grid-area: b;
+        }
+        .item-3{
+            grid-area: c;
+        }
+        .item-4{
+            grid-area: d;
+        }
+        .item-5{
+            grid-area: e;
+        }
+    }
+}
+
+@media (min-width:768px) {
+    main{
+        .container{
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            grid-template-areas:
+            "a a b" 
+            "c d e" 
+            ;
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    main{
+        .container{
+            grid-template-columns: 150px 220px 250px;
+
+            grid-template-rows: 100px 150px 100px;
+            grid-template-areas:
+            "a a b" 
+            "a a e" 
+            "c d e" 
+            ;
+
+            .item{
+                img{
+                    aspect-ratio: 4/3;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
