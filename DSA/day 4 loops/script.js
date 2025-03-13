@@ -1,3 +1,4 @@
+
 // 1. Accept an integer and print hello world n times
 
 // let x = Number(prompt("Enter the number "));
@@ -78,3 +79,95 @@
 
 
 // 6. Factorial of a number
+
+// let x = Number(prompt("Enter the number"));
+// let fact = 1;
+
+// for(let i = x; i > 0; i--){
+//     fact = fact * i;
+
+// }
+
+// console.log(fact)
+
+
+
+
+// *****************************************************************************************************************************
+// *****************************************************************************************************************************
+// *****************************************************************************************************************************
+
+
+
+// 7. Print all the sum of even & odd numbers in a range seperately
+
+// let x = Number(prompt('Entr the number'));
+
+// let even = 0;
+// let odd = 0;
+
+// for(let i = 1; i <= x; i++){
+
+//     if(i % 2 == 0){
+//         even = even + i;
+//     }
+
+//     else odd += i;
+// }
+
+// console.log(`even : ${even} odd : ${odd}`)
+
+
+
+
+// *****************************************************************************************************************************
+// *****************************************************************************************************************************
+// *****************************************************************************************************************************
+
+
+// 8. Print all the factor of a number 
+
+// let x = Number(prompt('Enter the number'));
+
+// for(let i = 1; i <= x/2; i++){
+//     if(x % i == 0){
+//         console.log(i);
+//     }
+// }
+// console.log(x);
+
+
+
+
+// *****************************************************************************************************************************
+// *****************************************************************************************************************************
+// *****************************************************************************************************************************
+
+
+// 9. check number is prime or not
+
+// let x = Number(prompt("Enter the number"));
+// let isPrime = true;
+
+// for(let i = 2; i < x/2; i++){
+//     if(x % i == 0) {
+//         isPrime = false;
+//         break
+//     }
+    
+// };
+// isPrime ? console.log('prime'): console.log('not prime');
+
+// let isPrime = isPrimefun(x);
+// isPrime ? console.log('prime'): console.log('not prime');
+
+// function isPrimefun(n){
+//     if(x <= 1) return false;
+//     if(n == 2) return true;
+//     if(n % 2 == 0) return false;
+//     for(let i = 3; i <= Math.floor(Math.sqrt(n)); i += 2){
+//         if(n % i == 0) return false;
+//     };
+//     return true
+
+// }
