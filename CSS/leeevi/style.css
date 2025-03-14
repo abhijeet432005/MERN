@@ -487,7 +487,7 @@ main .main-sec .view-6 .bottom .bot-container .card-4 .text-cont p {
   text-transform: uppercase;
 }
 main .main-sec .view-6 .bottom .bot-container .card-4 .text-cont h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   width: 80%;
   font-weight: 400;
   line-height: 1.2;
@@ -1127,6 +1127,9 @@ main .fotter .right .card .btn button:hover {
   }
   main .main-sec .view-6 .bottom .top-container img {
     width: 100%;
+  }
+  main .main-sec .view-6 .bottom .bot-container .card-4 .text-cont h1 {
+    font-size: 3rem;
   }
   main .main-sec .view-7 {
     margin-top: 4rem;
