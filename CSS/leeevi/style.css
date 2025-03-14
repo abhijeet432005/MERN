@@ -206,7 +206,13 @@ main .main-sec .view-2 .bottom .bot-container {
   flex-direction: column;
   gap: 1rem;
 }
-main .main-sec .view-2 .bottom .bot-container .card {
+main .main-sec .view-2 .bottom .bot-container .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .main-sec .view-2 .bottom .bot-container .container .card {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -219,29 +225,30 @@ main .main-sec .view-2 .bottom .bot-container .card {
   border-radius: 1rem;
   box-shadow: 0 -10px #fff;
 }
-main .main-sec .view-2 .bottom .bot-container .card .image {
+main .main-sec .view-2 .bottom .bot-container .container .card .image {
   width: 100%;
 }
-main .main-sec .view-2 .bottom .bot-container .card .image img {
+main .main-sec .view-2 .bottom .bot-container .container .card .image img {
   height: 4rem;
 }
-main .main-sec .view-2 .bottom .bot-container .card .text {
+main .main-sec .view-2 .bottom .bot-container .container .card .text {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-main .main-sec .view-2 .bottom .bot-container .card .text h1 {
+main .main-sec .view-2 .bottom .bot-container .container .card .text h1 {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 1.4rem;
 }
-main .main-sec .view-2 .bottom .bot-container .card .text p {
+main .main-sec .view-2 .bottom .bot-container .container .card .text p {
   font-size: 1.1rem;
   font-weight: 300;
   line-height: 1.5;
 }
 main .main-sec .view-2 .bottom .bot-container .btn {
+  position: static;
   background-color: #f2ff93;
   display: flex;
   justify-content: center;
@@ -463,21 +470,351 @@ main .main-sec .view-6 .bottom .bot-container .card .text p {
   font-weight: 300;
   line-height: 1.5;
 }
-main .main-sec .view-6 .bottom .bot-container .btn {
-  background-color: #f2ff93;
+main .main-sec .view-6 .bottom .bot-container .card-4 {
+  background-color: #f3fda7;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  z-index: 999;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
   box-shadow: 0 -10px #fff;
 }
-main .main-sec .view-6 .bottom .bot-container .btn button {
+main .main-sec .view-6 .bottom .bot-container .card-4 .text-cont {
+  width: 100%;
+}
+main .main-sec .view-6 .bottom .bot-container .card-4 .text-cont p {
+  text-transform: uppercase;
+}
+main .main-sec .view-6 .bottom .bot-container .card-4 .text-cont h1 {
+  font-size: 3rem;
+  width: 80%;
+  font-weight: 400;
+  line-height: 1.2;
+}
+main .main-sec .view-6 .bottom .bot-container .card-4 .btn-cont {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  border-radius: 0.58rem;
+  margin-top: 2rem;
+}
+main .main-sec .view-6 .bottom .bot-container .card-4 .btn-cont button {
   background-color: transparent;
+  color: white;
   border: none;
   text-transform: uppercase;
-  padding: 0.8rem;
-  font-weight: 700;
-  font-size: 0.9rem;
+  padding: 1rem;
+  font-size: 1rem;
+}
+main .main-sec .view-7 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+main .main-sec .view-7 .card-1 {
+  background-image: url("./_home-testimonials-p-800.webp");
+  aspect-ratio: 1/1;
+  border-radius: 1rem;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 2rem;
+  color: white;
+}
+main .main-sec .view-7 .card-1 p {
+  font-family: monospace;
+  font-size: 1.2rem;
+}
+main .main-sec .view-7 .card-1 h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+main .main-sec .view-7 .container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+main .main-sec .view-7 .container .card-2, main .main-sec .view-7 .container .card-3, main .main-sec .view-7 .container .card-4 {
+  width: 100%;
+  background-color: #F4F4F4;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+main .main-sec .view-7 .container .card-2 .text, main .main-sec .view-7 .container .card-3 .text, main .main-sec .view-7 .container .card-4 .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .main-sec .view-7 .container .card-2 .text img, main .main-sec .view-7 .container .card-3 .text img, main .main-sec .view-7 .container .card-4 .text img {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 3rem;
+}
+main .main-sec .view-7 .container .card-2 .text h1, main .main-sec .view-7 .container .card-3 .text h1, main .main-sec .view-7 .container .card-4 .text h1 {
+  width: 100%;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+main .main-sec .view-7 .container .card-2 .text p, main .main-sec .view-7 .container .card-3 .text p, main .main-sec .view-7 .container .card-4 .text p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+main .main-sec .view-8 {
+  width: 100%;
+}
+main .main-sec .view-8 .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f3fda7;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+main .main-sec .view-8 .container .text {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .main-sec .view-8 .container .text .text-cont {
+  width: 100%;
+}
+main .main-sec .view-8 .container .text .text-cont p {
+  text-transform: uppercase;
+}
+main .main-sec .view-8 .container .text .text-cont h1 {
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+main .main-sec .view-8 .container .text .btn-cont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  border-radius: 0.58rem;
+}
+main .main-sec .view-8 .container .text .btn-cont button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  padding: 1rem;
+  font-size: 1rem;
+}
+main .main-sec .view-9 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+main .main-sec .view-9 .left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main .main-sec .view-9 .left .blog {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .main-sec .view-9 .left .blog h1 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+main .main-sec .view-9 .left .blog p {
+  font-size: 1.1rem;
+}
+main .main-sec .view-9 .left .cat {
+  display: none;
+}
+main .main-sec .view-9 .right {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+main .main-sec .view-9 .right .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .main-sec .view-9 .right .card .image {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+main .main-sec .view-9 .right .card .image img {
+  border-radius: 1rem;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .main-sec .view-9 .right .card .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .main-sec .view-9 .right .card .text h3 {
+  font-weight: 500;
+}
+main .main-sec .view-9 .right .card .text p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+main .fotter {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+main .fotter .left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .fotter .left .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .fotter .left .container .btn {
+  width: 100%;
+}
+main .fotter .left .container .btn button {
+  background-color: #f4f4f4;
+  padding: 0.3rem 1rem;
+  color: rgb(0, 0, 0);
+  border: none;
+  text-transform: uppercase;
   letter-spacing: 0.1rem;
+  position: relative;
+  z-index: 1;
+}
+main .fotter .left .container .btn button:after {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scaleY(0);
+  transition: transform 0.3 ease;
+  transition: 0.3s ease;
+  z-index: -1;
+}
+main .fotter .left .container .btn button:hover:after {
+  transform: scaleY(1);
+}
+main .fotter .left .container .btn button:hover {
+  color: black;
+}
+main .fotter .right {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+main .fotter .right .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .fotter .right .card .text {
+  width: 100%;
+}
+main .fotter .right .card .text h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+main .fotter .right .card .links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .fotter .right .card .links a {
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  position: relative;
+}
+main .fotter .right .card .links a:after {
+  position: absolute;
+  content: "";
+  background-color: black;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+main .fotter .right .card .links a:hover:after {
+  transform: scaleX(1);
+}
+main .fotter .right .card .btn {
+  width: 100%;
+}
+main .fotter .right .card .btn button {
+  background-color: black;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  position: relative;
+  z-index: 1;
+}
+main .fotter .right .card .btn button:after {
+  content: "";
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scaleY(0);
+  transition: transform 0.3 ease;
+  transition: 0.3s ease;
+  z-index: -1;
+}
+main .fotter .right .card .btn button:hover:after {
+  transform: scaleY(0.8);
+}
+main .fotter .right .card .btn button:hover {
+  color: black;
 }
 
 @media (min-width: 768px) {
@@ -527,8 +864,164 @@ main .main-sec .view-6 .bottom .bot-container .btn button {
   main .main-sec .view-6 .bottom .bot-container .card {
     padding: 2.5rem;
   }
+  main .main-sec .view-7 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  main .main-sec .view-7 .card-1 {
+    background-image: url("./_home-testimonials-p-800.webp");
+    aspect-ratio: 1/1;
+    border-radius: 1rem;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 2rem;
+    color: white;
+  }
+  main .main-sec .view-7 .card-1 p {
+    font-family: monospace;
+    font-size: 1.2rem;
+  }
+  main .main-sec .view-7 .card-1 h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+  main .main-sec .view-7 .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  main .main-sec .view-7 .container .card-2, main .main-sec .view-7 .container .card-3, main .main-sec .view-7 .container .card-4 {
+    width: 100%;
+    background-color: #F4F4F4;
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+  main .main-sec .view-7 .container .card-2 .text h1, main .main-sec .view-7 .container .card-3 .text h1, main .main-sec .view-7 .container .card-4 .text h1 {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  main .main-sec .view-7 .container .card-2 .text p, main .main-sec .view-7 .container .card-3 .text p, main .main-sec .view-7 .container .card-4 .text p {
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  main .main-sec .view-8 {
+    width: 100%;
+  }
+  main .main-sec .view-8 .container {
+    padding: 1.5rem;
+  }
+  main .main-sec .view-8 .container .text {
+    margin-top: 5rem;
+    flex-direction: row;
+    align-items: end;
+  }
+  main .main-sec .view-8 .container .text .text-cont h1 {
+    font-size: 4rem;
+  }
+  main .main-sec .view-8 .container .text .btn-cont {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main .main-sec .view-8 .container .text .btn-cont button {
+    white-space: nowrap;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main .main-sec .view-9 {
+    grid-template-columns: 0.5fr 1fr;
+  }
+  main .main-sec .view-9 .left {
+    gap: 2rem;
+  }
+  main .main-sec .view-9 .left .cat {
+    display: block;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  main .main-sec .view-9 .left .cat .btn button {
+    color: white;
+    background-color: #000000;
+    border: none;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.1rem;
+    position: relative;
+    z-index: 1;
+    border-radius: 2rem;
+  }
+  main .main-sec .view-9 .left .cat .btn button:after {
+    content: "";
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transition: 0.3s ease;
+    transition: transform 0.3s ease;
+    z-index: -1;
+    border-radius: 2rem;
+  }
+  main .main-sec .view-9 .left .cat .btn button:hover:after {
+    transform: scaleX(0.9);
+    border-radius: 2rem;
+  }
+  main .main-sec .view-9 .left .cat .btn button:hover {
+    color: rgb(0, 0, 0);
+  }
+  main .main-sec .view-9 .right {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "c-1 c-2" "c-3 c-4";
+  }
+  main .main-sec .view-9 .right .card-1 {
+    grid-area: c-1;
+  }
+  main .main-sec .view-9 .right .card-2 {
+    grid-area: c-2;
+  }
+  main .main-sec .view-9 .right .card-3 {
+    grid-area: c-3;
+  }
+  main .main-sec .view-9 .right .card-4 {
+    grid-area: c-4;
+  }
+  main .fotter .left .container {
+    flex-direction: row;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  main .fotter .right {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "c-1 c-2 c-3";
+  }
+  main .fotter .right .card-1 {
+    grid-area: c-1;
+  }
+  main .fotter .right .card-2 {
+    grid-area: c-2;
+  }
+  main .fotter .right .card-3 {
+    grid-area: c-3;
+  }
 }
-@media (min-width: 1020px) {
+@media (min-width: 1280px) {
   body {
     padding: 2rem;
   }
@@ -562,8 +1055,41 @@ main .main-sec .view-6 .bottom .bot-container .btn button {
   main .main-sec .view-2 .top :nth-child(5) {
     height: 2rem;
   }
+  main .main-sec .view-2 .bottom .top-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  main .main-sec .view-2 .bottom .top-container h1 {
+    font-size: 4rem;
+    width: 60%;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+  main .main-sec .view-2 .bottom .top-container :nth-child(1) {
+    text-transform: uppercase;
+    font-family: monospace;
+    font-size: 1rem;
+  }
+  main .main-sec .view-2 .bottom .top-container :nth-child(3) {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+    font-weight: 300;
+    width: 70%;
+  }
   main .main-sec .view-2 .bottom .bot-container .card {
     padding: 2.5rem;
+  }
+  main .main-sec .view-3 .bottom .card {
+    padding: 3rem;
+  }
+  main .main-sec .view-3 .bottom .card .text h1 {
+    font-size: 5rem;
+  }
+  main .main-sec .view-3 .bottom .card .text p {
+    font-size: 1.5rem;
   }
   main .main-sec .view-4 {
     grid-template-columns: 0.6fr 1fr;
@@ -579,9 +1105,16 @@ main .main-sec .view-6 .bottom .bot-container .btn button {
   }
   main .main-sec .view-4 .bottom p {
     font-size: 1.3rem;
+    -moz-columns: 2;
+         columns: 2;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
   }
   main .main-sec .view-5 .container {
     grid-template-columns: 0.6fr 1fr;
+  }
+  main .main-sec .view-6 {
+    margin-top: 4rem;
   }
   main .main-sec .view-6 .bottom {
     grid-template-columns: 1fr 0.5fr;
@@ -594,5 +1127,132 @@ main .main-sec .view-6 .bottom .bot-container .btn button {
   }
   main .main-sec .view-6 .bottom .top-container img {
     width: 100%;
+  }
+  main .main-sec .view-7 {
+    margin-top: 4rem;
+    grid-template-columns: 0.6fr 1fr;
+  }
+  main .main-sec .view-7 .card-1 h1 {
+    font-size: 3rem;
+    width: 70%;
+  }
+  main .main-sec .view-7 .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  main .main-sec .view-7 .container .card-2, main .main-sec .view-7 .container .card-3, main .main-sec .view-7 .container .card-4 {
+    width: 100%;
+    background-color: #F4F4F4;
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+  main .main-sec .view-7 .container .card-2 .text h1, main .main-sec .view-7 .container .card-3 .text h1, main .main-sec .view-7 .container .card-4 .text h1 {
+    width: 100%;
+    font-size: 1.75rem;
+    font-weight: 400;
+  }
+  main .main-sec .view-7 .container .card-2 .text p, main .main-sec .view-7 .container .card-3 .text p, main .main-sec .view-7 .container .card-4 .text p {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  main .main-sec .view-8 {
+    margin-top: 4rem;
+    width: 100%;
+  }
+  main .main-sec .view-8 .container {
+    padding: 2rem;
+  }
+  main .main-sec .view-8 .container .text {
+    margin-top: 8rem;
+    flex-direction: row;
+    align-items: end;
+  }
+  main .main-sec .view-8 .container .text .text-cont h1 {
+    font-size: 4rem;
+    width: 70%;
+  }
+  main .main-sec .view-8 .container .text .btn-cont {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main .main-sec .view-8 .container .text .btn-cont button {
+    white-space: nowrap;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main .main-sec .view-9 {
+    grid-template-columns: 0.5fr 1fr;
+  }
+  main .main-sec .view-9 .left {
+    gap: 2rem;
+  }
+  main .main-sec .view-9 .left .cat {
+    display: block;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  main .main-sec .view-9 .left .cat .btn button {
+    color: white;
+    background-color: #000000;
+    border: none;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.1rem;
+    position: relative;
+    z-index: 1;
+    border-radius: 2rem;
+  }
+  main .main-sec .view-9 .left .cat .btn button:after {
+    content: "";
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transition: 0.3s ease;
+    transition: transform 0.3s ease;
+    z-index: -1;
+    border-radius: 2rem;
+  }
+  main .main-sec .view-9 .left .cat .btn button:hover:after {
+    transform: scaleX(0.9);
+    border-radius: 2rem;
+  }
+  main .main-sec .view-9 .left .cat .btn button:hover {
+    color: rgb(0, 0, 0);
+  }
+  main .main-sec .view-9 .right {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "c-1 c-2" "c-3 c-4";
+  }
+  main .main-sec .view-9 .right .card-1 {
+    grid-area: c-1;
+  }
+  main .main-sec .view-9 .right .card-2 {
+    grid-area: c-2;
+  }
+  main .main-sec .view-9 .right .card-3 {
+    grid-area: c-3;
+  }
+  main .main-sec .view-9 .right .card-4 {
+    grid-area: c-4;
+  }
+  main .fotter {
+    grid-template-columns: 0.5fr 1fr;
+  }
+  main .fotter .left .container {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */
