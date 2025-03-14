@@ -6,10 +6,12 @@
 
 }
 
+
 html,body{
     width: 100%;
     height: 100%;
 }
+
 
 body{
     padding: 0.8rem;
@@ -966,6 +968,7 @@ main{
 
 
 @media (min-width:768px) {
+
     main{
         .main-sec{
 
@@ -1258,9 +1261,11 @@ main{
 
 
 @media (min-width: 1280px) {
+
     body{
         padding: 2rem;
     }
+
     main{
         .main-sec{
             padding: 3rem;
