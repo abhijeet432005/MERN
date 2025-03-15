@@ -125,15 +125,18 @@
 
 
 // let x = Number(prompt("Enter a range"));
-// let a= -1;
+// let a= 0;
 // let b = 1;
 // let c;
 
-// for(let i = 1; i <= x; i++){
+// if(x >= 1)console.log(a)
+// if(x >= 2)console.log(b)
+
+// for(let i = 2; i < x; i++){
 //     c = a + b;
+//     console.log(c)
 //     a = b;
 //     b = c;
-//     console.log(c)
 // }
 
 
@@ -269,16 +272,17 @@
 // 11. sum of even indexed fibonacci number
 
 // let x = Number(prompt("Enter a range"));
-// let a= -1;
+// let a= 0;
 // let b = 1;
 // let c;
-// let sum = 0
+// let sum = a;
 
-// for(let i = 1; i <= x*2; i++){
+// for(let i = 2; i <= x*2; i++){
 //     c = a + b;
 //     a = b;
 //     b = c;
-//     if(i % 2 == 0){
+
+//     if(i % 2 === 0){
 //         sum = sum + c
 //     }
 // }
