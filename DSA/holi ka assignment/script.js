@@ -157,9 +157,13 @@
 //     for(let num = 1; num <= limit; num++){
 //         let count = 0;
 
-//         for(let i = 1; i <= num; i++){
+//         for(let i = 1; i * i <= num; i++){
 //             if(num % i == 0){
 //                 count ++;
+
+//                 if(i !== num / i){
+//                     count++
+//                 }
 //             }
 
 //         }
@@ -276,6 +280,8 @@
 // let b = 1;
 // let c;
 // let sum = a;
+
+
 
 // for(let i = 2; i <= x*2; i++){
 //     c = a + b;
