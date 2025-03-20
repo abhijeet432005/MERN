@@ -1,7 +1,6 @@
 let prompt = require("prompt-sync")()
 
 
-
 // 1. create a dynamic array
 
 // let size = Number(prompt("Enter the size "))
