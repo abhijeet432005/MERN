@@ -85,7 +85,7 @@
 
 
 // if((Math.trunc(y) * Math.trunc(y)) === x){
-//     console.log('perfect square')
+//     console.log('perfect square') 
 // }
 
 // else console.log('not a perfect square')
@@ -389,6 +389,5 @@
 //     return monthday[month - 1];
 // }
 
-// let and = getMonthDays(month,year);
 
-// console.log(`Number of days : ${getMonthDays(month,year)}`)
+// console.log(`Number of days : ${getMonthDays(month,year)}`) 
