@@ -162,7 +162,7 @@
 // isPrime ? console.log('prime'): console.log('not prime');
 
 // function isPrimefun(n){
-//     if(x <= 1) return false;
+//     if(n <= 1) return false;
 //     if(n == 2) return true;
 //     if(n % 2 == 0) return false;
 //     for(let i = 3; i <= Math.floor(Math.sqrt(n)); i += 2){
@@ -292,22 +292,38 @@
 
 // 13. Strong number program
 
-let x = Number(prompt("Enter the number"));
+// let x = Number(prompt("Enter the number"));
 
-if( x == 0 || isNaN(x)){
-    console.log("Invalid input")
-}
+// if( x == 0 || isNaN(x)){
+//     console.log("Invalid input")
+// }
 
-let rem , sum = 0, y = x;
+// let rem , sum = 0, y = x;
 
-while(x > 0){
-    let fact = 1;
-    rem = x % 10;
-    for(let i = 1; i <= rem; i++){
-        fact = fact * i
-    }
-    sum = fact + sum;
-    x = Math.floor(x / 10)
-}
+// while(x > 0){
+//     let fact = 1;
+//     rem = x % 10;
+//     for(let i = 1; i <= rem; i++){
+//         fact = fact * i
+//     }
+//     sum = fact + sum;
+//     x = Math.floor(x / 10)
+// }
 
-sum === y ? console.log("strong number") : console.log("Not a strong number")
+// sum === y ? console.log("strong number") : console.log("Not a strong number")
+
+
+
+
+
+// 14. Armstrong number 
+
+// let x = Number(prompt("Enter the number"));
+// let rem, sum = 0, y = x;
+
+// while(x > 0){
+//     rem = x % 10;
+//     sum = sum + (rem * rem * rem);
+//     x = Math.floor(x / 10);
+// }
+// console.log((y === sum) ? "Armstrong number" : "Not a armstrong number")
