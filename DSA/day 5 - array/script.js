@@ -40,15 +40,39 @@ let prompt = require("prompt-sync")()
 
 // 3. maximum element of array element
 
-let arr = [10,3,6,80,40,5,60];
+// let arr = [10,3,6,80,40,5,60];
 
-let max = arr[0];
+// let max = arr[0];
 
-for(let i = 0; i < arr.length; i++){
+// for(let i = 0; i < arr.length; i++){
+//     if(arr[i] > max){
+//         max = arr[i]
+//     }
+
+// }
+
+// console.log(max);
+
+
+
+// *******************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
+
+// 4. Second max element 
+
+let arr = [26 , 6 , 74 , 48 , 84 , 79];
+let max = Math.max(arr[0], arr[1]);
+let Smax = Math.min(arr[0], arr[1]);
+
+for(let i = 2; i < arr.length; i++){
     if(arr[i] > max){
-        max = arr[i]
+        Smax = max;
+        max = arr[i];
     }
-
+    else if(arr[i] > Smax){
+        Smax = arr[i];
+    }
 }
 
-console.log(max);
+console.log(Smax)
