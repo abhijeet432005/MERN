@@ -61,18 +61,83 @@ let prompt = require("prompt-sync")()
 
 // 4. Second max element 
 
-let arr = [26 , 6 , 74 , 48 , 84 , 79];
-let max = Math.max(arr[0], arr[1]);
-let Smax = Math.min(arr[0], arr[1]);
+// let arr = [26 , 6 , 74 , 48 , 84 , 79];
+// let max = Math.max(arr[0], arr[1]);
+// let Smax = Math.min(arr[0], arr[1]);
 
-for(let i = 2; i < arr.length; i++){
-    if(arr[i] > max){
-        Smax = max;
-        max = arr[i];
+// for(let i = 2; i < arr.length; i++){
+//     if(arr[i] > max){
+//         Smax = max;
+//         max = arr[i];
+//     }
+//     else if(arr[i] > Smax){
+//         Smax = arr[i];
+//     }
+// }
+
+// console.log(Smax);
+
+
+
+
+// *******************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
+
+
+
+// 5. reverse the array 
+
+// Method - 1
+
+// let arr = [1,2,3,4,5,6];
+// let temp  = new Array(arr.length);
+// let i = 0;
+
+// for(let j = arr.length - 1; j >= 0; j--){
+//     temp[i] = arr[j];
+//     i++;
+// }
+// console.log(temp)
+
+
+// Method - 2
+
+// let arr = [1,2,3,4,5,6];
+// let i = 0; j = arr.length - 1;
+
+
+// while(i < j){
+//     let temp = arr[i]; 
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+//     j--;
+//     i++;
+// }
+// console.log(arr)
+
+
+
+
+// *******************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
+
+
+// 6. All Zero at left side and all One at right side
+
+let arr = [1,1,0,1,0,1,1,0,0];
+let j = 0, i = 0;
+
+while(i < arr.length){
+    if(arr[i] == 0){
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        j++;
     }
-    else if(arr[i] > Smax){
-        Smax = arr[i];
-    }
+    i++;
 }
 
-console.log(Smax)
+
+console.log(arr)
