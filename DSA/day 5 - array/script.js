@@ -61,6 +61,7 @@ let prompt = require("prompt-sync")()
 
 // 4. Second max element 
 
+// let arr = [10,10,10,10];
 // let arr = [26 , 6 , 74 , 48 , 84 , 79];
 // let max = Math.max(arr[0], arr[1]);
 // let Smax = Math.min(arr[0], arr[1]);
@@ -70,12 +71,19 @@ let prompt = require("prompt-sync")()
 //         Smax = max;
 //         max = arr[i];
 //     }
-//     else if(arr[i] > Smax){
+//     else if(arr[i] > Smax && arr[i] != max){
 //         Smax = arr[i];
 //     }
+
+// }
+// if(max == Smax){
+//     console.log("no Second max")
+// }
+// if(max > Smax){
+//     // console.log("no Second max")
+//     console.log(Smax);
 // }
 
-// console.log(Smax);
 
 
 
@@ -173,13 +181,113 @@ let prompt = require("prompt-sync")()
 
 // 8. Right rotation
 
-let arr = [1,2,3,4,5,6];
-let temp = arr[arr.length - 1];
+// let arr = [1,2,3,4,5,6];
+// let temp = arr[arr.length - 1];
 
-for(let i = arr.length - 1; i > 0; i--){
-    arr[i] = arr[i - 1];
+// for(let i = arr.length - 1; i > 0; i--){
+//     arr[i] = arr[i - 1];
+// }
+
+// arr[0] = temp;
+// console.log(arr);
+
+
+// *******************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
+
+
+// 9. Rotate element left k times
+
+// let arr = [1,2,3,4,5];
+// let k = 2;
+// k = k % arr.length;
+
+// for(let i = 0; i < k; i++){
+//     let temp = arr[0];
+//     for(let i = 0; i < arr.length -1; i++){
+//         arr[i] = arr[i + 1];
+//     }
+//     arr[arr.length - 1] = temp;
+// }
+
+// console.log(arr)
+
+
+// Optimized approach 
+
+// let arr = [1,2,3,4,5];
+// let temp = new Array(arr.length);
+// let k = 2;
+
+// for(let i = 0; i < arr.length; i++){
+//     temp[i] = arr[(i + k) % arr.length];
+// }
+// console.log(temp)
+
+// Optimized approach - 2
+
+// let arr = [1,2,3,4,5];
+// let k = Number(prompt("Enter the number"))
+// reverse(arr, 0, k - 1);
+// reverse(arr, k, arr.length - 1);
+// reverse(arr, 0, arr.length - 1);
+// console.log(arr)
+
+// function reverse(arr, i, j){
+//     while(i < j){
+//         let temp = arr[i];
+//         arr[i] = arr[j];
+//         arr[j] = temp
+//         i++;
+//         j--;
+//     }
+// }
+
+
+
+
+// *******************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
+
+// 10. Linear search
+
+
+
+// let arr = [1,2,3,4,5];
+// let target = Number(prompt("Enter the element "));
+// let index = -1;
+
+// for(let i = 0; i < arr.length; i++){
+//     if(arr[i] === target){
+//         index = i;
+//     }
+
+// }
+// if(index == -1) console.log("Element not found");
+// else console.log(`Element ${target} Found at ${index} index`)
+
+
+// ****************************************************************************************************
+// ****************************************************************************************************
+// ****************************************************************************************************
+
+let arr = [1,2,3,4,5,6,7,8,9];
+let target = Number(prompt("Enter the element "));
+
+if(search(arr, target) === -1) console.log("not found");
+else console.log("Element found")
+
+function search(arr, target){
+    let start = 0, end = arr.length - 1; 
+    while(start <= end){
+        let mid = Math.floor((start + end) / 2);
+
+        if(arr[mid] === target) return mid;
+        else if(arr[mid] > target) end = mid - 1;
+        else start = mid + 1;
+    }
+
+    return -1
 }
-
-arr[0] = temp;
-console.log(arr);
-
