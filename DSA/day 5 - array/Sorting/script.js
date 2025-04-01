@@ -27,22 +27,44 @@ let prompt = require("prompt-sync")()
 
 // 2. Selection Sort
 
+// let arr = [1,4,3,2,9,10];
+
+// for(let i = 0; i < arr.length - 1; i++){
+//     let small = i;
+
+//     for(let j = i + 1; j < arr.length; j++){
+//         if(arr[small] > arr[j]){
+//             small = j;
+//         }
+//     }
+
+//     if(i != small){
+//         let temp = arr[i];
+//         arr[i] = arr[small];
+//         arr[small] = temp;
+//     }
+// }
+
+// console.log(arr);
+
+
+// *******************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
+
+
+// 2. Insertion Sort
+
 let arr = [1,4,3,2,9,10];
 
-for(let i = 0; i < arr.length - 1; i++){
-    let small = i;
-
-    for(let j = i + 1; i < arr.length; j++){
-        if(arr[small] > arr[j]){
-            small = j;
-        }
+for(let i = 1; i < arr.length - 1; i++){
+    let key = arr[i];
+    let j = i - 1;
+    while(j >= 0 && arr[j] > key){
+        arr[j + 1] = arr[j];
+        j--
     }
-
-    if(i != small){
-        let temp = arr[i];
-        arr[i] = arr[small];
-        arr[small] = temp;
-    }
+    arr[j + 1] = key;
 }
 
 console.log(arr);
