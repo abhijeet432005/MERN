@@ -22,18 +22,22 @@
 var btn = document.querySelector('button')
 let h2 = document.querySelector('h2')
 
+
 let check = 0;
 
 btn.addEventListener('click', function(){
     if(check == 0){
         btn.innerHTML = 'REMOVE FERIND';
-        h2.innerHTML = "Let's Chat"
-        check = 1
+        h2.innerHTML = "Let's Chat";
+        check = 1;
+        console.log('Frendship hooo  gyi');
+        
     }
     else{
         btn.innerHTML = "ADD FERIND"
         h2.innerHTML = "Stranger"
-        check = 0
+        check = 0;
+        console.log('Frendship tutt gyi');
     }
 })
 
@@ -51,23 +55,23 @@ btn.addEventListener('click', function(){
 
 
 
-// // 1. Selection of Element
+// 1. Selection of Element
 
 // let h = document.querySelector('h1');
-// // console.log(h)
+// console.log(h)
 
 
-// // 2. Changing HTML 
+// 2. Changing HTML 
 
 // h.innerHTML = "vartman ankho ka dhoka hai"
 
 
-// // 3. Changing CSS 
+// 3. Changing CSS 
 
 // h.style.color = 'pink'
 // h.style.textTransform = 'uppercase'
 
-// // 4. Event Listener 
+// 4. Event Listener 
 
 // h.addEventListener('mousemove', function(){
 //     // console.log('hiiii')
