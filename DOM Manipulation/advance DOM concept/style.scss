@@ -72,16 +72,23 @@ html,body{
 main{
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
     
-
     .cursor{
-        width: 20px;
         height: 20px;
-        background-color: white;
+        width: 20px;
+        background-color: rgb(255, 255, 255);
         border-radius: 50%;
+        position: fixed; 
+        top: 0;
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.15s ease all;
+        mix-blend-mode: difference;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
     }
+
 
     .create-elem{
         width: 100%;
@@ -103,6 +110,7 @@ main{
     
         img{
             aspect-ratio: 3/4;
+            border-radius: 2rem;
         }
     
     }

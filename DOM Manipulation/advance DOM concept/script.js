@@ -10,23 +10,8 @@
 // h.setAttribute('id', 'heroin')
 
 
-// 1. image swap 
 
-let swap = document.querySelector('.btn-grad')
-let img1 = document.querySelector('.img1')
-let img2 = document.querySelector('.img2')
-
-
-swap.addEventListener('click', function(){
-    let img1src = img1.getAttribute('src')
-    let img2src = img2.getAttribute('src')
-
-    img1.setAttribute('src', img2src)
-    img2.setAttribute('src', img1src)
-})
-
-
-// 2. creating element in js 
+// 1. creating element in js 
 
 let character = ['ninja-Photoroom.png', 'pika-Photoroom.png', 'shinchan-Photoroom.png', 'doremon-Photoroom.png', 'motu-Photoroom.png']
 
@@ -53,3 +38,35 @@ create.addEventListener('click', function(){
 
     body.appendChild(img)
 })
+
+
+
+// 2. image swap 
+
+let swap = document.querySelector('.btn-grad')
+let img1 = document.querySelector('.img1')
+let img2 = document.querySelector('.img2')
+
+
+swap.addEventListener('click', function(){
+    let img1src = img1.getAttribute('src')
+    let img2src = img2.getAttribute('src')
+
+    img1.setAttribute('src', img2src)
+    img2.setAttribute('src', img1src)
+})
+
+
+// 3. custom cursor
+
+let main = document.querySelector('main');
+let cursor = document.querySelector('.cursor')
+
+
+main.addEventListener('mousemove', function(dets){
+    setTimeout(() => {
+        cursor.style.opacity = 1;
+    }, 50);
+    cursor.style.left = dets.clientX+'px'
+    cursor.style.top = dets.clientY+'px'
+});
