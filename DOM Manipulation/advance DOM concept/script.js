@@ -70,3 +70,60 @@ main.addEventListener('mousemove', function(dets){
     cursor.style.left = dets.clientX+'px'
     cursor.style.top = dets.clientY+'px'
 });
+
+
+// 4. like feature 
+
+let heart = document.querySelector('#heart')
+let Top = document.querySelector('.top')
+let heart2 = document.querySelector('#heart-2');
+
+Top.addEventListener('dblclick', function(){
+
+    
+    heart.style.transform = "translate(-50%, -50%) scale(1)"
+    heart.style.opacity = '0.8'
+    heart2.style.color = 'red'
+    
+    setTimeout(() => {
+        heart.style.opacity = '0'
+    }, 2000);
+
+    setTimeout(() => {
+        heart.style.transform = "translate(-50%, -50%) scale(0)"
+    }, 1000);
+
+    
+})
+
+heart2.addEventListener('click', function(){
+    heart2.style.color = 'black'
+})
+
+
+// 5. image effect 
+
+let elem = document.querySelectorAll('.sec');
+
+elem.forEach(function(val){
+
+    console.log(val.childNodes[3])
+
+
+    val.addEventListener('mousemove', function(dets){
+        val.childNodes[3].style.left = dets.clientX+'px'
+        // val.childNodes[3].style.top = dets.clientY+'px'
+        
+    })
+
+    val.addEventListener('mouseenter', function(){
+        val.childNodes[3].style.opacity = 1;
+        let imgrot = Math.floor(Math.random() * 15);
+        val.childNodes[3].style.rotate = `${imgrot}deg`
+    })
+    val.addEventListener('mouseleave', function(){
+        val.childNodes[3].style.opacity = 0
+        let imgrot = Math.floor(Math.random() * 0);
+        val.childNodes[3].style.rotate = `${imgrot}deg`
+    })
+})
