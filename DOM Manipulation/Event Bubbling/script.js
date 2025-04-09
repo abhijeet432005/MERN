@@ -64,11 +64,7 @@ const people = [
   
 
 
-// arr.forEach(function(val){
-//     sum = val.age + sum;
-    
-// })
-// console.log(sum)
+
 
 function heroFnc(){
   let sum = ''
@@ -84,7 +80,7 @@ function heroFnc(){
                   <h3>Status: ${val.status}</h3>
                   
               </div>
-              <button class="ferind" id=${idx} style="background-color: ${
+              <button id=${idx} style="background-color: ${
                 val.status === "Stranger" ? "white" : "lightgreen"}">${val.status === "Stranger" ? "Add Friend" : "Unfriend"}
               </button>
           </div>`
