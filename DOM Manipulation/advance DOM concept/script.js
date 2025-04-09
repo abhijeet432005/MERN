@@ -120,10 +120,13 @@ elem.forEach(function(val){
         val.childNodes[3].style.opacity = 1;
         let imgrot = Math.floor(Math.random() * 15);
         val.childNodes[3].style.rotate = `${imgrot}deg`
+        val.childNodes[3].style.transform = 'scale(0.9)'
+        
     })
     val.addEventListener('mouseleave', function(){
         val.childNodes[3].style.opacity = 0
         let imgrot = Math.floor(Math.random() * 0);
         val.childNodes[3].style.rotate = `${imgrot}deg`
+        val.childNodes[3].style.transform = 'scale(0.5)'
     })
 })
