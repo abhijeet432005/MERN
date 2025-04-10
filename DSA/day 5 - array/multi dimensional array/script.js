@@ -78,16 +78,29 @@ const prompt = require('prompt-sync')();
 //     [7,8,9]
 // ];
 
+// let sum = 0;
 // let lsum = 0;
 // let rsum = 0;
 // for(let i = 0; i < arr.length; i++){
 //     for(let j = 0; j < arr[i].length; j++){
 
-//         if(i == j) lsum = lsum + arr[i][j]
+//         if(i == j) {
+//             lsum += arr[i][j];
+//             sum += arr[i][j]
+//         }
 
-//         if(i + j === arr.length - 1) rsum += arr[i][j]
+//         if(i + j === arr.length - 1) {
+//             rsum += arr[i][j];
+//             sum += arr[i][j]
+//         }
 //     }
 // }
+
+// if(arr.length % 2 === 1){
+//     sum -= arr[Math.floor(arr.length / 2)][Math.floor(arr.length / 2)]
+// }
+
+// console.log(sum)
 
 // console.log("Left sum : "+lsum)
 // console.log("Right Sum : "+rsum)
@@ -100,16 +113,16 @@ const prompt = require('prompt-sync')();
 
 // 5. Jacked array 
 
-let size =  Number(prompt("Enter the size "));
-let arr = new Array(size);
-for(let i = 0; i < arr.length; i++){
-    let innerSize = Number(prompt("Enter the inner size "));
-    arr[i] = new Array(innerSize);
-}
+// let size =  Number(prompt("Enter the size "));
+// let arr = new Array(size);
+// for(let i = 0; i < arr.length; i++){
+//     let innerSize = Number(prompt("Enter the inner size "));
+//     arr[i] = new Array(innerSize);
+// }
 
-for(let i = 0; i < arr.length; i++){
-    for(let j = 0; j < arr[i].length; j++){
-        arr[i][j] = Number(prompt("Enter the number "));
-    }
-}
-console.log(arr)
+// for(let i = 0; i < arr.length; i++){
+//     for(let j = 0; j < arr[i].length; j++){
+//         arr[i][j] = Number(prompt("Enter the number "));
+//     }
+// }
+// console.log(arr)
