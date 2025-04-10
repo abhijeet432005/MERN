@@ -327,3 +327,23 @@
 //     x = Math.floor(x / 10);
 // }
 // console.log((y === sum) ? "Armstrong number" : "Not a armstrong number")
+
+
+
+
+// 15. Strong Number
+
+let x = Number(prompt("Enter the number "));
+let rem, sum = 0, y = x;
+
+while(x > 0){
+    rem = x % 10;
+    let fact = 1
+    for(let i = 1; i <= rem; i++){
+        fact = fact * i;
+    }
+    sum = sum + fact
+    x = Math.floor(x / 10);
+}
+
+console.log((y === sum) ? "Strong number" : "noo")

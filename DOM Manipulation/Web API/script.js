@@ -39,6 +39,7 @@ let check = 0;
 
 downlaod.addEventListener('click', function(){
     let speed = Math.floor(Math.random()* 10 + 1)
+    console.log(speed)
     
 
     if(check == 0){

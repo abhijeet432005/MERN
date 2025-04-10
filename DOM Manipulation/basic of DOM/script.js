@@ -30,7 +30,7 @@ btn.addEventListener('click', function(){
         btn.innerHTML = 'REMOVE FERIND';
         h2.innerHTML = "Let's Chat";
         check = 1;
-        console.log('Frendship hooo  gyi');
+        console.log('Frendship hooo gyi');
         
     }
     else{
