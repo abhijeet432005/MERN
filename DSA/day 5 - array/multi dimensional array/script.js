@@ -126,3 +126,63 @@ const prompt = require('prompt-sync')();
 //     }
 // }
 // console.log(arr)
+
+
+// 6. Transpose Matrix leetcode - 1572
+
+// let arr = [
+//     [1,2,3],
+//     [4,5,6], 
+// ];
+
+// let ans = Array.from({length: arr[0].length}, ()=> Array(arr.length));
+                        // row                               col 
+
+// let row = arr.length;
+// let col = arr[0].length;
+// let ans = new Array(col)
+
+// for(let i = 0; i < ans.length; i++){
+//     ans[i] = new Array(row)
+// }
+
+// for(let i = 0; i < ans.length; i++){
+//     for(let j = 0; j < ans[i].length; j++){
+//         ans[i][j] = arr[j][i]
+//         process.stdout.write(`${ans[i][j]} `)
+//     }
+//     console.log()
+// }
+
+
+
+
+// 7. Rotate image leetcode - 48
+//  it ic combination of transpose matrix + reverse of an array
+
+
+let arr = [
+    [1,2,3],
+    [4,5,6], 
+    [7,8,9]
+];
+
+for(let i = 0; i < arr.length; i++){
+    for(let j = i; j < arr.length; j++){
+        let temp = arr[i][j];
+        arr[i][j] = arr[j][i];
+        arr[j][i] = temp;
+    }
+}
+
+for(let i = 0; i < arr.length; i++){
+    let k = 0, j = arr.length - 1;
+    while(k < j){
+        let temp = arr[i][k];
+        arr[i][k] = arr[i][j]
+        arr[i][j] = temp;
+        k++;
+        j--;
+    }
+}
+console.log(arr)
