@@ -1,7 +1,6 @@
-const prompt = require('prompt-sync')();
+const prompt = require("prompt-sync")();
 
-
-// 1. 2-D array 
+// 1. 2-D array
 
 // let arr = [
 //     [1,2,3],
@@ -19,8 +18,7 @@ const prompt = require('prompt-sync')();
 // **************************************************************************************************
 // **************************************************************************************************
 
-// 2. Dyanamic 2D array 
-
+// 2. Dyanamic 2D array
 
 // let inner = Number(prompt("Enter the array size "));
 // let innerArraySize = Number(prompt("Enter the inner array size "));
@@ -39,14 +37,11 @@ const prompt = require('prompt-sync')();
 
 // console.log(arr)
 
-
-
 // *******************************************************************************************************
 // *******************************************************************************************************
 // *******************************************************************************************************
 
 // 3. 3d Array
-
 
 // let arr = [
 //     [[1,2,3] , [4,5,6]],
@@ -63,18 +58,15 @@ const prompt = require('prompt-sync')();
 //     console.log()
 // }
 
-
-
 // ******************************************************************************************************
 // ******************************************************************************************************
 // ******************************************************************************************************
 
-
-// 4. Calculate the diagonal sum 
+// 4. Calculate the diagonal sum
 
 // let arr = [
 //     [1,2,3],
-//     [4,5,6], 
+//     [4,5,6],
 //     [7,8,9]
 // ];
 
@@ -105,13 +97,11 @@ const prompt = require('prompt-sync')();
 // console.log("Left sum : "+lsum)
 // console.log("Right Sum : "+rsum)
 
-
 // **********************************************************************************************
 // **********************************************************************************************
 // **********************************************************************************************
 
-
-// 5. Jacked array 
+// 5. Jacked array
 
 // let size =  Number(prompt("Enter the size "));
 // let arr = new Array(size);
@@ -127,16 +117,15 @@ const prompt = require('prompt-sync')();
 // }
 // console.log(arr)
 
-
 // 6. Transpose Matrix leetcode - 1572
 
 // let arr = [
 //     [1,2,3],
-//     [4,5,6], 
+//     [4,5,6],
 // ];
 
 // let ans = Array.from({length: arr[0].length}, ()=> Array(arr.length));
-                        // row                               col 
+// row                               col
 
 // let row = arr.length;
 // let col = arr[0].length;
@@ -154,35 +143,106 @@ const prompt = require('prompt-sync')();
 //     console.log()
 // }
 
-
-
-
 // 7. Rotate image leetcode - 48
 //  it ic combination of transpose matrix + reverse of an array
 
+// let arr = [
+//     [1,2,3],
+//     [4,5,6],
+//     [7,8,9]
+// ];
 
-let arr = [
-    [1,2,3],
-    [4,5,6], 
-    [7,8,9]
+// for(let i = 0; i < arr.length; i++){
+//     for(let j = i; j < arr.length; j++){
+//         let temp = arr[i][j];
+//         arr[i][j] = arr[j][i];
+//         arr[j][i] = temp;
+//     }
+// }
+
+// for(let i = 0; i < arr.length; i++){
+//     let k = 0, j = arr.length - 1;
+//     while(k < j){
+//         let temp = arr[i][k];
+//         arr[i][k] = arr[i][j]
+//         arr[i][j] = temp;
+//         k++;
+//         j--;
+//     }
+// }
+// console.log(arr)
+
+// 8. flipping an image leetcode - 832
+
+// let arr = [
+//     [1,1,0],
+//     [1,0,1],
+//     [0,0,0]
+// ];
+
+// for(let i = 0; i < arr.length; i++){
+//     let k = 0, j = arr.length - 1;
+//     while(k < j){
+//         let temp = arr[i][k];
+//         arr[i][k] = arr[i][j];
+//         arr[i][j] = temp;
+//         k++;
+//         j--
+//     }
+
+//     for(let j = 0; j < arr[i].length; j++){
+//         if(arr[i][j] === 0){
+//             arr[i][j] = 1;
+//         }
+//         else arr[i][j] = 0;
+//     }
+// }
+
+// console.log(arr)
+
+// 9. spiral matrix
+
+let mat = [
+  [1, 2, 3, 4, 5],
+  [6, 7, 8, 9, 10],
+  [11, 12, 13, 14, 15],
+  [16, 17, 18, 19, 20],
 ];
 
-for(let i = 0; i < arr.length; i++){
-    for(let j = i; j < arr.length; j++){
-        let temp = arr[i][j];
-        arr[i][j] = arr[j][i];
-        arr[j][i] = temp;
+let rStart = 0;
+let cStart = 0;
+let rEnd = mat.length - 1;
+let cEnd = mat[0].length - 1;
+
+let result = [];
+
+
+while (rStart <= rEnd && cStart <= cEnd) {
+  for (let i = cStart; i <= cEnd; i++) {
+    result.push(mat[rStart][i]);
+  }
+
+  rStart++;
+
+  for (let i = rStart; i <= rEnd; i++) {
+    result.push(mat[i][cEnd]);
+  }
+
+  cEnd--;
+
+  if (rStart <= rEnd) {
+    for (let i = cEnd; i >= cStart; i--) {
+      result.push(mat[rEnd][i]);
     }
+    rEnd--;
+  }
+
+  if (cStart <= cEnd) {
+    for (let i = rEnd; i >= rStart; i--) {
+      result.push(mat[i][cStart]);
+    }
+    cStart++;
+  }
 }
 
-for(let i = 0; i < arr.length; i++){
-    let k = 0, j = arr.length - 1;
-    while(k < j){
-        let temp = arr[i][k];
-        arr[i][k] = arr[i][j]
-        arr[i][j] = temp;
-        k++;
-        j--;
-    }
-}
-console.log(arr)
+console.log(result);
