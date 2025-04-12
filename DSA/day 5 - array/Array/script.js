@@ -225,6 +225,8 @@ let prompt = require("prompt-sync")()
 // }
 // console.log(temp)
 
+
+
 // Optimized approach - 2
 
 // let arr = [1,2,3,4,5];
@@ -245,3 +247,127 @@ let prompt = require("prompt-sync")()
 // }
 
 
+
+
+// ****************************************************************************************************
+// ****************************************************************************************************
+// ****************************************************************************************************
+
+
+// 10. Find subaaray
+
+// let arr = [3,-4,5,-4,-1,7,-8]
+// // n = arr.length;
+
+// let cSum = 0;
+// let max = -Infinity;
+
+// for(let val of arr){
+//     cSum += val
+
+//     max = Math.max(cSum, max)
+    
+//     if(cSum < 0){
+//         cSum = 0
+//     }        
+// }
+
+// console.log(max)
+
+
+
+
+// 11. Two sum 
+
+// let arr = [2,7,11,15];
+// let target = 9;
+// let map = {};
+
+// for(let i = 0; i < arr.length; i++){
+//     let diff = target - arr[i]
+
+//     if(map.hasOwnProperty(diff)){
+//         console.log([map[diff], i]);
+//     }
+
+//     map[arr[i]] = i;
+// }
+
+
+
+// 12. Majority Element 
+
+// let nums = [2,2,1,1,1,2,2];
+// let freq = {};
+
+// let threshold = Math.floor(nums.length / 2)
+
+// for(let num of nums){
+//     if(freq[num]){
+//         freq[num] += 1;
+//     }
+
+//     else{
+//         freq[num] = 1
+//     }
+// }
+
+// for(let num in freq){
+
+//     if(freq[num] > threshold){
+//         console.log(num)
+//     }
+// }
+
+
+// console.log(freq)
+
+
+
+let arr = [2,2,1,1,1,2,2];
+let threshold = Math.floor(arr.length / 2)
+
+// for(let val of arr){
+//     let freq = 0;
+
+//     for(let elem of arr){
+//         if(elem == val){
+//             freq++;
+//         }
+//     }
+
+//     if(freq > threshold){
+//         console.log(val);
+//         break;
+//     }
+// }
+
+
+// let freq = {};
+
+// for(let val of arr){
+//     if(freq[val]) freq[val] += 1;
+
+//     else freq[val] = 1
+// }
+
+// for(let val in freq){
+
+//     if(freq[val] > threshold){
+//         console.log(Number(val))
+//     }
+// }
+
+// console.log(freq)
+
+let freq = 0, ans = 0;
+
+for(let val of arr){
+    if(freq === 0){
+        ans = val
+    }
+
+    freq += (ans == val) ? +1 : -1;
+}
+
+console.log(ans)

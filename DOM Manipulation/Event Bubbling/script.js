@@ -59,47 +59,42 @@ const people = [
       img: "https://plus.unsplash.com/premium_photo-1708110921398-1fc68e98eacc?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fG1vZGVsfGVufDB8fDB8fHww",
       status: "Stranger"
     }
-  ];
+];
   
   
-
-
-
-
 function heroFnc(){
-  let sum = ''
-  people.forEach(function(val, idx){
-      sum = sum + `<div class="card">
-              <div class="top">
-                  <img src="${val.img}" alt="">
-              </div>
-  
-              <div class="bottom">
-                  <h1>${val.name}</h1>
-                  <h3>Age: ${val.age}</h3>
-                  <h3>Status: ${val.status}</h3>
-                  
-              </div>
-              <button id=${idx} style="background-color: ${
-                val.status === "Stranger" ? "white" : "lightgreen"}">${val.status === "Stranger" ? "Add Friend" : "Unfriend"}
-              </button>
-          </div>`
-  })
-  
-  let main = document.querySelector('#main')
-  main.innerHTML = sum
-}
+  let sum = '';
 
+  people.forEach(function(val, idx){
+        sum = sum + `<div class="card">
+                <div class="top">
+                    <img src="${val.img}" alt="">
+                </div>
+    
+                <div class="bottom">
+                    <h1>${val.name}</h1>
+                    <h3>Age: ${val.age}</h3>
+                    <h3>Status: ${val.status}</h3>
+                    
+                </div>
+                <button id=${idx} style="background-color: ${
+                  val.status === "Stranger" ? "white" : "lightgreen"}">${val.status === "Stranger" ? "Add Friend" : "Unfriend"}
+                </button>
+            </div>`
+    
+  })
+
+  let main = document.querySelector('#main');
+  main.innerHTML = sum;
+
+}
 heroFnc();
 
-let btn = document.querySelector(".ferind")
+// let main = document.querySelector('#main');
 main.addEventListener('click', function(dets){
-  let gold = people[dets.target.id];
-
-  if(gold.status == 'Stranger'){
-    gold.status = 'Ferinds';
-    // btn.style.backgroundColor = 'green'
-    
+  let gold = people[dets.target.id]
+  if(gold.status === 'Stranger'){
+    gold.status = 'Ferinds'
   }
 
   else {
@@ -108,3 +103,46 @@ main.addEventListener('click', function(dets){
 
   heroFnc();
 })
+
+
+// function heroFnc(){
+//   let sum = ''
+//   people.forEach(function(val, idx){
+//       sum = sum + `<div class="card">
+//               <div class="top">
+//                   <img src="${val.img}" alt="">
+//               </div>
+  
+//               <div class="bottom">
+//                   <h1>${val.name}</h1>
+//                   <h3>Age: ${val.age}</h3>
+//                   <h3>Status: ${val.status}</h3>
+                  
+//               </div>
+//               <button id=${idx} style="background-color: ${
+//                 val.status === "Stranger" ? "white" : "lightgreen"}">${val.status === "Stranger" ? "Add Friend" : "Unfriend"}
+//               </button>
+//           </div>`
+//   })
+  
+//   let main = document.querySelector('#main')
+//   main.innerHTML = sum
+// }
+
+// heroFnc();
+
+
+// main.addEventListener('click', function(dets){
+//   let gold = people[dets.target.id];
+
+//   if(gold.status == 'Stranger'){
+//     gold.status = 'Ferinds';
+    
+//   }
+
+//   else {
+//     gold.status = 'Stranger';
+//   }
+
+//   heroFnc();
+// })
