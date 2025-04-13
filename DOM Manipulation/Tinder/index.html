@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    
+    <div class="w-full h-screen bg-black ">
+
+        <div class="imagecontainer w-full h-screen relative">
+            <div class="incomingcard z-[2] w-full absolute h-screen">
+                <img class="" alt="" srcset="">
+            </div>
+            <div class="maincard z-[3] w-full absolute h-screen">
+                <img class="w-full h-full object-cover" src="" alt="" srcset="">
+            </div>
+        </div>
+
+        <div class="w-full h-screen absolute top-0 left-0 z-[4] flex flex-col justify-between">
+            <div class="navbar px-5 py-6 flex justify-between items-center text-white">
+                <div class="prflimg w-[3rem] h-[3rem] rounded-full">
+                    <img class="w-full h-full object-cover rounded-full overflow-hidden" src="" alt="">
+                </div>
+                <h3 class="text-xl capitalize font-medium tracking-tighter">They liked you</h3>
+                <div class="chaticon relative flex justify-center items-center w-[3rem] h-[3rem] bg-white/20 rounded-full">
+                    <i class="ri-chat-3-fill opacity-80 text-1xl"></i>
+                    <div class="badge flex justify-center items-center absolute w-[1.2rem] h-[1.2rem] bg-[#FC5149] rounded-full top-0 -translate-y-[5px] translate-x-[12px]">
+                        <h5 class="text-[13px] font-regular">6</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-container w-full">
+                <div class="details px-5 py-6 w-full text-white">
+                    <div class="location flex gap-3 items-center">
+                        <i class="ri-corner-left-up-line w-[2rem] h-[2rem] bg-white rounded-full font-semibold text-black flex items-center justify-center"></i>
+    
+                        <h3>USA, California</h3>
+                    </div>
+    
+                    <div class="Name flex gap-3 text-white mt-1">
+                        <h1 class="font-regular tracking-tighter text-5xl ">Jakson</h1>
+                        <h1 class="font-regular tracking-tighter text-5xl opacity-60">20</h1>
+                    </div>
+    
+                    <div class="tags flex gap-4 mt-3">
+                        
+                        
+                    </div>
+    
+                    <div class="bio text-white/90 mt-3">
+                        <h3 class="text-xl">Bio</h3>
+                        <p class="text-lg mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, necessitatibus nemo enim totam ipsam placeat.</p>
+                    </div>
+    
+                    <div class="flex items-start mt-8 gap-2">
+                        <button class="py-2 w-1/2 bg-white rounded-xl">
+                            <i class="ri-close-line text-black text-3xl"></i>
+                        </button>
+                        <button class="py-2 w-1/2 bg-[#FC5149] rounded-xl">
+                            <i class="ri-heart-2-fill text-3xl"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
