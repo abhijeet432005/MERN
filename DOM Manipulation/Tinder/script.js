@@ -1,258 +1,3 @@
-// let users = [
-//     {
-//         profilePic: "https://images.unsplash.com/photo-1557977275-d261356f567f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
-//         displayPic: "https://images.unsplash.com/photo-1536303158031-c868b371399f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
-//         pendingMessage: 4,
-//         location: "Delhi, India",
-//         name: "Vicky",
-//         age: 23,
-//         interest: ["Music", "Painting", "Dancing"],
-//         bio: "Creative soul who loves to express through art and rhythm.",
-//         isFerind: null
-//     },
-//     {
-//         profilePic: "https://plus.unsplash.com/premium_photo-1673758905770-a62f4309c43c?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9kZWx8ZW58MHx8MHx8fDA%3D",
-//         displayPic: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9kZWx8ZW58MHx8MHx8fDA%3D",
-//         pendingMessage: 2,
-//         location: "Mumbai, India",
-//         name: "Priya",
-//         age: 21,
-//         interest: ["Reading", "Traveling", "Yoga"],
-//         bio: "Adventurer at heart, reader by choice.",
-//         isFerind: null
-//     },
-//     {
-//         profilePic: "https://images.unsplash.com/photo-1557977275-d261356f567f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
-//         displayPic: "https://plus.unsplash.com/premium_photo-1669703777657-41f5adb14e9b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
-//         pendingMessage: 5,
-//         location: "Bangalore, India",
-//         name: "Rahul",
-//         age: 25,
-//         interest: ["Coding", "Gaming", "Music"],
-//         bio: "Tech geek and music lover.",
-//         isFerind: null
-//     },
-//     {
-//         profilePic: "https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
-//         displayPic: "https://images.unsplash.com/photo-1626978407649-de62156f1548?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1hbGUlMjBtb2RlbHxlbnwwfHwwfHx8MA%3D%3D",
-//         pendingMessage: 0,
-//         location: "Chennai, India",
-//         name: "Aadarsh",
-//         age: 22,
-//         interest: ["Photography", "Sketching", "Movies"],
-//         bio: "Capturing moments one click at a time.",
-//         isFerind: null
-//     },
-//     {
-//         profilePic: "",
-//         displayPic: "https://randomuser.me/api/portraits/men/5.jpg",
-//         pendingMessage: 3,
-//         location: "Kolkata, India",
-//         name: "Amit",
-//         age: 24,
-//         interest: ["Cricket", "Chess", "Books"],
-//         bio: "Living life one move at a time.",
-//         isFerind: null
-//     },
-//     {
-//         profilePic: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vZGVsfGVufDB8fDB8fHww",
-//         displayPic: "https://plus.unsplash.com/premium_photo-1682095757120-c9abb908ed60?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG1vZGVsfGVufDB8fDB8fHww",
-//         pendingMessage: 1,
-//         location: "Pune, India",
-//         name: "Sneha",
-//         age: 20,
-//         interest: ["Dance", "Fashion", "Food"],
-//         bio: "Dance is the hidden language of the soul.",
-//         isFerind: null
-//     },
-//     {
-//         profilePic: "https://plus.unsplash.com/premium_photo-1727942419945-1908baae3c8e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
-//         displayPic: "https://images.unsplash.com/photo-1475403614135-5f1aa0eb5015?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
-//         pendingMessage: 6,
-//         location: "Jaipur, India",
-//         name: "Karan",
-//         age: 26,
-//         interest: ["Adventure", "Cycling", "Movies"],
-//         bio: "Explorer of roads and reels.",
-//         isFerind: null
-//     },
-//     {
-//         profilePic: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1vZGVsfGVufDB8fDB8fHww",
-//         displayPic: "https://images.unsplash.com/photo-1564485377539-4af72d1f6a2f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG1vZGVsfGVufDB8fDB8fHww",
-//         pendingMessage: 2,
-//         location: "Hyderabad, India",
-//         name: "Meera",
-//         age: 23,
-//         interest: ["Writing", "Poetry", "Books"],
-//         bio: "Words are my superpower.",
-//         isFerind: null
-//     },
-//     {
-//         profilePic: "https://plus.unsplash.com/premium_photo-1674933214600-483da3cb2d0c?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1hbGUlMjBtb2RlbHxlbnwwfHwwfHx8MA%3D%3D",
-//         displayPic: "https://images.unsplash.com/photo-1515907467242-93cd67ebc7d6?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbGUlMjBtb2RlbHxlbnwwfHwwfHx8MA%3D%3D",
-//         pendingMessage: 0,
-//         location: "Ahmedabad, India",
-//         name: "Rohan",
-//         age: 27,
-//         interest: ["Fitness", "Stocks", "Gaming"],
-//         bio: "Work hard, lift harder.",
-//         isFerind: null
-//     },
-//     {
-//         profilePic: "https://plus.unsplash.com/premium_photo-1667520043080-53dcca77e2aa?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fG1vZGVsfGVufDB8fDB8fHww",
-//         displayPic: "https://images.unsplash.com/photo-1614786269829-d24616faf56d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fG1vZGVsfGVufDB8fDB8fHww",
-//         pendingMessage: 3,
-//         location: "Goa, India",
-//         name: "Tina",
-//         age: 22,
-//         interest: ["Beach", "Travel", "Photography"],
-//         bio: "Living life in flip-flops.",
-//         isFerind: null
-//     }
-// ];
-
-// let users = [
-//     {
-//         profilePic: "https://images.unsplash.com/photo-1557977275-d261356f567f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
-//         displayPic: "https://images.unsplash.com/photo-1536303158031-c868b371399f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
-//         pendingMessage: 4,
-//         location: "Delhi, India",
-//         name: "Vicky",
-//         age: 23,
-//         interest: [
-//             { icon: `<i class="ri-music-2-line"></i>`, interest: "Music" },
-//             { icon: `<i class="ri-brush-line"></i>`, interest: "Painting" },
-//             { icon: `<i class="ri-dance-line"></i>`, interest: "Dancing" }
-//         ],
-//         bio: "Creative soul who loves to express through art and rhythm.",
-//         isFerind: null
-//     },
-//     {
-//         profilePic: "https://plus.unsplash.com/premium_photo-1673758905770-a62f4309c43c?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9kZWx8ZW58MHx8MHx8fDA%3D",
-//         displayPic: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9kZWx8ZW58MHx8MHx8fDA%3D",
-//         pendingMessage: 2,
-//         location: "Mumbai, India",
-//         name: "Priya",
-//         age: 21,
-//         interest: [
-//             { icon: "ri-book-2-line", interest: "Reading" },
-//             { icon: "ri-earth-line", interest: "Traveling" },
-//             { icon: "ri-meditation-line", interest: "Yoga" }
-//         ],
-//         bio: "Adventurer at heart, reader by choice.",
-//         isFerind: null
-//     },
-//     {
-//         profilePic: "https://images.unsplash.com/photo-1557977275-d261356f567f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
-//         displayPic: "https://plus.unsplash.com/premium_photo-1669703777657-41f5adb14e9b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
-//         pendingMessage: 5,
-//         location: "Bangalore, India",
-//         name: "Rahul",
-//         age: 25,
-//         interest: [
-//             { icon: "ri-code-s-slash-line", interest: "Coding" },
-//             { icon: "ri-gamepad-line", interest: "Gaming" },
-//             { icon: "ri-music-line", interest: "Music" }
-//         ],
-//         bio: "Tech geek and music lover.",
-//         isFerind: null
-//     },
-//     {
-//         profilePic: "https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
-//         displayPic: "https://images.unsplash.com/photo-1626978407649-de62156f1548?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1hbGUlMjBtb2RlbHxlbnwwfHwwfHx8MA%3D%3D",
-//         pendingMessage: 0,
-//         location: "Chennai, India",
-//         name: "Aadarsh",
-//         age: 22,
-//         interest: [
-//             { icon: "ri-camera-line", interest: "Photography" },
-//             { icon: "ri-pencil-ruler-line", interest: "Sketching" },
-//             { icon: "ri-film-line", interest: "Movies" }
-//         ],
-//         bio: "Capturing moments one click at a time.",
-//         isFerind: null
-//     },
-    
-//     {
-//         profilePic: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vZGVsfGVufDB8fDB8fHww",
-//         displayPic: "https://plus.unsplash.com/premium_photo-1682095757120-c9abb908ed60?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG1vZGVsfGVufDB8fDB8fHww",
-//         pendingMessage: 1,
-//         location: "Pune, India",
-//         name: "Sneha",
-//         age: 20,
-//         interest: [
-//             { icon: "ri-dance-line", interest: "Dance" },
-//             { icon: "ri-t-shirt-line", interest: "Fashion" },
-//             { icon: "ri-restaurant-line", interest: "Food" }
-//         ],
-//         bio: "Dance is the hidden language of the soul.",
-//         isFerind: null
-//     },
-//     {
-//         profilePic: "https://plus.unsplash.com/premium_photo-1727942419945-1908baae3c8e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
-//         displayPic: "https://images.unsplash.com/photo-1475403614135-5f1aa0eb5015?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFsZSUyMG1vZGVsfGVufDB8fDB8fHww",
-//         pendingMessage: 6,
-//         location: "Jaipur, India",
-//         name: "Karan",
-//         age: 26,
-//         interest: [
-//             { icon: "ri-road-map-line", interest: "Adventure" },
-//             { icon: "ri-bicycle-line", interest: "Cycling" },
-//             { icon: "ri-film-line", interest: "Movies" }
-//         ],
-//         bio: "Explorer of roads and reels.",
-//         isFerind: null
-//     },
-//     {
-//         profilePic: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1vZGVsfGVufDB8fDB8fHww",
-//         displayPic: "https://images.unsplash.com/photo-1564485377539-4af72d1f6a2f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG1vZGVsfGVufDB8fDB8fHww",
-//         pendingMessage: 2,
-//         location: "Hyderabad, India",
-//         name: "Meera",
-//         age: 23,
-//         interest: [
-//             { icon: "ri-quill-pen-line", interest: "Writing" },
-//             { icon: "ri-mic-line", interest: "Poetry" },
-//             { icon: "ri-book-open-line", interest: "Books" }
-//         ],
-//         bio: "Words are my superpower.",
-//         isFerind: null
-//     },
-//     {
-//         profilePic: "https://plus.unsplash.com/premium_photo-1674933214600-483da3cb2d0c?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1hbGUlMjBtb2RlbHxlbnwwfHwwfHx8MA%3D%3D",
-//         displayPic: "https://images.unsplash.com/photo-1515907467242-93cd67ebc7d6?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbGUlMjBtb2RlbHxlbnwwfHwwfHx8MA%3D%3D",
-//         pendingMessage: 0,
-//         location: "Ahmedabad, India",
-//         name: "Rohan",
-//         age: 27,
-//         interest: [
-//             { icon: "ri-dumbbell-line", interest: "Fitness" },
-//             { icon: "ri-stock-line", interest: "Stocks" },
-//             { icon: "ri-game-line", interest: "Gaming" }
-//         ],
-//         bio: "Work hard, lift harder.",
-//         isFerind: null
-//     },
-//     {
-//         profilePic: "https://plus.unsplash.com/premium_photo-1667520043080-53dcca77e2aa?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fG1vZGVsfGVufDB8fDB8fHww",
-//         displayPic: "https://images.unsplash.com/photo-1614786269829-d24616faf56d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fG1vZGVsfGVufDB8fDB8fHww",
-//         pendingMessage: 3,
-//         location: "Goa, India",
-//         name: "Tina",
-//         age: 22,
-//         interest: [
-//             { icon: "ri-sun-line", interest: "Beach" },
-//             { icon: "ri-map-pin-line", interest: "Travel" },
-//             { icon: "ri-camera-2-line", interest: "Photography" }
-//         ],
-//         bio: "Living life in flip-flops.",
-//         isFerind: null
-//     }
-// ];
-
-
-
-
 let users = [
     {
       displayPic: "https://images.unsplash.com/photo-1500048993953-d23a436266cf",
@@ -272,7 +17,7 @@ let users = [
     {
       displayPic: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce",
       profilePic: "https://randomuser.me/api/portraits/women/2.jpg",
-      name: "Sneha Kapoor",
+      name: "Aadarsh",
       age: 25,
       location: "Mumbai, India",
       bio: "Dancer 💃 | Chai lover ☕ | Let's vibe to some Bollywood beats!",
@@ -285,7 +30,7 @@ let users = [
       isFriend: true
     },
     {
-      displayPic: "https://images.unsplash.com/photo-1501869150797-9bb5cfceeb90",
+      displayPic: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fG1vZGVsfGVufDB8fDB8fHww",
       profilePic: "https://randomuser.me/api/portraits/men/3.jpg",
       name: "Aman Verma",
       age: 21,
@@ -302,7 +47,7 @@ let users = [
     {
       displayPic: "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca",
       profilePic: "https://randomuser.me/api/portraits/women/4.jpg",
-      name: "Tanya Sharma",
+      name: "Salmon Bhai",
       age: 22,
       location: "Pune, India",
       bio: "Techie 👩‍💻 | Cat Mom 🐱 | Book hoarder 📚",
@@ -317,7 +62,7 @@ let users = [
     {
       displayPic: "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7",
       profilePic: "https://randomuser.me/api/portraits/men/5.jpg",
-      name: "Karan Mehta",
+      name: "Alia",
       age: 24,
       location: "Chandigarh, India",
       bio: "Fitness freak 🏋️‍♂️ | Nutrition junkie 🥗 | Early riser 🌄",
@@ -332,7 +77,7 @@ let users = [
     {
       displayPic: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
       profilePic: "https://randomuser.me/api/portraits/women/6.jpg",
-      name: "Ishita Dey",
+      name: "Dev",
       age: 26,
       location: "Kolkata, India",
       bio: "Poet | Tea Enthusiast 🍵 | Deep thinker 💭",
@@ -347,7 +92,7 @@ let users = [
     {
       displayPic: "https://images.unsplash.com/photo-1517841905240-472988babdf9",
       profilePic: "https://randomuser.me/api/portraits/men/7.jpg",
-      name: "Nikhil Roy",
+      name: "Kirti",
       age: 22,
       location: "Hyderabad, India",
       bio: "Gamer 🎮 | Meme Lord 😂 | Pizza is life 🍕",
@@ -377,7 +122,7 @@ let users = [
     {
       displayPic: "https://images.unsplash.com/photo-1493666438817-866a91353ca9",
       profilePic: "https://randomuser.me/api/portraits/men/9.jpg",
-      name: "Harsh Singh",
+      name: "Harshita",
       age: 27,
       location: "Lucknow, India",
       bio: "Finance guy 📊 | Always learning 📈 | Gym rat 💪",
@@ -389,55 +134,150 @@ let users = [
       ],
       isFriend: false
     },
-    {
-      displayPic: "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d",
-      profilePic: "https://randomuser.me/api/portraits/women/10.jpg",
-      name: "Neha Jain",
-      age: 23,
-      location: "Ahmedabad, India",
-      bio: "Minimalist | Traveler | Always curious 🌍",
-      pendingMessage: 0,
-      interest: [
-        { icon: `<i class="ri-leaf-line"></i>`, interest: "Minimalism" },
-        { icon: `<i class="ri-earth-line"></i>`, interest: "Travel" },
-        { icon: `<i class="ri-question-line"></i>`, interest: "Curiosity" }
-      ],
-      isFriend: true
-    }
+    
 ]
-  
-  
-
-  
 
 function select(elem){
     return document.querySelector(elem)
 }
 
-let curr = 6;
+let curr = 0;
+let isAnimating = false;
 
-function setInitial(){
-    select(".maincard img").src = users[curr].displayPic;
-    select(".incomingcard img").src = users[curr+1].displayPic;
-
-    select(".prflimg img").src = users[curr].profilePic
-
-    select(".badge h5").textContent = users[curr].pendingMessage;
-    select(".location h3").textContent = users[curr].location;
-    select(".Name h1:nth-child(1)").textContent = users[curr].name;
-    select(".Name h1:nth-child(2)").textContent = users[curr].age;
-    select(".bio p").textContent = users[curr].bio
+function setData(index){
+    select(".prflimg img").src = users[index].profilePic
+    select(".badge h5").textContent = users[index].pendingMessage;
+    select(".location h3").textContent = users[index].location;
+    select(".Name h1:nth-child(1)").textContent = users[index].name;
+    select(".Name h1:nth-child(2)").textContent = users[index].age;
+    select(".bio p").textContent = users[index].bio;
 
     let clutter = ""
-    users[curr].interest.forEach(function(interests){
-        clutter += `<div class="tag flex items-center justify-center bg-white/40 px-3 py-1 rounded-full gap-1">
+    users[index].interest.forEach(function(interests){
+        clutter += `<div class="tag flex items-center whitespace-nowrap justify-center bg-white/40 px-3 py-1 rounded-full gap-1">
             ${interests.icon}
             <h3 class="text-sm tracking-tighter">${interests.interest}</h3>
         </div>`
     })
 
-    select(".tags").innerHTML = clutter
-    curr = 2;
+    select(".tags").innerHTML = clutter;
 }
 
-setInitial();
+
+
+(function setInitial(){
+    select(".maincard img").src = users[curr].displayPic;
+    select(".incomingcard img").src = users[(curr + 1) % users.length].displayPic;
+    setData(curr);
+
+    curr = 2;
+})();
+
+
+
+function imageChange(){
+    if(!isAnimating){
+        isAnimating = true;
+
+        let t1 = gsap.timeline({
+            onComplete: function(){
+                isAnimating = false;
+
+                let main = select(".maincard");
+                let incoming = select(".incomingcard");
+
+                incoming.classList.remove("z-[2]");
+                incoming.classList.add("z-[3]");
+                incoming.classList.remove("incomingcard");
+
+                main.classList.remove("z-[3]");
+                main.classList.add("z-[2]");
+                gsap.set(main, {
+                    scale: 1,
+                    opacity: 1
+                });
+
+                
+                if(curr === users.length) curr = 0;
+     
+                select(".maincard img").src = users[curr].displayPic;
+               
+                             
+                curr++;
+                main.classList.remove("maincard");
+                incoming.classList.add("maincard");
+                main.classList.add("incomingcard");
+
+               
+            }
+        });
+
+        t1.to(".maincard", {
+            scale: 1.1,
+            opacity: 0,
+            duration: 0.9
+        }, "a")
+        .from(".incomingcard", {
+            scale: 0.9,
+            opacity: 0,
+            duration: 1.1
+        }, "a");
+    }
+}
+
+let deny = select(".deny");
+let accept = select(".accept");
+
+
+
+deny.addEventListener('click', function(){
+    imageChange();
+    setData(curr - 1);
+    gsap.from(".details .element", {
+        y: "100%", 
+        opacity: 0,
+        stagger: 0.06,
+        ease: "power3.out",
+        duration: 0.6
+    });
+});
+
+let heart = document.querySelector(".heart")
+
+accept.addEventListener('click', function(){
+    heart.style.transform = "translate(-50%, -50%) scale(1)"
+    heart.style.opacity = '0.8'
+    
+    setTimeout(() => {
+        heart.style.opacity = '0'
+    }, 1000);
+    
+    setTimeout(() => {
+        heart.style.transform = "translate(-50%, -50%) scale(0)"
+        setData(curr - 1);
+        imageChange();
+        gsap.from(".details .element", {
+            y: "100%", 
+            opacity: 0,
+            stagger: 0.06,
+            ease: "power3.out",
+            duration: 0.6
+        });
+    }, 600);
+    
+});
+
+
+
+    
+
+(function containerCreator(){
+    document.querySelectorAll(".element")
+    .forEach(function(element){
+        let div = document.createElement("div");
+        div.classList.add(`${element.classList[1]}container`, 'overflow-hidden')
+        div.appendChild(element);
+        select(".details").appendChild(div);
+    })
+})();
+
