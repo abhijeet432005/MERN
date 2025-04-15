@@ -371,23 +371,23 @@
 
 // 15. Numnber of days in month
 
-// let month = Number(prompt("Enter month"))
-// let year = Number(prompt("Enter year"))
+let month = Number(prompt("Enter month"))
+let year = Number(prompt("Enter year"))
 
 
-// function getMonthDays(month, year){
-//     if(month < 1 || month > 12){
-//         return "Invalid month! Enter between 1-12"
-//     };
+function getMonthDays(month, year){
+    if(month < 1 || month > 12){
+        return "Invalid month! Enter between 1-12"
+    };
 
-//     let monthday = [31,28,31,30,31,30,31,31,30,31,30,31];
+    let monthday = [31,28,31,30,31,30,31,31,30,31,30,31];
 
-//     if(month == 2 && (year % 4 == 0 && (year % 100 !== 0 || year % 400 == 0))){
-//         return 29;
-//     };
+    if(month == 2 && (year % 4 == 0 && (year % 100 !== 0 || year % 400 == 0))){
+        return 29;
+    };
 
-//     return monthday[month - 1];
-// }
+    return monthday[month - 1];
+}
 
 
-// console.log(`Number of days : ${getMonthDays(month,year)}`) 
+console.log(`Number of days : ${getMonthDays(month,year)}`) 
