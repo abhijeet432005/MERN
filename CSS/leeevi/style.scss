@@ -20,6 +20,8 @@ body{
 
 main{
     width: 100%;
+
+    
     
     .main-sec{
         width: 100%;
@@ -1265,8 +1267,33 @@ main{
     body{
         padding: 2rem;
     }
-
+    
     main{
+        .cursor{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.151);
+            border-radius: 50%;
+            border: 1px solid black;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            transform: translate(-50%, -50%);
+            transition: 0.1s all ease;
+            
+            .mini{
+                width: 0.5rem;
+                height: 0.5rem;
+                background-color: rgba(0, 0, 0, 0);
+                border-radius: 50%;
+                border: 1px solid black;
+                transition: 0.5s all ease-in-out;
+            }
+        }
+
         .main-sec{
             padding: 3rem;
             .view-1{
