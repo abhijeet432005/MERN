@@ -35,4 +35,28 @@
 // console.log(users)
 
 
+// task : implement dark mode and light mode
+
+
+let darkmode = localStorage.getItem('darkmode');
+let main = document.querySelector('main');
+let btn = document.querySelector('.d-theme');
+
+function enableDark(){
+    main.classList.add('dark')
+    localStorage.setItem('darkmode', 'active')
+}
+
+function disableDark(){
+    main.classList.remove('dark');
+    localStorage.setItem('darkmode', null);
+}
+
+if(darkmode === 'active') enableDark();
+
+
+btn.addEventListener('click', function(){
+    darkmode = localStorage.getItem('darkmode')
+    darkmode !== 'active' ? enableDark() : disableDark();
+})
 
