@@ -61,7 +61,7 @@ function menuanim(){
         }
         
         else{
-            full.style.opacity = 1
+            full.style.opacity = 0
             full.style.top = '-100%'
             navimg.style.opacity = 1
             flag = 0
