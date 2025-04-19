@@ -110,7 +110,7 @@ html,body{
     min-height: 100vh;
     width: 100%;
     position: fixed;
-    top: -100%;
+    top: -120%;
     z-index: 99;
     background-color: rgba(0, 0, 0, 0.107);
     transition: all ease 0.5s;
@@ -473,13 +473,13 @@ main{
 
     .page-4{
         width: 100%;
-        height: 80vh;
+        height: 60vh;
         display: flex;
         align-items: center;
         flex-direction: column;
         padding: 1rem 1rem;
         background-color: #EFEAE3;
-        gap: 4rem;
+        gap: 3rem;
 
         .top{
             width: 100%;
