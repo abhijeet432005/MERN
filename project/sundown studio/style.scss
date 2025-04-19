@@ -822,13 +822,14 @@ main{
 
                 .sec{
                     position: relative;
-                    border-bottom: 1px solid rgba(0, 0, 0, 0.479);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.374);
+                    z-index: 1;
                     
                     .sec-text{
                         flex-direction: row;
                         justify-content: space-between;
                         align-items: center;
-                        z-index: 99;
+                        z-index: 999;
                         
 
                         .left{
@@ -844,6 +845,7 @@ main{
                             align-items: flex-end;
                         }
                     }
+
                     img{
                         width: 20rem;
                         height: 25rem;
@@ -853,7 +855,7 @@ main{
                         transform: translate(-50%, -50%);
                         border-radius: 1rem;
                         opacity: 0;
-                        transition: 0.5s all ease;
+                        transition: 0.2s all ease;
     
                     }
     
@@ -871,6 +873,7 @@ main{
                     }
 
                 }
+
                 .sec::after{
                     content: "";
                     width: 100%;
@@ -896,13 +899,14 @@ main{
         }
 
         .page-4{
-            
+            height: 80vh;
             gap: 1rem;
     
             .top{
                 
                 gap: 0.5rem;
-                margin-top: 3rem;
+                margin-top: 5rem;
+                padding: 0 1.5rem;
     
                 .circle{
                     width: 1rem;
@@ -972,7 +976,6 @@ main{
         flex-direction: column;
         justify-content: flex-end;
         padding: 0rem 1rem;
-        gap: 3rem;
     
         .f-cont{
             width: 100%;

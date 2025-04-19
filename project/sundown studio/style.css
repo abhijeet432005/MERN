@@ -680,13 +680,14 @@ main .page-5 {
   }
   main .page-3 .bottom .sec {
     position: relative;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.479);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.374);
+    z-index: 1;
   }
   main .page-3 .bottom .sec .sec-text {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    z-index: 99;
+    z-index: 999;
   }
   main .page-3 .bottom .sec .sec-text .left h1 {
     font-size: 3rem;
@@ -705,7 +706,7 @@ main .page-5 {
     transform: translate(-50%, -50%);
     border-radius: 1rem;
     opacity: 0;
-    transition: 0.5s all ease;
+    transition: 0.2s all ease;
   }
   main .page-3 .bottom .sec video {
     width: 20rem;
@@ -736,11 +737,13 @@ main .page-5 {
     transform: scaleY(1);
   }
   main .page-4 {
+    height: 80vh;
     gap: 1rem;
   }
   main .page-4 .top {
     gap: 0.5rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
+    padding: 0 1.5rem;
   }
   main .page-4 .top .circle {
     width: 1rem;
@@ -791,7 +794,6 @@ main .page-5 {
     flex-direction: column;
     justify-content: flex-end;
     padding: 0rem 1rem;
-    gap: 3rem;
   }
   .footer .f-cont {
     width: 100%;
