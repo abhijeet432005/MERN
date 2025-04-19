@@ -110,10 +110,11 @@ html,body{
     min-height: 100vh;
     width: 100%;
     position: fixed;
-    top: -120%;
+    top: -100%;
     z-index: 99;
     background-color: rgba(0, 0, 0, 0.107);
     transition: all ease 0.5s;
+    opacity: 0;
 
     .full-1{
         width: 100%;

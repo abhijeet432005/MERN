@@ -54,12 +54,14 @@ function menuanim(){
     
     menu.addEventListener('click', function(){
         if(flag === 0){
+            full.style.opacity = 1
             full.style.top = 0
             navimg.style.opacity = 0
             flag = 1
         }
         
         else{
+            full.style.opacity = 1
             full.style.top = '-100%'
             navimg.style.opacity = 1
             flag = 0
