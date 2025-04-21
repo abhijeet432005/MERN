@@ -1,3 +1,6 @@
+let prompt = require('prompt-sync')();
+
+
 // 1. Reverse the string 
 
 // let str = "hello";
@@ -56,5 +59,40 @@
 
 
 
+// 3.  toggele the character ---> AbC -> aBc
+// let str = prompt("Enter the string : ");
+// let ans = "";
+
+// for(let i = 0; i < str.length; i++){
+//     let val = str.charCodeAt(i)
+//     if(val >= 65 && val <= 90){
+//         ans += String.fromCharCode(val + 32)
+//     }
+
+//     else if(val >= 97 && val <= 122){
+//         ans += String.fromCharCode(val - 32)
+//     }
+// }
+// console.log(ans)
 
 
+
+
+// **************************************************************************************************************
+// **************************************************************************************************************
+// **************************************************************************************************************
+
+
+// 4. 
+
+
+let str = "hello bhai kaisa hai";
+let arr = str.split(" ");
+let ans = "";
+
+for(let i = 0; i < arr.length; i++){
+    let word = arr[i];
+    ans += word.charAt(0).toUpperCase() + word.substring(1, word.length - 1) + word.charAt(word.length - 1).toUpperCase() +" "
+}
+
+console.log(ans)
