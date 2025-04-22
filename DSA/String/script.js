@@ -151,7 +151,7 @@ function anagram(str1, str2){
     }
 
     for(let val in freq){
-        if(freq[val] != 1){
+        if(freq[val] != 0){
             return console.log("not a anagram")
         }
     }
