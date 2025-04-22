@@ -83,16 +83,24 @@ let prompt = require('prompt-sync')();
 // **************************************************************************************************************
 
 
-// 4. 
+// 4. Capitalize the first and last character of word
 
 
-let str = "hello bhai kaisa hai";
-let arr = str.split(" ");
-let ans = "";
+// let str = "hello bhai kaisa hai";
+// let arr = str.split(" ");
+// let ans = "";
 
-for(let i = 0; i < arr.length; i++){
-    let word = arr[i];
-    ans += word.charAt(0).toUpperCase() + word.substring(1, word.length - 1) + word.charAt(word.length - 1).toUpperCase() +" "
-}
+// for(let i = 0; i < arr.length; i++){
+//     let word = arr[i];
+//     ans += word.charAt(0).toUpperCase() + word.substring(1, word.length - 1) + word.charAt(word.length - 1).toUpperCase() +" "
+// }
 
-console.log(ans)
+// console.log(ans)
+
+
+
+
+
+// **************************************************************************************************************
+// **************************************************************************************************************
+// **************************************************************************************************************
