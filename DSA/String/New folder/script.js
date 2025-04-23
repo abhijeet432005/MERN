@@ -39,25 +39,62 @@ let prompt = require('prompt-sync')();
 
 // 3. Jewel and stone 
 
-let Jewel = prompt("Enter the Jewel : ")
-let stone = prompt("Enter the Jewel : ")
+// let Jewel = prompt("Enter the Jewel : ")
+// let stone = prompt("Enter the Jewel : ")
 
-function js(Jewel, stone){
-    let set = new Set();
+// function js(Jewel, stone){
+//     let set = new Set();
 
-    for(let i = 0; i < Jewel.length; i++){
-        set.add(Jewel.charAt(i))
+//     for(let i = 0; i < Jewel.length; i++){
+//         set.add(Jewel.charAt(i))
+//     }
+
+//     let count = 0;
+
+//     for(let i = 0; i< stone.length; i++){
+//         let ch = stone.charAt(i)
+//         if(set.has(ch)) count++
+//     }
+
+//     return count;
+
+// }
+
+// console.log(js(Jewel, stone))
+
+
+
+
+
+
+// *******************************************************************************************************************************
+// *******************************************************************************************************************************
+// *******************************************************************************************************************************
+
+
+// 4. Happy number 
+
+let num = Number(prompt("Enter the number : "));
+
+let set = new Set();
+
+function happy(num){
+
+    while(true){
+        let sum = 0;
+
+        while(num > 0){
+            let rem = num % 10;
+            sum += (rem * rem);
+            num = Math.floor(num / 10);
+        }
+
+        if(sum === 1) return true;
+        if(set.has(sum)) return false;
+        else(set.add(sum))
+        num = sum;
     }
-
-    let count = 0;
-
-    for(let i = 0; i< stone.length; i++){
-        let ch = stone.charAt(i)
-        if(set.has(ch)) count++
-    }
-
-    return count;
-
 }
 
-console.log(js(Jewel, stone))
+
+console.log(happy(num))
