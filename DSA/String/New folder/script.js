@@ -27,3 +27,37 @@ let prompt = require('prompt-sync')();
 // for(let val of set){
 //     process.stdout.write(`${val} `)
 // }
+
+
+
+
+
+// *******************************************************************************************************************************
+// *******************************************************************************************************************************
+// *******************************************************************************************************************************
+
+
+// 3. Jewel and stone 
+
+let Jewel = prompt("Enter the Jewel : ")
+let stone = prompt("Enter the Jewel : ")
+
+function js(Jewel, stone){
+    let set = new Set();
+
+    for(let i = 0; i < Jewel.length; i++){
+        set.add(Jewel.charAt(i))
+    }
+
+    let count = 0;
+
+    for(let i = 0; i< stone.length; i++){
+        let ch = stone.charAt(i)
+        if(set.has(ch)) count++
+    }
+
+    return count;
+
+}
+
+console.log(js(Jewel, stone))
