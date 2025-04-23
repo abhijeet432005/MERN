@@ -131,32 +131,41 @@ let prompt = require('prompt-sync')();
 
 // 6. Anagram string 
 
-function anagram(str1, str2){
+// function anagram(str1, str2){
 
-    if(str1.length != str2.length) return console.log("invalid");
+//     if(str1.length != str2.length) return console.log("invalid");
 
-    let freq = {};
+//     let freq = {};
     
-    for(let val of str1){
-        if(freq[val]){
-            freq[val] += 1
-        }
-        else freq[val] = 1
-    }
+//     for(let val of str1){
+//         if(freq[val]){
+//             freq[val] += 1
+//         }
+//         else freq[val] = 1
+//     }
 
-    for(let val of str2){
-        if(freq[val]){
-            freq[val] -= 1
-        }
-    }
+//     for(let val of str2){
+//         if(freq[val]){
+//             freq[val] -= 1
+//         }
+//     }
 
-    for(let val in freq){
-        if(freq[val] != 0){
-            return console.log("not a anagram")
-        }
-    }
+//     for(let val in freq){
+//         if(freq[val] != 0){
+//             return console.log("not a anagram")
+//         }
+//     }
 
-    return console.log("anagram")
-}
+//     return console.log("anagram")
+// }
 
-anagram("race", "care")
+// anagram("race", "care")
+
+
+
+
+// **************************************************************************************************************
+// **************************************************************************************************************
+// **************************************************************************************************************
+
+
