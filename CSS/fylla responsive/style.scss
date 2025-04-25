@@ -70,212 +70,212 @@ hr{
     
 }
 
-// .view-1{
-//     width: 100%;
-//     padding: 2rem;
+.view-1{
+    width: 100%;
+    padding: 2rem;
     
     
-//     nav{
-//         display: flex;
-//         align-items: center;
-//         justify-content: space-between;
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-//         .logo{
-//             // width: 100%;
+        .logo{
+            // width: 100%;
 
-//             img{
-//                 width: 8rem;
-//             }
-//         }
+            img{
+                width: 8rem;
+            }
+        }
 
         
-//     }
+    }
 
 
 
-//     .line{
-//         width: 100%;
-//         height: 1px;
-//         background-color: black;
-//         margin-top: 1rem;
-//     }
+    .line{
+        width: 100%;
+        height: 1px;
+        background-color: black;
+        margin-top: 1rem;
+    }
 
 
-//     .links{
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         gap: 2.5rem;
-//         position: relative;
+    .links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        position: relative;
 
-//         a{
-//             text-decoration: none;
-//             color: black;
-//             position: relative;
-//             display: none;
-//             z-index: 99;
-//             cursor: default;
-//         }
+        a{
+            text-decoration: none;
+            color: black;
+            position: relative;
+            display: none;
+            z-index: 99;
+            cursor: default;
+        }
 
-//         a::after{
-//             content: "";
-//             width: 0%;
-//             height: 2px;
-//             background-color: rgb(0, 0, 0);
-//             position: absolute;
-//             bottom: 0%;
-//             left: 0%;
-//         }
+        a::after{
+            content: "";
+            width: 0%;
+            height: 2px;
+            background-color: rgb(0, 0, 0);
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+        }
         
-//         a:hover::after{
-//             animation-name: line;
-//             animation-duration: 1s;
+        a:hover::after{
+            animation-name: line;
+            animation-duration: 1s;
 
-//         }
+        }
 
-//         @keyframes line {
-//             0%{
-//                 width: 0%;
-//                 left: 0;
-//             }
+        @keyframes line {
+            0%{
+                width: 0%;
+                left: 0;
+            }
 
-//             50%{
-//                 width: 100%;
-//                 left: 0;
-//             }
+            50%{
+                width: 100%;
+                left: 0;
+            }
 
-//             100%{
-//                 width: 0%;
-//                 left: 100%;
-//             }
-//         }
+            100%{
+                width: 0%;
+                left: 100%;
+            }
+        }
 
-//         .btn{
-//             display: none;
-//             button{
-//                 padding: .4rem 1rem;
-//                 border-radius: .5rem;
-//                 font-size: .9rem;
-//                 font-weight: 500;
-//                 background-color: black;
-//                 color: rgb(255, 255, 255);
-//                 letter-spacing: .2rem;
-//                 z-index: 99;
-//             }
+        .btn{
+            display: none;
+            button{
+                padding: .4rem 1rem;
+                border-radius: .5rem;
+                font-size: .9rem;
+                font-weight: 500;
+                background-color: black;
+                color: rgb(255, 255, 255);
+                letter-spacing: .2rem;
+                z-index: 99;
+            }
             
-//             :hover{
-//                 color: rgb(0, 0, 0);
-//             }
+            :hover{
+                color: rgb(0, 0, 0);
+            }
 
-//         }
+        }
 
-//         .line{
-//             width: 1px;
-//             height: 3rem;
-//             background-color: black;
-//             margin: -1.5rem;
-//             display: none;
-//         }
+        .line{
+            width: 1px;
+            height: 3rem;
+            background-color: black;
+            margin: -1.5rem;
+            display: none;
+        }
 
-//         .btn-2{
-//             display: flex;
-//             display: none;
+        .btn-2{
+            display: flex;
+            display: none;
 
-//             .same{
-//                 padding: 11px 14px;
-//             }
-//             button{
-//                 padding: 11px 10px;
-//                 margin: .1rem;
-//                 font-size: .8rem;
-//                 border-radius: 8rem;
-//                 border: 1px solid black;
-//                 background-color: #FDFBF5;
-//                 transition: all .3s ease;
-//             }
+            .same{
+                padding: 11px 14px;
+            }
+            button{
+                padding: 11px 10px;
+                margin: .1rem;
+                font-size: .8rem;
+                border-radius: 8rem;
+                border: 1px solid black;
+                background-color: #FDFBF5;
+                transition: all .3s ease;
+            }
 
-//             button:hover{
-//                 font-weight: 400;
-//                 background-color: black;
-//                 color: white;
-//             }
-//         }
+            button:hover{
+                font-weight: 400;
+                background-color: black;
+                color: white;
+            }
+        }
 
-//         .line{
-//             width: 1px;
-//             height: 3rem;
-//             background-color: black;
-//             margin: -1.5rem;
-//             display: none;
-//         }
+        .line{
+            width: 1px;
+            height: 3rem;
+            background-color: black;
+            margin: -1.5rem;
+            display: none;
+        }
 
 
-//         .sun{
-//             i{
-//                 font-size: 1.2rem;
-//                 border: 1px solid black;
-//                 padding: .6rem;
-//                 padding-right: 2.2rem;
-//                 border-radius: 4rem;
-//             }
+        .sun{
+            i{
+                font-size: 1.2rem;
+                border: 1px solid black;
+                padding: .6rem;
+                padding-right: 2.2rem;
+                border-radius: 4rem;
+            }
 
-//         }
+        }
 
-//         .nav-line{
-//             i{
+        .nav-line{
+            i{
 
-//             }
-//             margin: -2rem;
-//             margin-right: .1rem;
-//             font-size: 2rem;
-//             font-weight: 400;
-//         }
+            }
+            margin: -2rem;
+            margin-right: .1rem;
+            font-size: 2rem;
+            font-weight: 400;
+        }
         
         
        
-//     }
+    }
 
-//     hr{
-//         margin-top: 1.5rem;
-//         border: 0.5px solid black;
-//     }
+    hr{
+        margin-top: 1.5rem;
+        border: 0.5px solid black;
+    }
 
-//     // hero
+    // hero
 
-//     .hero{
-//         margin-top: 3rem;
-//         width: 100%;
+    .hero{
+        margin-top: 3rem;
+        width: 100%;
 
-//         h2{
-//             font-weight: 400;
-//             font-size: 1.2rem;
-//         }
+        h2{
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
 
-//         h1{
-//             width: 90%;
-//             font-size: 4.2rem;
-//             line-height: 1;
-//             font-weight: 400;
-//             margin-left: -.5rem;
+        h1{
+            width: 90%;
+            font-size: 4.2rem;
+            line-height: 1;
+            font-weight: 400;
+            margin-left: -.5rem;
 
-//             br{
-//                 display: none;
-//             }
-//         }
+            br{
+                display: none;
+            }
+        }
 
-//         .h-img{
-//             width: 100%;
-//             margin-top: 2.5rem;
+        .h-img{
+            width: 100%;
+            margin-top: 2.5rem;
 
-//             img{
-//                 width: 100%;
-//                 border-radius: 1.5rem;
-//                 object-fit: cover;
-//             }
-//         }
+            img{
+                width: 100%;
+                border-radius: 1.5rem;
+                object-fit: cover;
+            }
+        }
 
-//     }
-// }
+    }
+}
 
 
 // view - 2
