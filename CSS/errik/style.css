@@ -24,17 +24,21 @@ main .nav {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.411);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   position: absolute;
   top: -100%;
-  transition: 0.8s all ease-in-out;
+  transition: 0.6s all ease-in-out;
 }
 main .nav .inner {
   width: 100%;
-  height: 50vh;
-  background-color: #FFFFFF;
+  height: 80vw;
+  background-color: rgba(255, 255, 255, 0.5882352941);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
-  transition: 0.8s all ease;
+  transition: 0.8s all ease-in-out;
 }
 main .nav .inner .close {
   width: 100%;
@@ -48,7 +52,7 @@ main .nav .inner .close i {
 main .nav .inner nav {
   display: flex;
   flex-direction: column;
-  padding: 3vw;
+  padding: 4vw;
   align-items: end;
 }
 main .nav .inner nav a {
@@ -120,14 +124,43 @@ main .view-1 nav .links a:hover::before, main .view-1 nav .links a:hover::after 
     left: 100%;
   }
 }
+main .view-1 nav .links .btn {
+  overflow: hidden;
+  position: relative;
+}
 main .view-1 nav .links .btn button {
+  position: relative;
+  z-index: 1;
   text-transform: uppercase;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   color: white;
   border: 1px solid black;
   border-radius: 2rem;
   padding: 0.6rem 1rem;
   letter-spacing: 0.2rem;
+  transition: 0.3s all ease;
+}
+main .view-1 nav .links .btn :after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2rem;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s all ease;
+  transition: 0.3s all ease;
+  position: absolute;
+  z-index: -1;
+}
+main .view-1 nav .links .btn :hover:after {
+  transform: scaleX(1);
+}
+main .view-1 nav .links .btn :hover {
+  color: rgb(0, 0, 0);
 }
 main .view-1 nav .menu i {
   font-size: 1.5rem;
@@ -164,12 +197,17 @@ main .view-1 .hero {
 main .view-1 .hero .right {
   width: 100%;
   aspect-ratio: 1/1;
+  overflow: hidden;
 }
 main .view-1 .hero .right img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: 0.3s all ease;
+}
+main .view-1 .hero .right img:hover {
+  transform: scale(1.1);
 }
 main .view-1 .hero .left {
   width: 100%;
@@ -796,6 +834,34 @@ main .view-8 .card-4 {
   }
 }
 @media (min-width: 1000px) {
+  .cursor {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    transition: 0.15s all ease;
+    opacity: 0;
+  }
+  .mini {
+    width: 0.9rem;
+    height: 0.9rem;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    transition: 0.2s all ease;
+    opacity: 0;
+    z-index: 999;
+  }
   main .view-1 {
     gap: 4rem;
     padding: 3rem;
