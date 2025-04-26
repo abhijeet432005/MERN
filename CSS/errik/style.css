@@ -32,7 +32,7 @@ main .nav {
 }
 main .nav .inner {
   width: 100%;
-  height: 80vw;
+  height: 50vh;
   background-color: rgba(255, 255, 255, 0.5882352941);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -783,9 +783,18 @@ main .view-8 .card-4 {
 }
 
 @media (min-width: 768px) {
+  main .nav {
+    display: none;
+  }
   main .view-1 {
     padding: 3rem;
     gap: 4rem;
+  }
+  main .view-1 nav .links {
+    display: inline-flex;
+  }
+  main .view-1 .menu {
+    display: none;
   }
   main .view-2 {
     padding: 3rem;
@@ -861,6 +870,9 @@ main .view-8 .card-4 {
     transition: 0.2s all ease;
     opacity: 0;
     z-index: 999;
+  }
+  main .nav {
+    display: none;
   }
   main .view-1 {
     gap: 4rem;

@@ -35,7 +35,7 @@ main{
         
         .inner{
             width: 100%;
-            height: 80vw;
+            height: 50vh;
             background-color: #ffffff96;
             backdrop-filter: blur(10px);
             border-bottom-left-radius: 2rem;
@@ -980,11 +980,25 @@ main{
 
 @media (min-width:768px){
     main{
+
+        .nav{
+            display: none;
+        }
         
 
         .view-1{
             padding: 3rem;
             gap: 4rem;
+
+            nav{
+                .links{
+                    display: inline-flex;
+                }
+            }
+
+            .menu{
+                display: none;
+            }
         }
 
         .view-2{
@@ -1106,6 +1120,9 @@ main{
     }
 
     main{
+        .nav{
+            display: none;
+        }
 
         .view-1{
             gap: 4rem;
