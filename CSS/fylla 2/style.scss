@@ -959,6 +959,14 @@ main{
 
 
 @media (min-width:1250px){
+    .cursor{
+        width: 1rem;
+        height: 1rem;
+        background-color: black;
+        mix-blend-mode: difference;
+        
+    }
+
     .view-1{
         padding: 2rem;
 
