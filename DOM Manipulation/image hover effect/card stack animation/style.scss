@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Darumadrop+One&family=Noto+Sans+JP:wght@100..900&family=Pochaevsk&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,85 +7,97 @@
 }
 
 html,body{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    color: #000;
+    overflow: hidden;
+    font-family: "Noto Sans JP", sans-serif;
+    background: #e3e3e3;
+}
+
+a{
+    text-decoration: none;
+    position: relative;
+    color: #000;
 }
 
 
-
-main{
+.container{
     width: 100%;
-    
-    .container{
-        width: 100vw;
-        height: 100vh;
+
+    nav{
+        width: 100%;
+        height: 60px;
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        
-        .text {
-            font-size: 1.5rem;
-            letter-spacing: -0.1rem;
-          
-            h1 {
-              -webkit-text-stroke: 1px #000; // stroke width and color
-              color: transparent;
-            }
-          }
-        
-        .img-container{
-            width: 30vw;
-            height: 40vw;
-            position: relative;
-            overflow: hidden;
-            
-            .img{
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                
-                img{
-                    width: 100%;
-                    height: auto;
-                    object-fit: cover;
-                }
-            }
-
-            .img-overlay{
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                mix-blend-mode: screen;
-                background-color: rgba(255, 0, 0, 0.306);
-            }
-
-            .img-block{
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                flex-flow: row wrap;
-                align-content: space-between;
-                justify-content: space-between;
-
-
-                .block{
-                    width: 2.5rem;
-                    height: 2.5rem;
-                    mix-blend-mode: hard-light;
-                    background-color: rgba(238, 196, 9, 0.804);
-                    opacity: 0;
-                    transition: opacity 0.3s ease-in;
-
-                }
-                .active{
-                    opacity: 0.75;
-                }
-            }
-        }
-        
-
+        justify-content: space-between;
+        padding: 1.5rem;
     }
 
+    footer{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem;
+    }
+    
+    header{
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        display: flex;
+        transform: translateY(-50%);
+        justify-content: space-around;
+
+        .text{
+            position: relative;
+            width: max-content;
+            height: max-content;
+            padding: 0.6rem;
+
+            p{
+                position: relative;
+                font-size: 1.2rem;
+            }
+
+            .text-revealer{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+
+
+            }
+            .text-revealer::after{
+                content: "";
+                position: absolute;
+                top: 2.5rem;
+                width: 100%;
+                height: 100%;
+                background: #ffffff;
+            }
+        }
+    }
+
+    .gallery{
+        width: 100%;
+        height: calc(100vh - 60px);
+        position: relative;
+
+        .img{
+            width: 75px;
+            height: 100px;
+            overflow: hidden;
+            position: absolute;
+            margin: 20px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
 }
