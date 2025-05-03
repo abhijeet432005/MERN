@@ -19,7 +19,7 @@ let character = ['ninja-Photoroom.png', 'pika-Photoroom.png', 'shinchan-Photoroo
 let create = document.querySelector('#cr-elem');
 let body = document.body;
 
-create.addEventListener('click', function(){
+create.addEventListener('click', function(e){
     let num = Math.floor(Math.random() * character.length);
     let random = character[num]
 
