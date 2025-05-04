@@ -14,7 +14,7 @@ blocks.forEach((block) => {
     })
 })
 
-Shery.imageMasker(".img-container" /* Element to target.*/, {
+Shery.imageMasker(".img-container", {
     y: -100,
     y: 50,
     text: "Move",
