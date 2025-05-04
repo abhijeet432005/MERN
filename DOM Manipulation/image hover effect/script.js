@@ -15,8 +15,6 @@ blocks.forEach((block) => {
 })
 
 Shery.imageMasker(".img-container" /* Element to target.*/, {
-    //Parameters are optional.
-    // mouseFollower: true,
     y: -100,
     y: 50,
     text: "Move",
