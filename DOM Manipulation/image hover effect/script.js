@@ -23,7 +23,6 @@ Shery.imageMasker(".img-container" /* Element to target.*/, {
   });
 
   Shery.textAnimate("h1" /* Element to target.*/, {
-    //Parameters are optional.
     style: 1,
     y: 10,
     delay: 0.1,
