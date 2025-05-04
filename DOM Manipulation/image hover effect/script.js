@@ -32,7 +32,6 @@ Shery.imageMasker(".img-container" /* Element to target.*/, {
   });
 
 Shery.makeMagnet(".img-container" /* Element to target.*/, {
-    //Parameters are optional.
     ease: "cubic-bezier(0.23, 1, 0.320, 2)",
     duration: 1,
 });
