@@ -22,7 +22,7 @@ Shery.imageMasker(".img-container" /* Element to target.*/, {
     duration: 1,
   });
 
-  Shery.textAnimate("h1" /* Element to target.*/, {
+  Shery.textAnimate("h1" , {
     style: 1,
     y: 10,
     delay: 0.1,
