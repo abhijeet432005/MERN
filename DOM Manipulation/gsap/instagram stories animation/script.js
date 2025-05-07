@@ -5,6 +5,42 @@ gsap.ticker.add((time) => {
 });
 gsap.ticker.lagSmoothing(0);
 
+Shery.mouseFollower({
+    //Parameters are optional.
+    skew: true,
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
+});
+
+Shery.textAnimate("h1" /* Element to target.*/, {
+    //Parameters are optional.
+    style: 1,
+    y: 10,
+    // delay: 0.1,
+    // duration: 0.5,
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    multiplier: 0.01,
+  });
+Shery.textAnimate("p" /* Element to target.*/, {
+    //Parameters are optional.
+    style: 2,
+    y: 10,
+    // delay: 0.1,  
+    // duration: 0.5,
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    multiplier: 0.01,
+  });
+
+  Shery.makeMagnet("h1" /* Element to target.*/, {
+    //Parameters are optional.
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
+  });
+  Shery.makeMagnet("p" /* Element to target.*/, {
+    //Parameters are optional.
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
+  });
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xfefdfd);
@@ -108,3 +144,114 @@ const scannerSection = document.querySelector(".scanner");
 const scannerPosition = scannerSection.offsetTop;
 const scanContainer = document.querySelector(".scan-cont");
 gsap.set(scanContainer, {scale: 0});
+
+
+function playInitialAnimation(){
+    if(model){
+        gsap.to(model.scale, {
+            x: 1,
+            y: 1,
+            z: 1,
+            duration: 1,
+            ease: "power2.out"
+        })
+    }
+    gsap.to(scanContainer, {
+        scale: 1,
+        duration: 1,
+        ease: "power2.out"
+    })
+}
+
+
+ScrollTrigger.create({
+    trigger: "body",
+    start: "top top",
+    end: "top bottom",
+    onEnterBack: () => {
+        if(model){
+            gsap.to(model.scale, {
+                x: 1,
+                y: 1,
+                z: 1,
+                duration: 1,
+                ease: "power2.out"
+            })
+            isFloating = true
+        }
+        gsap.to(scanContainer, {
+            scale: 1,
+            duration: 1,
+            ease: "power2.out"
+        })
+    }
+})
+
+
+ScrollTrigger.create({
+    trigger: ".scanner",
+    start: "top top",
+    end: `${stickyHeight}px`,
+    pin: true,
+    onEnter: () => {
+        if(model){
+            isFloating = false,
+            model.position.y = -1,
+
+            gsap.to(model.rotation, {
+                y: model.rotation.y + Math.PI * 2,
+                duration: 1,
+                ease: "power.inOut",
+                // onComplete: () => {
+                //     gsap.to(model.scale, {
+                //         x: 0,
+                //         y: 0,
+                //         z: 0,
+                //         duration: 0.5,
+                //         ease: "power2.in",
+                //         onComplete: () => {
+                //             gsap.to(scanContainer, {
+                //                 scale: 0,
+                //                 duration: 0.5,
+                //                 ease: "power2.in"
+                //             })
+                //         }
+
+                //     })
+                // }
+            })
+        }
+    },
+
+    
+      
+})
+
+
+lenis.on("scroll", (e) => {
+    currentScroll = e.scroll;
+});
+
+function animate(){
+    if(model){
+        if(isFloating){
+            const floatOffset = Math.sin(Date.now() * 0.001 * floatSpeed) * floatAmplitude;
+            model.position.y = floatOffset;
+        }
+
+        const scrollProgress = Math.min(currentScroll / scannerPosition, 1);
+
+        if(scrollProgress < 1){
+            model.rotation.x = scrollProgress * Math.PI * 2;
+        }
+
+        if(scrollProgress < 1 ){
+            model.rotation.y += 0.01 * rotationSpeed;
+        }
+    }
+
+    renderer.render(scene, camera);
+    requestAnimationFrame(animate)
+}
+
+
