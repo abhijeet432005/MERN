@@ -112,6 +112,6 @@ Shery.mouseFollower({
     y: 10,
     delay: 0,
     duration: 0,
-    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    // ease: "cubic-bezier(0.23, 1, 0.320, 1)",
     multiplier: 0.1,
   });
