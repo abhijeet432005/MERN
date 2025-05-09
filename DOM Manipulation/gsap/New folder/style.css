@@ -28,7 +28,6 @@ main h1 {
   font-weight: 400;
 }
 main .items {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
