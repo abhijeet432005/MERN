@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const lenis = new Lenis({ autoRaf: true });
+  const lenis = new Lenis({
+    smooth: true,
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  });
 
   const container = document.querySelector(".trail-container");
 
@@ -156,65 +160,53 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  window.addEventListener(
-    "scroll",
-    () => {
-      isCursorInContainer = isInContainer(mouseX, mouseY);
+  window.addEventListener("scroll", () => {
+    isCursorInContainer = isInContainer(mouseX, mouseY);
 
-      if (isCursorInContainer) {
-        isMoving = true;
-        lastMouseX += (Math.random() - 0.5) * 10;
+    if (isCursorInContainer) {
+      isMoving = true;
+      lastMouseX += (Math.random() - 0.5) * 10;
 
-        clearTimeout(window.scrollTimeout);
-        window.scrollTimeout = setTimeout(() => {
-          isMoving = false;
-        }, 100);
-      }
-    },
-    { passive: false }
-  );
+      clearTimeout(window.scrollTimeout);
+      window.scrollTimeout = setTimeout(() => {
+        isMoving = false;
+      }, 100);
+    }
 
-  window.addEventListener(
-    "scroll",
-    () => {
-      const now = Date.now();
-      isScrolling = true;
+    const now = Date.now();
+    isScrolling = true;
 
-      if (now - lastScrollTime < config.scrollThreshold) return;
+    if (now - lastScrollTime < config.scrollThreshold) return;
 
-      lastScrollTime = now;
+    lastScrollTime = now;
 
-      if (!scrollTicking) {
-        requestAnimationFrame(() => {
-          if (isScrolling) {
-            createScrollTrailImage();
-            isScrolling = false;
-          }
-          scrollTicking = false; // fixed typo here
-        });
-        scrollTicking = true;
-      }
-    },
-    { passive: true }
-  );
+    if (!scrollTicking) {
+      requestAnimationFrame(() => {
+        if (isScrolling) {
+          createScrollTrailImage();
+          isScrolling = false;
+        }
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
+  });
 
-  const animate = () => {
+  const animate = (time) => {
+    lenis.raf(time);
     createTrailImage();
     removeOldImage();
     requestAnimationFrame(animate);
   };
 
-  animate();
+  requestAnimationFrame(animate);
 
-  Shery.textAnimate("h1" /* Element to target.*/, {
-  //Parameters are optional.
-  style: 1,
-  y: 10,
-//   delay: 0.1,
-  duration: 0,
-  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-  multiplier: -0.0001,
+  // Optional text animation
+  Shery.textAnimate("h1", {
+    style: 1,
+    y: 10,
+    duration: 0,
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    multiplier: -0.0001,
+  });
 });
-});
-
-
