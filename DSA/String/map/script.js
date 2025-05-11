@@ -55,7 +55,7 @@ let prompt = require('prompt-sync')();
 // }
 
 
-// console.log(map.keys(2))
+console.log(map.keys(2))
 
 // names = ["Mary","John","Emma"]
 // heights = [180,165,170]
