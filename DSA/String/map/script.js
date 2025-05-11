@@ -65,9 +65,9 @@ let prompt = require('prompt-sync')();
 // console.log(ar.map(block => block[1]))
 
 
-let score = [[10,6,9,1],[7,5,11,2],[4,8,3,15]];
-let k = 2;
+// let score = [[10,6,9,1],[7,5,11,2],[4,8,3,15]];
+// let k = 2;
 
-score.sort((a,b) => b[k] - a[k])
+// score.sort((a,b) => b[k] - a[k])
 
-console.log(score)
+// console.log(score)
