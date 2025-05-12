@@ -91,7 +91,7 @@ loader.load("asset/gas_station/scene.gltf", function (gltf) {
 });
 
 function animate() {
-    requestAnimationFrame(animate);
+    // requestAnimationFrame(animate);
     controls.update();
     composer.render();
 }
