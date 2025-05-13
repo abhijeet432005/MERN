@@ -45,6 +45,7 @@ p {
 
 main {
   width: 100%;
+  padding: 2rem;
 }
 main .container {
   width: 100%;
@@ -67,7 +68,7 @@ main .container .header .spacer {
 main .container .section-preview {
   position: fixed;
   width: 500px;
-  height: 600px;
+  height: 700px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
