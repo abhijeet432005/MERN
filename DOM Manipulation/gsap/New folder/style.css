@@ -1,6 +1,10 @@
 @font-face {
-  src: url("./asset/pp-neue-montreal-cufonfonts/ppneuemontreal-medium.otf");
+  font-family: thin;
+  src: url(./asset/pp-neue-montreal-cufonfonts/ppneuemontreal-thin.otf);
+}
+@font-face {
   font-family: Mid;
+  src: url(./asset/pp-neue-montreal-cufonfonts/ppneuemontreal-medium.otf);
 }
 * {
   margin: 0;
@@ -8,62 +12,71 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   width: 100%;
   height: 100%;
-  font-family: mid;
-  background-color: #151620;
+  font-family: Mid;
+  background: black;
 }
 
-a, p {
-  text-decoration: none;
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+h1 {
   color: white;
+  font-size: 12vw;
+  font-family: thin;
+  letter-spacing: -0.025em;
   text-transform: uppercase;
+  text-align: center;
 }
 
-.garage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 2.5em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 2;
-}
-nav .nav-item {
-  display: flex;
-  gap: 2em;
-}
-nav .logo {
-  background-color: #ffe640;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  border-radius: 4px;
-}
-nav .logo a {
+p {
+  color: white;
   font-size: 0.9rem;
-  font-weight: bolder;
-  color: black;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+main {
   width: 100%;
-  padding: 2.5em;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+}
+main .container {
+  width: 100%;
+  height: 100%;
+}
+main .container .intro-copy {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+main .container .header section {
+  margin: 150vh 0;
+}
+main .container .header .spacer {
+  width: 100%;
+  height: 200px;
+}
+main .container .section-preview {
+  position: fixed;
+  width: 500px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .container .section-preview .img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  overflow: hidden;
 }/*# sourceMappingURL=style.css.map */
