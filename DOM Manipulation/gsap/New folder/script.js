@@ -1,104 +1,115 @@
-gsap.registerPlugin(ScrollTrigger);
+document.addEventListener("DOMContentLoaded", () => {
+    const imageSources = [
+        "./asset/img27.jpg",
+        "./asset/img7.jpg",
+        "./asset/img28.jpg",
+        "./asset/img24.jpg",
+        "./asset/img3.jpg",
+        
+    ]
 
-function mainAnimate(){
+    const menuItems = document.querySelectorAll(".menu-item");
 
-    function addImageScaleAnimation() {
-        gsap.utils.toArray("section").forEach((section, index) => {
-            const image = document.querySelector(`#preview-${index + 1} img`);
-    
-            const startCondition = index === 0 ? "top top" : "bottom bottom";
-    
-            gsap.to(image, {
-                scrollTrigger: {
-                    trigger: section,
-                    start: startCondition,
-                    end: () => {
-                        const viewportHeight = window.innerHeight;
-                        const sectionBottom = section.offsetTop + section.offsetHeight;
-                        const additionalDistance = viewportHeight * 0.5;
-                        const endValue = sectionBottom - viewportHeight + additionalDistance;
-                        return `+=${endValue}`;
-                    },
-                    scrub: 1,
-                },
-                scale: 2,
-                ease: "none"
-            });
-        });
-    }
-    
-    addImageScaleAnimation();
-    
-    function animateClipPath(
-        sectionId,
-        previewId,
-        startClipPath,
-        endClipPath,
-        start = "top top",
-        end = "bottom top"
-    ) {
-        const section = document.querySelector(sectionId);
-        const preview = document.querySelector(previewId);
-    
-    
-        ScrollTrigger.create({
-            trigger: section,
-            start: start,
-            end: end,
-            onEnter: () => {
-                gsap.to(preview, {
-                    scrollTrigger: {
-                        trigger: section,
-                        start: start,
-                        end: end,
-                        scrub: 0.125,
-                    },
-                    clipPath: endClipPath,
-                    ease: "none"
-                })
+    menuItems.forEach((item) => {
+        const copyElement = item.querySelectorAll(".info, .name, .tag");
+
+        copyElement.forEach((div) => {
+            const copy = div.querySelector("p");
+
+            if(copy){
+                const duplicateCopy = document.createElement("p");
+                duplicateCopy.textContent = copy.textContent;
+                div.appendChild(duplicateCopy)
+
             }
         })
+    })
+
+    const appendImages = (src) => {
+        const preview1 = document.querySelector(".preview-img-1")
+        const preview2 = document.querySelector(".preview-img-2")
+
+        const img1 = document.createElement("img")
+        const img2 = document.createElement("img")
+
+        img1.src = src;
+        img1.style.clipPath = "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)";
+
+        img2.src = src;
+        img2.style.clipPath = "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)";
+
+        preview1.appendChild(img1)
+        preview2.appendChild(img2)
+
+        gsap.to([img1, img2], {
+            clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+            duration: 1,
+            ease: "power3.out",
+            onComplete: function () {
+                removeExtraImages(preview1)
+                removeExtraImages(preview2)
+            }
+        })
+
     }
-    
-    animateClipPath(
-        "#section-1",
-        "#preview-1",
-        "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-        "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
-    );
-    
-    const totalSection = 7;
-    
-    for (let i = 1; i <= totalSection; i++) {
-        const currentSection = `#section-${i}`;
-        let prevPreview = `#preview-${i - 1}`;
-        const currentPreview = `#preview-${i}`;
-    
-        animateClipPath(
-            currentSection,
-            prevPreview,
-            "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-            "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-            "top bottom",
-            "center center"
-        );
-    
-        if (i < totalSection) {
-            animateClipPath(
-                currentSection,
-                currentPreview,
-                "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-                "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-                "center center",
-                "bottom top"
-            );
+
+    function removeExtraImages(container){
+        while(container.children.length > 10){
+            container.removeChild(container.firstChild)
         }
     }
-}
 
-mainAnimate()
+    document.querySelectorAll(".menu-item").forEach((item, index) => {
+        item.addEventListener("mouseover", () => {
+            mouseOverAnimation(item)
+            appendImages(imageSources[index]);
 
-Shery.mouseFollower({
-  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-  duration: 1,
-});
+        });
+
+        item.addEventListener("mouseout", () => {
+            mouseOutAnimation(item)
+        })
+    })
+
+    const mouseOverAnimation = (elem) => {
+        gsap.to(elem.querySelectorAll("p:nth-child(1)"), {
+            top: "-100%",
+            duration: 0.3,
+        });
+        gsap.to(elem.querySelectorAll("p:nth-child(2)"), {
+            top: "0%",
+            duration: 0.3,
+        });
+        
+    }
+    const mouseOutAnimation = (elem) => {
+        gsap.to(elem.querySelectorAll("p:nth-child(1)"), {
+            top: "0%",
+            duration: 0.3,
+        });
+        gsap.to(elem.querySelectorAll("p:nth-child(2)"), {
+            top: "100%",
+            duration: 0.3,
+        });
+        
+    }
+
+    document.querySelector(".menu").addEventListener("mouseout", () => {
+        gsap.to(".preview-img img", {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+            duration: 1,
+            ease: "power3.out",
+        })
+    })
+
+    document.addEventListener("mousemove", (e) => {
+        const preview = document.querySelector(".preview");
+
+        gsap.to(preview, {
+            x: e.clientX,
+            y: e.clientY,
+            duration: 1,
+            ease: "power3.out"
+        })
+    })
+})

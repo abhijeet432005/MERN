@@ -1,11 +1,3 @@
-@font-face {
-  font-family: thin;
-  src: url(./asset/pp-neue-montreal-cufonfonts/ppneuemontreal-thin.otf);
-}
-@font-face {
-  font-family: Mid;
-  src: url(./asset/pp-neue-montreal-cufonfonts/ppneuemontreal-medium.otf);
-}
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +7,8 @@
 html, body {
   width: 100%;
   height: 100%;
-  font-family: Mid;
-  background: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  overflow: hidden;
 }
 
 img {
@@ -26,58 +18,84 @@ img {
      object-fit: cover;
 }
 
-h1 {
-  color: white;
-  font-size: 12vw;
-  font-family: thin;
-  letter-spacing: -0.025em;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 p {
-  color: white;
-  font-size: 0.9rem;
+  position: absolute;
+  top: 0%;
+  width: 100%;
   font-weight: 500;
   text-transform: uppercase;
-  text-align: center;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  transition: color 0.25s;
 }
 
 main {
   width: 100%;
-  padding: 2rem;
 }
 main .container {
   width: 100%;
   height: 100%;
 }
-main .container .intro-copy {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-}
-main .container .header section {
-  margin: 150vh 0;
-}
-main .container .header .spacer {
+main .container .menu {
   width: 100%;
-  height: 200px;
+  margin: 15em 0;
 }
-main .container .section-preview {
-  position: fixed;
-  width: 500px;
-  height: 700px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+main .container .menu .menu-item {
+  width: 100%;
+  padding: 0 2em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
-main .container .section-preview .img {
+main .container .menu .menu-item .info, main .container .menu .menu-item .name, main .container .menu .menu-item .tag {
+  position: relative;
+  overflow: hidden;
+}
+main .container .menu .menu-item .info, main .container .menu .menu-item .tag {
+  flex: 1;
+  height: 14px;
+  font-size: 14px;
+}
+main .container .menu .menu-item .tag {
+  text-align: right;
+}
+main .container .menu .menu-item .name {
+  flex: 4;
+  height: 60px;
+  font-size: 3vw;
+  text-align: center;
+}
+main .container .menu .menu-item .info p:nth-child(2),
+main .container .menu .menu-item .name p:nth-child(2),
+main .container .menu .menu-item .tag p:nth-child(2) {
+  top: 100%;
+  color: black;
+}
+main .container .menu:hover .info p:nth-child(1),
+main .container .menu:hover .name p:nth-child(1),
+main .container .menu:hover .tag p:nth-child(1) {
+  color: rgb(165, 165, 165);
+}
+main .container .preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 225px;
+  height: 225px;
+  z-index: 2;
+  pointer-events: none;
+}
+main .container .preview .preview-img {
+  position: absolute;
   width: 100%;
   height: 100%;
+}
+main .container .preview .preview-img img {
   position: absolute;
-  -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-          clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+main .container .preview .preview-img-2 {
+  left: 10px;
+  top: 10px;
 }/*# sourceMappingURL=style.css.map */
