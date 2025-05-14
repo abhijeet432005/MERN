@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
     }
 
-    document.querySelector(".menu").addEventListener("mouseout", () => {
+    // document.querySelector(".menu").addEventListener("mouseout", () => {
         gsap.to(".preview-img img", {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
             duration: 1,
