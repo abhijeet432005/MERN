@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const rows = document.querySelectorAll(".row");
 
   rows.forEach((row, index) => {
-    // const rowImages = row.querySelectorAll(".img");
+    const rowImages = row.querySelectorAll(".img");
 
     if (rowImages.length > 0) {
       row.id = `row-${index}`;
