@@ -7,8 +7,8 @@
 html, body {
   width: 100%;
   height: 100%;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  overflow: hidden;
+  font-family: monospace;
+  cursor: default;
 }
 
 img {
@@ -18,84 +18,61 @@ img {
      object-fit: cover;
 }
 
-p {
-  position: absolute;
-  top: 0%;
-  width: 100%;
-  font-weight: 500;
+h1 {
   text-transform: uppercase;
+  text-align: center;
+  font-size: 10vw;
   line-height: 100%;
-  letter-spacing: -0.02em;
-  transition: color 0.25s;
+  font-weight: 400;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  color: transparent;
+}
+
+p {
+  text-transform: uppercase;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 13px;
 }
 
 main {
   width: 100%;
 }
-main .container {
-  width: 100%;
-  height: 100%;
-}
-main .container .menu {
-  width: 100%;
-  margin: 15em 0;
-}
-main .container .menu .menu-item {
-  width: 100%;
-  padding: 0 2em;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-main .container .menu .menu-item .info, main .container .menu .menu-item .name, main .container .menu .menu-item .tag {
+main .intro, main .outro {
   position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #101214;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
   overflow: hidden;
 }
-main .container .menu .menu-item .info, main .container .menu .menu-item .tag {
+main .work {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #1a1d20;
+}
+main .work .row {
+  width: 100%;
+  display: flex;
+}
+main .work .row .col {
   flex: 1;
-  height: 14px;
-  font-size: 14px;
+  aspect-ratio: 1;
 }
-main .container .menu .menu-item .tag {
-  text-align: right;
-}
-main .container .menu .menu-item .name {
-  flex: 4;
-  height: 60px;
-  font-size: 3vw;
-  text-align: center;
-}
-main .container .menu .menu-item .info p:nth-child(2),
-main .container .menu .menu-item .name p:nth-child(2),
-main .container .menu .menu-item .tag p:nth-child(2) {
-  top: 100%;
-  color: black;
-}
-main .container .menu:hover .info p:nth-child(1),
-main .container .menu:hover .name p:nth-child(1),
-main .container .menu:hover .tag p:nth-child(1) {
-  color: rgb(165, 165, 165);
-}
-main .container .preview {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 225px;
-  height: 225px;
-  z-index: 2;
-  pointer-events: none;
-}
-main .container .preview .preview-img {
-  position: absolute;
+main .work .row .col .img {
+  position: relative;
   width: 100%;
   height: 100%;
+  will-change: transform;
 }
-main .container .preview .preview-img img {
-  position: absolute;
-  top: 0;
-  left: 0;
+main .work .row .col .img[data-origin=left] {
+  transform-origin: 0% 0%;
 }
-main .container .preview .preview-img-2 {
-  left: 10px;
-  top: 10px;
+main .work .row .col .img[data-origin=right] {
+  transform-origin: 100% 0%;
 }/*# sourceMappingURL=style.css.map */
