@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ScrollTrigger.create({
         id: `scaleIn-${index}`,
         trigger: row,
-        start: "top bottom",
+        // start: "top bottom",
         end: "bottom bottom-=10%",
         scrub: 1,
         invalidateOnRefresh: true,
