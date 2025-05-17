@@ -1,62 +1,49 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const lenis = new Lenis();
-        
-    lenis.on('scroll', ScrollTrigger.update);
-    gsap.ticker.add((time) => {
-        lenis.raf(time * 1000);
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true
+});
+
+gsap.registerPlugin(Flip);
+CustomEase.create("cubic", "0.83, 0, 0.17, 1");
+
+const gallery = document.querySelector(".img-gallery-container");
+const images = gsap.utils.toArray(".img");
+let rotationValues = [10, -5, 2, -2];
+
+let isFlipped = false;
+
+function applyRotation() {
+    images.forEach((img, index) => {
+        const rotation = isFlipped ? 0 : rotationValues[index];
+        gsap.to(img, {
+            rotate: rotation,
+            duration: 2,
+            ease: "cubic",
+            delay: 0.155,
+        });
     });
+}
 
-    gsap.ticker.lagSmoothing(0);
+document.querySelector(".btn").addEventListener("click", () => {
+    isFlipped = !isFlipped;
 
-    const cards = gsap.utils.toArray(".card")
-    const rotation = [-12,10,-5,5,-5,2];
+    setTimeout(() => {
+        document.querySelector(".btn").textContent = isFlipped ? "Hide All Ideas" : "Explore Ideas";
+    }, 1000);
 
-    cards.forEach((card, index) => {
-        gsap.set(card, {
-            y: window.innerHeight,
-            rotate: rotation[index]
-        })
-    })
+    let state = Flip.getState(".img-gallery-container, .img");
+    gallery.classList.toggle("order");
+    images.forEach((img) => img.classList.toggle("reorder"));
 
-    ScrollTrigger.create({
-        trigger: ".sticky-card",
-        start: "top top",
-        end: `+=${window.innerHeight * 8}px`,
-        pin: true,
-        pinSpacing: true,
-        scrub: 1,
-        onUpdate: (self) => {
-            const progress = self.progress;
-            const totalCards = cards.length;
-            const progressPerCard = 1 / totalCards;
-
-            cards.forEach((card, index) => {
-                const cardStart = index * progressPerCard;
-                let cardProgress = (progress - cardStart) / progressPerCard;
-                cardProgress = Math.min(Math.max(cardProgress, 0), 1);
-
-                let yPos = window.innerHeight * (1 - cardProgress);
-                let xPos = 0;
-
-                if(cardProgress === 1 && index < totalCards - 1){
-                    const remaningProgress  = (progress - (cardStart + progressPerCard)) / (1 - (cardStart + progressPerCard));
-
-                    if(remaningProgress > 0){
-                        const distanceMultiplier = 1 - index * 0.15;
-                        xPos = -window.innerWidth * 0.3 * distanceMultiplier * remaningProgress;
-
-                        yPos = -window.innerHeight * 0.3 * distanceMultiplier * remaningProgress;
-
-                    }
-                }
-
-                gsap.to(card, {
-                    y: yPos,
-                    x: xPos,
-                    duration: 0,
-                    ease: "none"
-                })
-            })
+    Flip.from(state, {
+        absolute: true,
+        duration: 2,
+        rotate: 0, // ✅ Fixed typo
+        stagger: 0.05,
+        ease: "cubic",
+        onStart: applyRotation,
+        onComplete: () => {
+            scroll.update(); // ✅ LocomotiveScroll instance is `scroll`, not `scroller`
         }
-    })
-})
+    });
+});

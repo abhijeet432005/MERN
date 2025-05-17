@@ -5,64 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
 </head>
 <body>
 
     <main>
-        <section class="hero">
-            <h1>Future threads for a fractured world.</h1>
-        </section>
-        <section class="sticky-card">
-            <div class="card">
-                <div class="card-img">
+        <nav>
+            <div class="links">
+                <a href="#">Work</a>
+                <a href="#">Info</a>
+                <a href="#">About</a>
+            </div>
+            <div class="cta">
+                <a href="#">Sign Up</a>
+            </div>
+        </nav>
+
+        <footer>
+            <a href="#">English</a>
+            <a href="#">View Showreel</a>
+        </footer>
+
+        <div class="img-gallery" data-scroll-container>
+            <div class="img-gallery-container order" data-scroll>
+                <div class="img reorder">
+                    <img src="https://images.unsplash.com/photo-1615592389070-bcc97e05ad01?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGFuaW1lfGVufDB8fDB8fHww" alt="" srcset="">
+                </div>
+                <div class="img reorder">
                     <img src="https://images.unsplash.com/photo-1627672360124-4ed09583e14c?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGFuaW1lfGVufDB8fDB8fHww" alt="" srcset="">
                 </div>
-                <div class="card-content"><p>X01-842</p></div>
-            </div>
-            <div class="card">
-                <div class="card-img">
+                <div class="img reorder">
                     <img src="https://images.unsplash.com/photo-1668293750324-bd77c1f08ca9?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fGFuaW1lfGVufDB8fDB8fHww" alt="" srcset="">
                 </div>
-                <div class="card-content"><p>V9-372k</p></div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1661495898094-9aca4552668e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fGFuaW1lfGVufDB8fDB8fHww" alt="" srcset="">
+                <div class="img reorder">
+                    <img src="https://images.unsplash.com/photo-1697715841744-9c24df04dacc?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzN8fGFuaW1lfGVufDB8fDB8fHww" alt="" srcset="">
                 </div>
-                <div class="card-content"><p>Z84-Q17</p></div>
             </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1667558307422-a44cc22bc4cb?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMyfHx8ZW58MHx8fHx8w" alt="" srcset="">
-                </div>
-                <div class="card-content"><p>XL56-904</p></div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1677143051370-da2e52baa771?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM5fHx8ZW58MHx8fHx8" alt="" srcset="">
-                </div>
-                <div class="card-content"><p>A23-7P1</p></div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1670236246360-b0afceb96b87?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDQ5fHx8ZW58MHx8fHx8" alt="" srcset="">
-                </div>
-                <div class="card-content"><p>T98-462</p></div>
-            </div>
-        </section>
+        </div>
+        
+        
+        <div class="hero">
+            <h1>Near Future</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, tempora.</p>
+        </div>
 
-        <section class="outro">
-            <h1>Tommorow, tailored.</h1>
-        </section>
+        <div class="btn">
+            Explore Ideas
+        </div>
     </main>
     
-
-    <!--  Gsap is needed for Basic Effects -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-    <!-- Scroll Trigger is needed for Scroll Effects -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/CustomEase.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
