@@ -56,7 +56,7 @@ let prompt = require("prompt-sync")()
 
 // 2. Insertion Sort
 
-let arr = [1,4,3,2,9,10];
+// let arr = [1,4,3,2,9,10];
 
 for(let i = 1; i < arr.length - 1; i++){
     let key = arr[i];
