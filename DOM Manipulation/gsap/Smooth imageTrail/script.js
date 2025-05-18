@@ -209,11 +209,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
   // Optional text animation
-  Shery.textAnimate("h1", {
-    style: 1,
-    y: 10,
-    duration: 0,
-    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-    multiplier: -0.0001,
-  });
+  // Shery.textAnimate("h1", {
+  //   style: 1,
+  //   y: 10,
+  //   duration: 0,
+  //   ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  //   multiplier: -0.0001,
+  // });
 });

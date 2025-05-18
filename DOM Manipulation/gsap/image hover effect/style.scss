@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+    
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+p{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    transition: color 0.25s;
+}
+
+
+
+main{
+    width: 100%;
+    
+
+    .container{
+        width: 100%;
+        height: 100%;
+
+        .menu{
+            width: 100%;
+            margin: 15em 0;
+
+            .menu-item{
+                width: 100%;
+                padding: 0 2em;  
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                .info, .name, .tag{
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .info, .tag{
+                    flex: 1;
+                    height: 14px;
+                    font-size: 14px;
+                }
+
+                .tag{
+                    text-align: right;
+                }
+
+
+                .name{
+                    flex: 4;
+                    height: 60px;
+                    font-size: 3vw;
+                    text-align: center;
+                }
+
+                .info p:nth-child(2),
+                .name p:nth-child(2),
+                .tag p:nth-child(2){
+                    top: 100%;
+                    color: black;
+                }
+            }
+
+        }
+        .menu:hover .info p:nth-child(1),
+        .menu:hover .name p:nth-child(1),
+        .menu:hover .tag p:nth-child(1){
+            color:  rgb(165, 165, 165);
+        }
+
+        .preview{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 225px;
+            height: 225px;
+            z-index: 2;
+            pointer-events: none;
+
+            .preview-img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            .preview-img-2{
+                left: 10px;
+                top: 10px;
+                // height: 20px;
+                // background-color: black;
+            }
+            
+        }
+    }
+}

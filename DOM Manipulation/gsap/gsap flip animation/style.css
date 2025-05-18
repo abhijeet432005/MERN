@@ -3,7 +3,7 @@
   src: url(./assets/pp-neue-montreal-cufonfonts/ppneuemontreal-medium.otf);
 }
 @font-face {
-  font-family: mid;
+  font-family: thinFont;
   src: url(./assets/pp-neue-montreal-cufonfonts/ppneuemontreal-thin.otf);
 }
 * {
@@ -40,6 +40,7 @@ main nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: thinFont;
 }
 main nav .links {
   display: flex;
@@ -53,6 +54,7 @@ main footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: thinFont;
 }
 main .hero {
   width: 100%;
@@ -67,7 +69,7 @@ main .hero h1 {
   width: 100%;
   font-size: 14vw;
   color: #c0c0c0;
-  font-family: mid;
+  font-family: thinFont;
   letter-spacing: -0.05em;
 }
 main .hero p {

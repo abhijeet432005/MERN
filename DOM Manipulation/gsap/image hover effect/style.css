@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+p {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  transition: color 0.25s;
+}
+
+main {
+  width: 100%;
+}
+main .container {
+  width: 100%;
+  height: 100%;
+}
+main .container .menu {
+  width: 100%;
+  margin: 15em 0;
+}
+main .container .menu .menu-item {
+  width: 100%;
+  padding: 0 2em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+main .container .menu .menu-item .info, main .container .menu .menu-item .name, main .container .menu .menu-item .tag {
+  position: relative;
+  overflow: hidden;
+}
+main .container .menu .menu-item .info, main .container .menu .menu-item .tag {
+  flex: 1;
+  height: 14px;
+  font-size: 14px;
+}
+main .container .menu .menu-item .tag {
+  text-align: right;
+}
+main .container .menu .menu-item .name {
+  flex: 4;
+  height: 60px;
+  font-size: 3vw;
+  text-align: center;
+}
+main .container .menu .menu-item .info p:nth-child(2),
+main .container .menu .menu-item .name p:nth-child(2),
+main .container .menu .menu-item .tag p:nth-child(2) {
+  top: 100%;
+  color: black;
+}
+main .container .menu:hover .info p:nth-child(1),
+main .container .menu:hover .name p:nth-child(1),
+main .container .menu:hover .tag p:nth-child(1) {
+  color: rgb(165, 165, 165);
+}
+main .container .preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 225px;
+  height: 225px;
+  z-index: 2;
+  pointer-events: none;
+}
+main .container .preview .preview-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+main .container .preview .preview-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .container .preview .preview-img-2 {
+  left: 10px;
+  top: 10px;
+}/*# sourceMappingURL=style.css.map */

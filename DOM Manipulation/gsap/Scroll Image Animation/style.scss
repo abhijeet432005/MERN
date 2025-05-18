@@ -1,0 +1,92 @@
+@font-face {
+    font-family: thin;
+    src: url(./asset/pp-neue-montreal-cufonfonts/ppneuemontreal-thin.otf);
+}
+@font-face {
+    font-family: Mid;
+    src: url(./asset/pp-neue-montreal-cufonfonts/ppneuemontreal-medium.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: Mid;
+    background: black;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1{
+    color: white;
+    font-size: 12vw;
+    font-family: thin;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p{
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+main{
+    width: 100%;
+    padding: 2rem;
+
+    .container{
+        width: 100%;
+        height: 100%;
+
+        .intro-copy{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0  ;
+        }
+
+        .header{
+    
+            section{
+                margin: 150vh 0;
+            }
+    
+            .spacer{
+                width: 100%;
+                height: 200px;
+            }
+        }
+    
+        .section-preview{
+            position: fixed;
+            width: 500px;
+            height: 700px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+    
+            .img{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+                overflow: hidden;
+            }
+        }
+    }
+
+}
