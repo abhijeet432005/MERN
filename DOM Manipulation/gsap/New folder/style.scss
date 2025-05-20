@@ -85,7 +85,7 @@ main {
       justify-content: center;
       align-items: center;
       transform-style: preserve-3d;
-    //   perspective: 2000px;
+      perspective: 2000px;
       will-change: transform;
 
       .gallery {
