@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function(){
     ];
 
     const slider = document.querySelector(".slider")
-    let activeSlide = 0;
+    // let activeSlide = 0;
 
     document.addEventListener("click", () => {
         const currentSlide = slider.querySelector(".slide:not(.existing)");
