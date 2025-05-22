@@ -92,10 +92,6 @@ a {
   font-weight: 400;
   text-transform: uppercase;
 }
-.hero-copy p {
-  text-transform: capitalize;
-}
-
 #hero-video {
   position: fixed;
   right: 0;
