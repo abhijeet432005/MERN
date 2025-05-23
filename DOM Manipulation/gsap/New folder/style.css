@@ -60,7 +60,6 @@ footer {
   top: 15.5%;
   left: 50%;
   transform-style: preserve-3d;
-  transform: translateX(-50%) rotateX(55deg);
 }
 
 .item {
