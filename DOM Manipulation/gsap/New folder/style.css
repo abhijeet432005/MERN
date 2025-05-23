@@ -6,7 +6,84 @@
 
 html, body {
   width: 100%;
+  height: 150vh;
+  font-family: monospace;
+  scroll-behavior: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 8px; /* Scrollbar ki width */
+  background-color: #e2e2e2; /* Scrollbar track color */
+  border-radius: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #ffffff; /* Track color */
+  border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(222, 217, 217, 0.831372549); /* Thumb color */
+  border-radius: 8px;
+}
+
+nav, footer {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+
+nav {
+  top: 0;
+}
+
+footer {
+  bottom: 0;
+  text-transform: capitalize;
+}
+
+.container {
+  position: fixed;
+  width: 100%;
   height: 100%;
+  overflow: hidden;
+  perspective: 1500px;
+}
+
+.gallery {
+  position: absolute;
+  top: 15.5%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translateX(-50%) rotateX(55deg);
+}
+
+.item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45px;
+  height: 65px;
+  margin: 10px;
+  transform-style: preserve-3d;
+  background: #b0b0b0;
+}
+
+.preview-img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 200px;
+  z-index: 0;
+  pointer-events: none;
 }
 
 img {
@@ -14,80 +91,4 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-h1 {
-  white-space: nowrap;
-}
-
-.slider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: #dbdbdb;
-}
-
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #dbdbdb;
-  z-index: 2;
-  overflow: hidden;
-}
-
-.slide.dark {
-  background-color: #000;
-}
-
-.slide-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.slide-content h1 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 18vw;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: -1.1rem;
-  color: #000;
-}
-
-.slide.dark .slide-content h1 {
-  color: #dbdbdb;
-}
-
-.slide-img {
-  position: absolute;
-  width: 250px;
-  height: 150vh;
-  filter: saturate(0);
-}
-
-.slide-img img {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 250px;
-  height: 550px;
-}
-
-.slide-img-1 {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-20deg);
-}
-
-.slide-img-2 {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(20deg);
 }/*# sourceMappingURL=style.css.map */

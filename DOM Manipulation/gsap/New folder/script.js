@@ -1,87 +1,107 @@
-document.addEventListener("DOMContentLoaded", function(){
-    const sliderContent = [
-        "Echoes",
-        "Etheral",
-        "Neon Void",
-        "Mystics",
-        "Horizons",
-        "Dystopian"
-    ];
+window.onload = function () {
+    const lenis = new Lenis();
 
-    const slider = document.querySelector(".slider")
-    let activeSlide = 0;
+    lenis.on('scroll', ScrollTrigger.update);
 
-    document.addEventListener("click", () => {
-        const currentSlide = slider.querySelector(".slide:not(.existing)");
-        const slideTheme = activeSlide % 2 ? "dark" : "light";
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+    });
 
-        activeSlide = (activeSlide + 1) % sliderContent.length
+    gsap.ticker.lagSmoothing(0);
+    gsap.registerPlugin(ScrollTrigger);
 
-        if(currentSlide){
-            const existingImgs = currentSlide.querySelectorAll("img")
-            gsap.to(existingImgs, {
-                top: "0%",
-                duration: 1.5,
-                ease: "power4.inOut"
-            })
-            currentSlide.classList.add("existing")
+    const gallery = document.querySelector(".gallery")
+    console.log(gallery)
+    const previewImg = document.querySelector(".preview-img img")
 
-        }
-        const newSlide = document.createElement("div")
-        newSlide.classList.add("slide")
-        newSlide.classList.add(slideTheme)
-        newSlide.style.clipPath = "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)"
+    document.addEventListener("mousemove", function (event) {
+        console.log("Triggering animation");
+        const x = event.clientX;
+        const y = event.clientY;
 
-        const newSlideImg1 = document.createElement("div")
-        newSlideImg1.className = "slide-img slide-img-1"
-        const img1 = document.createElement("img")
-        img1.src = `./asset/img${activeSlide + 1}.jpg`;
-        img1.style.top = "100%"
-        newSlideImg1.appendChild(img1)
-        newSlide.appendChild(newSlideImg1)
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
 
-        const newSlideContent = document.createElement("div")
-        newSlideContent.classList.add("slide-content")
-        newSlideContent.innerHTML = `<h1 style="transform: scale(1.5)">${sliderContent[activeSlide]}</h1>`;
+        const percentX = (x - centerX) / centerX;
+        const percentY = (y - centerY) / centerY;
 
-        newSlide.appendChild(newSlideContent)
+        const rotateX = 55 + percentY * 2;
+        const rotateY = percentX * 2;
 
-        const newSlideImg2 = document.createElement("div")
-        newSlideImg2.className = "slide-img slide-img-2"
-        const img2 = document.createElement("img")
-        img2.src = `./asset/img${activeSlide + 2}.jpg`;
-        img2.style.top = "100%"
-        newSlideImg2.appendChild(img2)
-        newSlide.appendChild(newSlideImg2)
 
-        slider.appendChild(newSlide)
-        gsap.to(newSlide, {
-            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-            duration: 1.5,
-            ease: "power4.inOut",
-            onStart: () => {
-                gsap.to([img1, img2], {
-                    top: "50%",
-                    duration: 1.5,
-                    ease: "power4.inOut",
-                })
-            }, 
-            onComplete: () => {
-                removeExtraSlide(slider);
-            }
+        gsap.to(".gallery", {
+            duration: 1,
+            ease: "power2.out",
+            transform: `translateX(-50%) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+            overwrite: "auto",
         });
+    })
 
-        gsap.to(".slide-content h1", {
-            scale: 1,
-            duration: 1.5,
-            ease: "power4.inOut"
+    for (let i = 0; i < 200; i++) {
+        const item = document.createElement("div")
+        item.className = "item"
+        const img = document.createElement("img")
+        img.src = `./asset/img${(i % 15) + 1}.jpg`
+        item.appendChild(img)
+        gallery.appendChild(item)
+    }
+
+    const items = document.querySelectorAll(".item")
+    const numberOfItem = items.length;
+    const angleIncrement = 360 / numberOfItem;
+
+    items.forEach((item, index) => {
+        gsap.set(item, {
+            rotationY: 90,
+            rotationZ: index * angleIncrement - 90,
+            transformOrigin: "50% 400px",
+        })
+
+        item.addEventListener("mouseover", () => {
+            const imgInsideItem = item.querySelector("img")
+            previewImg.src = imgInsideItem.src;
+
+            gsap.to(item, {
+                x: 10,
+                y: 10,
+                z: 10,
+                ease: "power2.out",
+                duration: 0.5,
+            })
+        })
+
+        item.addEventListener("mouseout", () => {
+            previewImg.src = "./asset/img12.jpg"
+            gsap.to(item, {
+                x: 10,
+                y: 10,
+                z: 10,
+                ease: "power2.out",
+                duration: 0.5,
+            })
         })
     })
 
-    function removeExtraSlide(container){
-        while(container.children.length > 5){
-            container.removeChild(container.firstChild)
+    ScrollTrigger.create({
+        trigger: "body",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 2,
+        onRefresh: setupRotation,
+        onUpdate: (self) => {
+            // console.log("Scroll progress:", self.progress);
+            const rotationProgress = self.progress * 360 + 1;
+            items.forEach((item, index) => {
+                const currentAngle = index * angleIncrement - 90 + rotationProgress;
+                gsap.to(item, {
+                    rotationZ: currentAngle,
+                    duration: 1,
+                    ease: "power3.out",
+                    overwrite: "auto",
+                })
+            })
         }
-    }
+    })
+}
 
-})
+function setupRotation() { }
