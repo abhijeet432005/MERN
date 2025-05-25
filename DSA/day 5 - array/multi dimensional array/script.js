@@ -248,7 +248,7 @@ let mat = [
 let rStart = 0;
 let cStart = 0;
 let rEnd = mat.length - 1;
-let cEnd = mat[0].length - 1;
+// let cEnd = mat[0].length - 1;
 
 let result = [];
 
