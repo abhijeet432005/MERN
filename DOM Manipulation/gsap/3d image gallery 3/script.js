@@ -63,7 +63,7 @@ items.forEach(function (item, index) {
                         transform: "translate(-50%, -50%) scale(5)",
                         duration: 1,
                         ease: "power2.out",
-                        // delay: 1.25
+                        delay: 1.25
                     });
                 }
             });
