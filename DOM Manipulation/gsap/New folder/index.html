@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-    <nav>
-        <p>Logo.</p>
-        <p>About Us</p>
-    </nav>
-
-    <footer>
-        <p>Unlock your power</p>
-        <p>your code your bug</p>
-    </footer>
-
-    <div class="preview-img">
-        <img src="./asset/img12.jpg" alt="" srcset="">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+  </head>
+  <body>
+    <div class="img-gallery" data-scroll-container>
+        <div class="img-gallery-container" data-scroll>
+            <div class="img">
+                <img src="./asset/img14.jpg" alt="">
+            </div>
+            <div class="img">
+                <img src="./asset/img15.jpg" alt="">
+            </div>
+            <div class="img">
+                <img src="./asset/img16.jpg" alt="">
+            </div>
+            <div class="img">
+                <img src="./asset/img17.jpg" alt="">
+            </div>
+            <div class="img">
+                <img src="./asset/img18.jpg" alt="">
+            </div>
+            <div class="img">
+                <img src="./asset/img19.jpg" alt="">
+            </div>
+            <div class="img">
+                <img src="./asset/img20.jpg" alt="">
+            </div>
+            <div class="img">
+                <img src="./asset/img21.jpg" alt="">
+            </div>
+            <div class="img">
+                <img src="./asset/img11.jpg" alt="">
+            </div>
+            <div class="img">
+                <img src="./asset/img10.jpg" alt="">
+            </div>
+        </div>
     </div>
 
-    <div class="container">
-        <div class="gallery"></div>
-    </div>
-    <div class="spacer"></div>
+    <div class="btn">Flip Layout</div>
 
-    <!--  Gsap is needed for Basic Effects -->
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.3.3/dist/lenis.min.js"></script> 
-    <!-- Scroll Trigger is needed for Scroll Effects -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/CustomEase.min.js"></script>
     <script src="script.js"></script>
-    
-</body>
+  </body>
 </html>
