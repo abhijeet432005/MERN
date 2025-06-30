@@ -20,7 +20,7 @@ let create = document.querySelector('#cr-elem');
 let body = document.body;
 
 create.addEventListener('click', function(e){
-    let num = Math.floor(Math.random() * character.length);
+    let num = Math.floor(Math.random() * character.length); 
     let random = character[num]
 
     let x = Math.random() * 84;
