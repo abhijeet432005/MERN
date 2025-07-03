@@ -1,0 +1,63 @@
+body.active {
+  background-color: #0f172a; /* dark slate */
+  color: #f1f5f9; /* light text */
+}
+
+body.active input,
+body.active textarea,
+body.active select {
+  background-color: #1e293b;
+  color: #f1f5f9;
+  border-color: #334155;
+}
+
+body.active .bg-white {
+  background-color: #1e293b !important;
+}
+
+body.active .text-gray-800 {
+  color: #f1f5f9 !important;
+}
+
+body.active .text-gray-500,
+body.active .text-gray-600,
+body.active .text-gray-700 {
+  color: #94a3b8 !important;
+}
+
+body.active .shadow-xl {
+  box-shadow: 0 0 0 1px #334155, 0 10px 15px -3px rgba(15, 23, 42, 0.6),
+    0 4px 6px -4px rgba(15, 23, 42, 0.4);
+}
+
+body.active .border-gray-300 {
+  border-color: #475569 !important;
+}
+
+body.active .bg-gray-100 {
+  background-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+body.active .hover\:bg-blue-700:hover {
+  background-color: #1e40af !important;
+}
+
+
+
+
+@keyframes skeletonPulse {
+  0% {
+    background-color: #e5e7eb; /* Tailwind's gray-200 */
+  }
+  50% {
+    background-color: #d1d5db; /* Tailwind's gray-300 */
+  }
+  100% {
+    background-color: #e5e7eb;
+  }
+}
+
+#profileCard.animation-pulse .bg-gray-300 {
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+}
