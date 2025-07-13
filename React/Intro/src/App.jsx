@@ -9,8 +9,7 @@ const App = () => {
   const handelparameter = (msg) => {
     alert(msg)
   }
-
-  // const wrapper = () =>  handelparameter("batti")
+  
   
   return (
     <>
