@@ -1,10 +1,11 @@
 import { useParams } from 'react-router-dom'
 import { nanoid } from 'nanoid'
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { recipiecontext } from '../context/RecipieContext'
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
+
 
 const Recipie_update = () => {
 
@@ -13,29 +14,40 @@ const Recipie_update = () => {
   const param = useParams()
   const recipie = data.find(elem => param.id == elem.id)
   // console.log(recipie)
-  
+
+  useEffect(() => {
+    console.log("Recipe_update Mount")
+
+    return () => {
+      console.log("Recipe_update Unmount")
+
+    }
+  }, [])
+
   const { register, handleSubmit, reset, formState: { errors } } = useForm(
-    {defaultValues: {
-      image: recipie.image,
-      title: recipie.title,
-      steps: recipie.instructions,
-      desc: recipie.desc,
-      chef: recipie.chef,
-      cat: recipie.category,
-      ingr: recipie.ingredients,
-      instructions: recipie.instructions
-    }}
+    {
+      defaultValues: {
+        image: recipie.image,
+        title: recipie.title,
+        steps: recipie.instructions,
+        desc: recipie.desc,
+        chef: recipie.chef,
+        cat: recipie.category,
+        ingr: recipie.ingredients,
+        instructions: recipie.instructions
+      }
+    }
   )
   // console.log(data)
-  
-  
-  
+
+
+
   const SubmitHandler = (recipe) => {
     const index = data.findIndex(elem => param.id == elem.id)
     const copydata = [...data]
-    copydata[index] = {...copydata[index], ...recipe}
+    copydata[index] = { ...copydata[index], ...recipe }
     setdata(copydata)
-    console.log(copydata[index])
+    // console.log(copydata[index])
 
     toast.success("Update Successfully!")
 
@@ -46,7 +58,7 @@ const Recipie_update = () => {
 
   return (
     <div className='p-5 bg-gray-800 flex justify-center'>
-      
+
       <form onSubmit={handleSubmit(SubmitHandler)} className='flex flex-col w-fit items-start '>
         <input className='border-b p-1 m-2' type="url" placeholder='Enter image URL' {...register("image")} />
         <input className='border p-2 m-2' type="text" placeholder='Recipie Title' {...register("title", { required: "Empty" })} />

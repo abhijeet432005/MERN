@@ -1,5 +1,6 @@
 // Q1
 
+
 // var age = Number(prompt("Enter your age"));
 // if(age<18){
 //     console.log("you are minor");
@@ -505,3 +506,16 @@
 // console.log("Toggled Word:", toggledWord);
 
 
+function Counter(num){
+
+    let number = document.querySelector(".counter")
+    let btn  = document.querySelector("button")
+    
+    btn.addEventListener("click", () => {
+        // let num = 0;
+        num++
+        number.innerHTML = num
+    })
+}
+
+Counter(0)

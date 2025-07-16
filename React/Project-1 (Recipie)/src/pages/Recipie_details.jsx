@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { recipiecontext } from '../context/RecipieContext'
 import { set } from 'react-hook-form'
@@ -10,6 +10,15 @@ const Recipie_details = () => {
     const recipie = data.find(elem => param.id == elem.id)
     console.log(recipie)
     // console.log(data, param.id)
+
+    useEffect(() =>{
+        console.log("Recipe_details Mount")
+        
+        return () => {
+            console.log("Recipe_details Unmount")
+
+        }
+    }, [])
 
     const update = (id) => {
         navigate(`/recipie/detail/update/${id}`)
