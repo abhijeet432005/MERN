@@ -10,6 +10,7 @@ const Nav = () => {
       <NavLink className={e => e.isActive ?  "text-red-400 border-b" : ""} to="/recipie">Recipie</NavLink>
       <NavLink className={e => e.isActive ?  "text-red-400 border-b" : ""} to="/about">About</NavLink>
       <NavLink className={`px-2 py-2 bg-gray-900 ${e => e.isActive ?  "text-red-400 border-b" : ""}`} to="/create">Create Recipie</NavLink>
+      
     </div>
   )
 }
