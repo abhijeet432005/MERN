@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.card{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 300px);
+    gap: 3rem;
+    margin-top: 4rem;
+}
