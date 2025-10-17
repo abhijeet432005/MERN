@@ -33,8 +33,6 @@ const CreateRecipie = () => {
         
         console.log(recipie)
       }
-      console.log("Current origin:", window.location.origin);
-      console.log("hii")
 
   return (
     <div className='flex justify-center mt-4'>

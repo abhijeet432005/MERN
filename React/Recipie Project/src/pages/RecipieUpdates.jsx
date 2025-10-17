@@ -31,6 +31,8 @@ const RecipieUpdates = () => {
     copyData[index] = {...copyData[index], ...recipie}
     setdata(copyData)
     localStorage.setItem("recipie", JSON.stringify(copyData))
+    // localStorage.setItem("fav", JSON.stringify(copyData))
+    console.log(copyData[index])
     navigate(-1)
   };
 
@@ -106,3 +108,4 @@ const RecipieUpdates = () => {
 };
 
 export default RecipieUpdates;
+

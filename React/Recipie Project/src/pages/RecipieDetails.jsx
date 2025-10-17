@@ -23,7 +23,6 @@ const RecipieDetails = () => {
         localStorage.setItem("fav", JSON.stringify(filterfav))
 
         navigate('/recipies')
-        console.log(data)
     }
 
 

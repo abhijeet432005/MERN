@@ -4,7 +4,6 @@ import RecipieCard from '../components/RecipieCard'
 import { useNavigate } from 'react-router-dom'
 
 const Recipies = () => {
-  const navigate = useNavigate()
   const [data] = useContext(recipiecontext)
 
   const render = data.map((recipie) => (
