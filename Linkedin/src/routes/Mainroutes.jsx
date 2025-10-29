@@ -6,13 +6,14 @@ import Jobs from '../pages/Jobs'
 import UserDetail from '../pages/user/UserDetail'
 import Post from '../components/Post/Post'
 import PageNotFound from '../pages/PageNotFound'
+import AuthRoutes from './AuthRoutes'
 
 const Mainroutes = () => {
   return (
     <div>
         <Routes>
             <Route path='/' element={<Login />}></Route>
-            <Route path='/home' element={<Home />}></Route>
+            <Route path='/home' element={<AuthRoutes><Home /></AuthRoutes>}></Route>
             <Route path='/jobs' element={<Jobs />}></Route>
             <Route path='/userdetails' element={<UserDetail />}></Route>
             <Route path='/post' element={<Post />}></Route>
