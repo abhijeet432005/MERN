@@ -22,8 +22,10 @@ export const signINAPI = () => async (dispatch) => {
     // );
 
     localStorage.setItem("user", JSON.stringify(info))
+    return true
   } catch (error) {
     alert(error.message);
+    return false
   }
 };
 
@@ -41,6 +43,7 @@ export const currentUser = () => async (dispatch) => {
 // LOGOUT
 export const signOutAPI = () => async (dispatch) => {
   try {
+    await signOut(auth)
     localStorage.removeItem("user")
     dispatch(logOutUser());
   } catch (error) {
