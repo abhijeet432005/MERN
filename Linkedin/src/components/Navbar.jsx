@@ -140,7 +140,7 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search"
-              className="pl-10 pr-3 py-2 w-[15rem] border rounded-full bg-white border-gray-400 outline-none transition"
+              className="pl-10 pr-3 py-2 w-60 border rounded-full bg-white border-gray-400 outline-none transition"
             />
           </div>
 
@@ -171,7 +171,7 @@ const Navbar = () => {
               {menuOpen && <UserDetail userData={userData} />}
             </div>
 
-            <div className="w-[2px] h-14 bg-black"></div>
+            <div className="w-0.5 h-14 bg-black"></div>
             <div className="flex flex-col items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
