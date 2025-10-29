@@ -15,7 +15,7 @@ import Post from "../Post/Post";
 
 const HomeMain = () => {
   const userData = useSelector((state) => state.user.user);
-  const postData = JSON.parse(localStorage.getItem("Post"));
+  const postData = JSON.parse(localStorage.getItem("Post")) || [];
   console.log(userData)
   const [PostModel, setPostModel] = useState(false);
 
@@ -87,7 +87,7 @@ const HomeMain = () => {
 
       {/* post ui  */}
 
-      {postData.length > 0 && postData.map((postData, id) => (
+      {postData.length === 0 ? <h1 className="text-center text-gray-400 text-2xl">No Post Yet....</h1> : postData.map((postData, id) => (
         <div
           className="min-w-full flex flex-col bg-white lg:rounded-2xl"
           key={id}

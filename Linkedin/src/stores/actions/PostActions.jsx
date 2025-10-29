@@ -43,12 +43,18 @@ export const Syncpost = (data) => async (dispatch, getState) => {
 
 
 export const loading = () => async (dispatch) => {
-    try {
-        const data = JSON.parse(localStorage.getItem("Post"))
-        if (data) dispatch(loadPost(data))
-    } catch (error) {
-        console.log(error)
+  try {
+    const stored = localStorage.getItem("Post")
+    const data = stored ? JSON.parse(stored) : [] // agar null ho toh empty array
+    if (Array.isArray(data)) {
+      dispatch(loadPost(data))
+    } else {
+      dispatch(loadPost([]))
     }
+  } catch (error) {
+    console.log("❌ JSON Parse Error:", error)
+    dispatch(loadPost([])) // fallback to empty array
+  }
 }
 
 
