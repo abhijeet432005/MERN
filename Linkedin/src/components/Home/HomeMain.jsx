@@ -16,9 +16,7 @@ const HomeMain = () => {
   const userData = useSelector((state) => state.user.user);
   const postData = JSON.parse(localStorage.getItem("Post"))
   const [PostModel, setPostModel] = useState(false);
-
-
-
+  
   const closeHandler = () => {
     setPostModel(!PostModel);
   };
