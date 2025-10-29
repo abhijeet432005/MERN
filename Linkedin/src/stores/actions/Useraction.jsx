@@ -20,6 +20,7 @@ export const signINAPI = () => async (dispatch) => {
     //     photo: user.photoURL,
     //   })
     // );
+    dispatch(setUser(info))
 
     localStorage.setItem("user", JSON.stringify(info))
     return true
@@ -46,6 +47,7 @@ export const signOutAPI = () => async (dispatch) => {
     await signOut(auth)
     localStorage.removeItem("user")
     dispatch(logOutUser());
+    window.location.href = "/";
   } catch (error) {
     console.log(error);
   }
