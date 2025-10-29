@@ -1,0 +1,34 @@
+@import 'tailwindcss';
+
+.container{
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 5fr) minmax(0, 2fr);
+    grid-template-areas: "a b c";
+    gap: 2rem;
+}
+
+.left{
+    grid-area: a;
+}
+
+.main{
+    grid-area: b;
+}
+
+.right{
+    grid-area: c;
+    
+}
+
+@media (max-width: 1024px) {
+    .container{
+        grid-template-areas: "b";
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .left{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+}
