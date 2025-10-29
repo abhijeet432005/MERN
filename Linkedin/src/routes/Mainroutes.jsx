@@ -5,6 +5,7 @@ import Home from '../pages/Home'
 import Jobs from '../pages/Jobs'
 import UserDetail from '../pages/user/UserDetail'
 import Post from '../components/Post/Post'
+import PageNotFound from '../pages/PageNotFound'
 
 const Mainroutes = () => {
   return (
@@ -15,6 +16,7 @@ const Mainroutes = () => {
             <Route path='/jobs' element={<Jobs />}></Route>
             <Route path='/userdetails' element={<UserDetail />}></Route>
             <Route path='/post' element={<Post />}></Route>
+            <Route path='*' element={<PageNotFound />}></Route>
         </Routes>
     </div>
   )
