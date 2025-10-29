@@ -2,8 +2,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { Navigate } from 'react-router-dom'
 
-const AuthRoutes = () => {
-    const user = useSelector(state => state.user.user)
+const AuthRoutes = (props) => {
+    const user = JSON.parse(localStorage.getItem("user"))
   return user ? props.children : <Navigate to='/' />
 }
 

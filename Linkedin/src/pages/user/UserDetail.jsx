@@ -8,6 +8,7 @@ const UserDetail = ({ userData }) => {
     const naviagte = useNavigate()
 
     const signOutHandler = () => {
+      console.log("clicked")
         dispatch(signOutAPI())
         naviagte('/')
     }
