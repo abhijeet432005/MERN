@@ -10,14 +10,13 @@ import { FaRegCommentDots } from "react-icons/fa";
 import { BiRepost } from "react-icons/bi";
 import { IoIosSend } from "react-icons/io";
 import { BiSearch } from "react-icons/bi";
-import { useSelector } from "react-redux";
-import Post from "../Post/Post";
 
 const HomeMain = () => {
   const userData = useSelector((state) => state.user.user);
-  const postData = JSON.parse(localStorage.getItem("Post")) || [];
-  console.log(userData)
+  const postData = JSON.parse(localStorage.getItem("Post"))
   const [PostModel, setPostModel] = useState(false);
+
+
 
   const closeHandler = () => {
     setPostModel(!PostModel);
@@ -87,56 +86,63 @@ const HomeMain = () => {
 
       {/* post ui  */}
 
-      {postData.length === 0 ? <h1 className="text-center text-gray-400 text-2xl">No Post Yet....</h1> : postData.map((postData, id) => (
-        <div
-          className="min-w-full flex flex-col bg-white lg:rounded-2xl"
-          key={id}
-        >
-          <div className="flex w-full justify-between items-start p-5">
-            <div className="flex gap-2 items-center">
-              <img
-                src={userData?.photo}
-                alt="user"
-                referrerPolicy="no-referrer"
-                className="h-15 border rounded-full"
-              />
-              <div>
-                <h1 className="leading-4 text-[1rem]">{userData?.name}</h1>
-                <h1 className="text-sm/4 line-clamp-1">About</h1>
-                <h1 className="text-sm/4 line-clamp-1">date</h1>
+      {postData.length === 0 ? (
+        <h1 className="text-center text-gray-400 text-2xl">No Post Yet....</h1>
+      ) : (
+        postData.map((postData, id) => (
+          <div
+            className="min-w-full flex flex-col bg-white lg:rounded-2xl"
+            key={id}
+          >
+            <div className="flex w-full justify-between items-start p-5 relative">
+              <div className="flex gap-2 items-center">
+                <img
+                  src={userData?.photo}
+                  alt="user"
+                  referrerPolicy="no-referrer"
+                  className="h-15 border rounded-full"
+                />
+                <div>
+                  <h1 className="leading-4 text-[1rem]">{userData?.name}</h1>
+                  <h1 className="text-sm/4 line-clamp-1">About</h1>
+                  <h1 className="text-sm/4 line-clamp-1">date</h1>
+                </div>
               </div>
+              <div className="text-2xl cursor-pointer" >
+                ˙˙˙
+              </div>
+              
             </div>
-            <div className="text-2xl cursor-pointer">˙˙˙</div>
+            <div className="px-5">{postData?.caption}</div>
+            <div className="w-full mt-1">
+              {postData?.image && (
+                <img
+                  className="w-full h-60 object-contain"
+                  src={`${postData.image}`}
+                  alt=""
+                />
+              )}
+              {postData?.video && postData.video.includes("youtube") && (
+                <iframe
+                  width="100%"
+                  height="300"
+                  src={postData.video.replace("watch?v=", "embed/")}
+                  title="video"
+                  allowFullScreen
+                  className="rounded-xl"
+                />
+              )}
+            </div>
+            <div className="w-full flex justify-between items-center px-2 py-1">
+              <p>like</p>
+              <p>comments</p>
+            </div>
+            <div className="flex justify-evenly items-center border-t border-gray-400 py-2">
+              {LikeRender}
+            </div>
           </div>
-          <div className="px-5">{postData?.caption}</div>
-          <div className="w-full mt-1">
-            {postData?.image && (
-              <img
-                className="w-full h-60 object-contain"
-                src={`${postData.image}`}
-                alt=""
-              />
-            )}
-            {postData?.video && postData.video.includes("youtube") && (
-              <iframe
-                width="100%"
-                height="300"
-                src={postData.video.replace("watch?v=", "embed/")}
-                title="video"
-                allowFullScreen
-                className="rounded-xl"
-              />
-            )}
-          </div>
-          <div className="w-full flex justify-between items-center px-2 py-1">
-            <p>like</p>
-            <p>comments</p>
-          </div>
-          <div className="flex justify-evenly items-center border-t border-gray-400 py-2">
-            {LikeRender}
-          </div>
-        </div>
-      ))}
+        ))
+      )}
 
       {PostModel && <Post closeHandler={closeHandler} />}
     </div>

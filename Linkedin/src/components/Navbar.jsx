@@ -18,17 +18,20 @@ const Navbar = () => {
   const [postModal, setPostModal] = useState(false);
   const menuRef = useRef(null);
 
-  const closePostHandler = () => setPostModal(false);
+  const closePostHandler = () => {
+    setMenuOpen(false)
+    setPostModal(false)
+  };
 
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (menuRef.current && !menuRef.current.contains(e.target)) {
-        setMenuOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  // useEffect(() => {
+  //   const handleClickOutside = (e) => {
+  //     if (menuRef.current && !menuRef.current.contains(e.target)) {
+  //       setMenuOpen(false);
+  //     }
+  //   };
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => document.removeEventListener("mousedown", handleClickOutside);
+  // }, []);
 
   const handleMenuClick = (elem) => {
     if (elem.action === "openPostModal") {
@@ -40,7 +43,11 @@ const Navbar = () => {
     { icon: <IoHome />, name: "Home", path: "home" },
     { icon: <IoMdPeople />, name: "Network", path: "network" },
     { icon: <FaSquarePlus />, name: "Post", action: "openPostModal" },
-    { icon: <IoIosNotifications />, name: "Notification", path: "notification" },
+    {
+      icon: <IoIosNotifications />,
+      name: "Notification",
+      path: "notification",
+    },
     { icon: <BsBagFill />, name: "Jobs", path: "jobs" },
   ];
 
@@ -111,7 +118,7 @@ const Navbar = () => {
                   className="h-8 w-8 border rounded-full bg-blue-300"
                 />
               </div>
-              {menuOpen && <UserDetail userData={userData} />}
+              {menuOpen && <UserDetail userData={userData} closePostHandler={closePostHandler}/>}
             </div>
           ) : (
             <img

@@ -33,8 +33,8 @@ export const Syncpost = (data) => async (dispatch, getState) => {
     const oldPost = JSON.parse(localStorage.getItem("Post")) || []
     const updated = [newPost, ...oldPost]
     // Redux me update karo
+    dispatch(loadPost(updated))
     localStorage.setItem("Post", JSON.stringify(updated))
-    dispatch(loading())
 
   } catch (error) {
     console.error("❌ Error posting:", error);

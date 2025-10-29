@@ -3,22 +3,25 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { signOutAPI } from "../../stores/actions/Useraction";
 
-const UserDetail = ({ userData }) => {
+const UserDetail = ({ userData, closePostHandler }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const signOutHandler = async () => {
-    try {
-      await dispatch(signOutAPI());
-      navigate("/");
-    } catch (err) {
-      console.error("Sign out failed:", err);
-    }
-  };
+const signOutHandler = async () => {
+  console.log("Signout clicked"); // 🔥 Add this
+  try {
+    await dispatch(signOutAPI());
+    console.log("Signout done"); // 🔥 Add this
+    navigate("/");
+  } catch (err) {
+    console.error("Sign out failed:", err);
+  }
+};
+
 
   return (
-    <div className="absolute top-14  lg:right-0 w-56 bg-white shadow-lg rounded-lg border p-3">
-      <div className="flex flex-col items-center text-center border-b pb-3">
+    <div className="absolute top-14 lg:right-0 w-56 bg-white shadow-lg rounded-lg border p-3">
+      <div className="flex flex-col items-center text-center border-b pb-3 relative">
         <img
           src={userData?.photo}
           alt="profile"
@@ -27,6 +30,8 @@ const UserDetail = ({ userData }) => {
         />
         <h2 className="text-sm font-semibold">{userData?.name}</h2>
         <p className="text-xs text-gray-500">{userData?.email}</p>
+        
+        <p className="absolute top-0 right-0" onClick={closePostHandler}>╳</p>
       </div>
 
       <ul className="text-sm mt-3">
