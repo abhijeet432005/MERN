@@ -10,6 +10,7 @@ import { FaRegCommentDots } from "react-icons/fa";
 import { BiRepost } from "react-icons/bi";
 import { IoIosSend } from "react-icons/io";
 import { BiSearch } from "react-icons/bi";
+import { useSelector } from "react-redux";
 
 const HomeMain = () => {
   const userData = useSelector((state) => state.user.user);
