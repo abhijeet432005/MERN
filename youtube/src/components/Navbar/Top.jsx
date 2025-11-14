@@ -74,7 +74,7 @@ const Top = () => {
             }}
           />
           <img
-            src="public/Youtube-Logo-500x281-removebg-preview.png"
+            src="public/assets/Youtube-Logo-500x281-removebg-preview.png"
             alt=""
             className="lg:w-32 w-20 lg:h-9"
           />
