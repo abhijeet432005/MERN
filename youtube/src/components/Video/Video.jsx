@@ -55,12 +55,12 @@ const Video = ({ elem }) => {
     return "Just now";
   };
   return (
-    <div>
+    <div className="p-2 lg:p-0">
       <NavLink
         to={`/watch?v=${typeof elem.id === 'object' ? elem.id.videoId : elem.id}`}
-        className="lg:w-[26vw] w-[38vh]  ml-5 rounded-2xl overflow-hidden flex flex-col gap-2 m-4"
+        className="lg:w-[26vw] w-full  lg:ml-5 rounded-2xl overflow-hidden flex flex-col gap-2 lg:m-4"
       >
-        <div>
+        <div className="w-full">
           <img
             src={`${elem.snippet?.thumbnails?.medium?.url}`}
             alt=""

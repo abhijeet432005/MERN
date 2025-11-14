@@ -16,7 +16,7 @@ const Top = ({ toggle }) => {
   const dispatch = useDispatch();
   const { ToggelHandler } = useContext(myContext);
   const Suggestion = useSelector((state) => state.video.Suggestion);
-  const search = [...Suggestion];
+  // const search = [...Suggestion];
   // search.push(Suggestion)
   // console.log(search);
 
@@ -66,7 +66,8 @@ const Top = ({ toggle }) => {
 
   return (
     <div className="w-full fixed top-0 z-9">
-      <div className="w-full p-3 flex justify-between items-center bg-white h-[4rem]">
+      <div className="w-full p-3 flex justify-between items-center bg-white h-[4rem] gap-3 lg:gap-0">
+
         <div className="flex items-center gap-8 lg:pl-5">
           <CiMenuBurger
             className="text-2xl font-bold duration-1000 hidden md:block lg:block"
@@ -81,7 +82,7 @@ const Top = ({ toggle }) => {
           />
         </div>
 
-        <div className="relative lg:w-[35vw] w-[38vh]">
+        <div className="relative lg:w-[35vw] w-[37vh]">
           <form
             onSubmit={SubmitHandler}
             className="flex items-center border border-gray-300 rounded-full overflow-hidden bg-white"
@@ -130,6 +131,7 @@ const Top = ({ toggle }) => {
             <BiUser className="text-2xl" />
           </div>
         </div>
+
       </div>
     </div>
   );

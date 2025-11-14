@@ -20,7 +20,7 @@ const Feed = () => {
           part: "snippet,contentDetails,statistics",
           chart: "mostPopular",
           regionCode: "IN",
-          maxResults: 8,
+          maxResults: 1,
           nextPageToken: 'nextPageToken',
         }
       })

@@ -22,16 +22,18 @@ const Button = () => {
     "Recently Uploads",
     "Trending",
     "Movies",
+    "Disha Vakani",
+    "Live"
   ];
   const [position, setposition] = useState(0);
   const [activeButton, setactiveButton] = useState("All");
   // console.log(position)
 
   const HandelNext = () => {
-    position >= 8 ? "" : setposition((prev) => prev + 8);
+    position >= 15 ? "" : setposition((prev) => prev + 15);
   };
   const HandelPrev = () => {
-    position <= 0 ? "" : setposition((prev) => prev - 8);
+    position <= 0 ? "" : setposition((prev) => prev - 15);
   };
 
   const ButtonHandler = (elem) => {
@@ -69,7 +71,7 @@ const Button = () => {
                 activeButton === elem
                   ? "bg-black text-white"
                   : "bg-gray-200 hover:bg-gray-300"
-              } px-4 py-2 rounded-full whitespace-nowrap transition-all`}
+              } px-3 py-1.5 text-[0.8rem] lg:text-[1rem] rounded-full whitespace-nowrap transition-all`}
             >
               {elem}
             </button>
