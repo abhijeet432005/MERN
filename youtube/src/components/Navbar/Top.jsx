@@ -16,7 +16,7 @@ const Top = ({ toggle }) => {
   const dispatch = useDispatch();
   const { ToggelHandler } = useContext(myContext);
   const Suggestion = useSelector((state) => state.video.Suggestion);
-  // const search = [...Suggestion];
+  const search = [...Suggestion];
   // search.push(Suggestion)
   // console.log(search);
 
@@ -26,7 +26,7 @@ const Top = ({ toggle }) => {
       const res = await axios.get(
         `http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=${input}`
       );
-      console.log(res.data[1]);
+      // console.log(res.data[1]);
       dispatch(SetSearch(res?.data[1]));
     } catch (error) {
       console.log(error);
