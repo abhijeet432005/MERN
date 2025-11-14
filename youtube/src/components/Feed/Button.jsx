@@ -1,9 +1,6 @@
 import React, { useContext, useState } from "react";
 import { myContext } from "../../context/Contextprovider";
-import { isAction } from "@reduxjs/toolkit";
-import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { asyncGetByCat } from "../../store/actions/vidoeAction";
 import { loadByCatogery } from "../../store/reducer/VideoSlice";
 
 const Button = () => {

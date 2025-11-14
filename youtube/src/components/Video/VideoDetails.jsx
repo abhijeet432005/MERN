@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import SideNav from "./SideNav";
 import { GrDislike, GrLike, GrMore } from "react-icons/gr";
 import { SlShare } from "react-icons/sl";
