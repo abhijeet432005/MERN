@@ -3,13 +3,11 @@ import { BiSearch, BiUser } from "react-icons/bi";
 import { CiMenuBurger } from "react-icons/ci";
 import { PiPlus } from "react-icons/pi";
 import { myContext } from "../../context/Contextprovider";
-import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { loadByCatogery, SetSearch } from "../../store/reducer/VideoSlice";
-import { asyncGetVideoData } from "../../store/actions/vidoeAction";
 import axios from "axios";
 
-const Top = ({ toggle }) => {
+const Top = () => {
   const [input, setinput] = useState("");
   const [showSuggestion, setshowSuggestion] = useState(false);
   const [shouldFetch, setShouldFetch] = useState(true);

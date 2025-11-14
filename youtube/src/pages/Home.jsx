@@ -1,8 +1,8 @@
 import React from "react";
 import Nav from "../components/Navbar/Nav";
-import Top from "../components/navbar/Top";
 import { Outlet } from "react-router-dom";
 import Feed from "../components/Feed/Feed";
+import Top from "../components/Navbar/Top";
 
 const Home = () => {
   return (
