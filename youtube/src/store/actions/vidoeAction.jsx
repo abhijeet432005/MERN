@@ -27,14 +27,15 @@ export const asyncGetByCat = (cat) => async (dispatch) => {
     const res = await axios.get(`https://www.googleapis.com/youtube/v3/search`, {
       params: {
         part: "snippet",
-        maxResults: 20,
-        q: cat,
+        maxResults: 4,
+        q: `${cat}`,
         type: "video",
         key: API_KEY,
       },
     });
+    console.log(res)
 
-    dispatch(loadvideo(res.data.items)); // only send array of videos
+    dispatch(loadvideo(res.data)); // only send array of videos
   } catch (error) {
     console.log(error);
   }

@@ -3,15 +3,18 @@ import Home from './pages/Home'
 import { useDispatch } from 'react-redux'
 import { asyncGetVideoData } from './store/actions/vidoeAction'
 import Mainroutes from './routes/Mainroutes'
+import { loadvideo } from './store/reducer/VideoSlice'
 
 const App = () => {
   const dispatch = useDispatch()
 
+
   useEffect(() => {
-    dispatch(asyncGetVideoData())
+    // dispatch(asyncGetVideoData())
+    // dispatch(loadvideo())
   }, [])
   return (
-    <div className='w-full'>
+    <div className='w-full '>
       <Mainroutes />
     </div>
   )

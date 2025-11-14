@@ -58,22 +58,22 @@ const Video = ({ elem }) => {
     <div>
       <NavLink
         to={`/watch?v=${typeof elem.id === 'object' ? elem.id.videoId : elem.id}`}
-        className="w-[26vw]  ml-5 rounded-2xl overflow-hidden flex flex-col gap-2 m-4"
+        className="lg:w-[26vw] w-[38vh]  ml-5 rounded-2xl overflow-hidden flex flex-col gap-2 m-4"
       >
         <div>
           <img
             src={`${elem.snippet?.thumbnails?.medium?.url}`}
             alt=""
-            className="w-full h-[15vw] rounded-2xl"
+            className="w-full h-full lg:h-[15vw] rounded-2xl"
           />
         </div>
 
-        <div className="flex w-full gap-4">
+        <div className="flex w-full gap-4 ">
           <div className="rounded-full h-fit flex justify-center items-center overflow-hidden">
-            <img src={Icon} alt="" srcset="" className="w-[2.5vw] h-[2.5vw]" />
+            <img src={Icon} alt="" srcset="" className="lg:w-[2.5vw] lg:h-[2.5vw] w-10 rounded-full" />
           </div>
 
-          <div className="w-[22vw]">
+          <div className="w-full lg:w-[22vw]">
             <h1 className="w-full line-clamp-2">{elem.snippet.title}</h1>
             <p className="text-gray-400">{elem.snippet.channelTitle}</p>
 

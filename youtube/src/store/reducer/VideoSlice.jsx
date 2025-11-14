@@ -12,9 +12,9 @@ const VideoSlice = createSlice({
   initialState,
   reducers: {
     loadvideo: (state, action) => {
-      const { videos, nextPageToken } = action.payload;
-      state.video = [...state.video, ...videos];
-      state.pageToken = nextPageToken;
+      const { video, nextPageToken } = action.payload;
+      state.video = [...state.video, ...video];
+      state.pageToken = nextPageToken || null;
     },
 
     loadByCatogery: (state, action) => {

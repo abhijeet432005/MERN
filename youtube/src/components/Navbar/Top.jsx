@@ -67,22 +67,21 @@ const Top = ({ toggle }) => {
   return (
     <div className="w-full fixed top-0 z-9">
       <div className="w-full p-3 flex justify-between items-center bg-white h-[4rem]">
-        <div className="flex items-center gap-8 pl-5">
+        <div className="flex items-center gap-8 lg:pl-5">
           <CiMenuBurger
-            className="text-2xl font-bold duration-1000"
+            className="text-2xl font-bold duration-1000 hidden md:block lg:block"
             onClick={() => {
               ToggelHandler();
-              toggle();
             }}
           />
           <img
             src="public/Youtube-Logo-500x281-removebg-preview.png"
             alt=""
-            className="w-32 h-9"
+            className="lg:w-32 w-20 lg:h-9"
           />
         </div>
 
-        <div className="relative w-[35vw]">
+        <div className="relative lg:w-[35vw] w-[38vh]">
           <form
             onSubmit={SubmitHandler}
             className="flex items-center border border-gray-300 rounded-full overflow-hidden bg-white"
@@ -101,7 +100,7 @@ const Top = ({ toggle }) => {
           </form>
 
           {search.length !== 0 && showSuggestion ? (
-            <div className="w-[32.5vw] bg-white absolute top-11 rounded-2xl border-gray-300 border">
+            <div className="w-full lg:w-[32.5vw] bg-white absolute top-11 rounded-2xl border-gray-300 border">
               {search.map((elem, idx) => {
                 return (
                   <ul className="" key={idx}>
@@ -121,8 +120,8 @@ const Top = ({ toggle }) => {
           )}
         </div>
 
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-2 bg-gray-200 px-2 py-2 rounded-full border border-gray-400">
+        <div className="flex items-center gap-3 ">
+          <div className="items-center gap-2 bg-gray-200 px-2 py-2 rounded-full border hidden lg:flex border-gray-400">
             <PiPlus />
             <h1>Create</h1>
           </div>

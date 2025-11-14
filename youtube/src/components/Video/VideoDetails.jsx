@@ -21,31 +21,32 @@ const VideoDetails = () => {
   const [side, setside] = useState(false);
   const ID = searchParam.get("v");
   const videoData = useSelector((state) => state.video.video) || [];
+  console.log(videoData);
   const video = videoData.find((item) => {
-  const vidId = item.id?.videoId || item.id; // category search ke case me id.videoId hota hai
-  return vidId === ID;
-});
-  console.log(videoData)
-  const SideRef = useRef(null)
-  
+    const vidId = item.id?.videoId || item.id; // category search ke case me id.videoId hota hai
+    return vidId === ID;
+  });
+  // const video = videoData.items.find(item => item.id == ID)
+  const SideRef = useRef(null);
+
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm()
+  } = useForm();
 
   useEffect(() => {
     const handelClickOutside = (e) => {
-      if(SideRef.current && !SideRef.current.contains(e.target)){
-        setside(false)
+      if (SideRef.current && !SideRef.current.contains(e.target)) {
+        setside(false);
       }
-    }
+    };
 
-    document.addEventListener("mousedown", handelClickOutside)
+    document.addEventListener("mousedown", handelClickOutside);
 
-    return () => document.removeEventListener("mousedown",handelClickOutside)
-  }, [])
+    return () => document.removeEventListener("mousedown", handelClickOutside);
+  }, []);
 
   const getYTChannel = async () => {
     try {
@@ -68,41 +69,50 @@ const VideoDetails = () => {
   };
 
   const formatLike = (num) => {
-    if(num >= 1000000) return (num / 1000000).toFixed(1).replace(/\.0$/, "") + "M"
-    else if(num >= 1000) return (num / 1000).toFixed(1).replace(/\.0$/, "") + "K"
-    else return (num)
-  }
+    if (num >= 1000000)
+      return (num / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+    else if (num >= 1000)
+      return (num / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+    else return num;
+  };
 
   const submitHandler = (data) => {
-    dispatch(LiveChat(data))
-    reset()
-  }
+    dispatch(LiveChat(data));
+    reset();
+  };
 
   return (
     <>
       <Top toggle={toggle} />
-      <div className="border-gray-200 min-w-max absolute top-0 left-0" ref={SideRef}>
+      <div
+        className="border-gray-200 min-w-max absolute top-0 left-0"
+        ref={SideRef}
+      >
         <SideNav side={side} />
       </div>
 
-      <div className="mt-15 p-5 w-full flex gap-4">
-        <div className="w-[68vw] flex flex-col gap-4 ">
-          <iframe
-            width="1000"
-            height="580"
-            src={`https://www.youtube.com/embed/${ID}?si=X8ZjCSEKoyKI3Gjg`}
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+      <div className="mt-20 lg:p-5 p-2 w-full flex flex-col lg:flex-row gap-4">
+        <div className="lg:w-[68vw] w-full  flex flex-col gap-4 ">
+          <div className="w-full h-[45vh] lg:h-[75vh]">
+            <iframe
+              width='100%'
+              height="100%"
+              src={`https://www.youtube.com/embed/${ID}?si=X8ZjCSEKoyKI3Gjg`}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+
+          </div>
+
 
           <div>
             <h1 className="text-2xl">{video?.snippet?.title}</h1>
           </div>
 
-          <div className="flex justify-between">
+          <div className="flex justify-between flex-col items-start lg:flex-row">
             <div className="flex justify-center items-center gap-2">
               <img
                 src={`${Icon}`}
@@ -119,9 +129,11 @@ const VideoDetails = () => {
                 Subscribe
               </button>
             </div>
-            <div className="flex justify-center items-center gap-2">
+
+            <div className="flex justify-center items-center gap-2 overflow-auto lg:overflow-hidden mt-4 lg:mt-0">
               <button className="flex items-center gap-1.5 bg-gray-200 p-2 rounded-full">
-                <GrLike /> {formatLike(video?.statistics?.likeCount)} |<GrDislike />
+                <GrLike /> {formatLike(video?.statistics?.likeCount)} |
+                <GrDislike />
               </button>
               <button className="flex items-center gap-1.5 bg-gray-200 p-2 rounded-full">
                 <SlShare /> Share
@@ -137,29 +149,43 @@ const VideoDetails = () => {
               </button>
             </div>
           </div>
+
+
         </div>
 
-        <div className="w-[30vw] h-fit border border-gray-200 rounded-2xl">
-          <div className=" p-3 border-gray-300 flex justify-between items-center" >
+        <div className="w-[full] lg:w-[30vw] h-96 flex flex-col justify-between lg:h-fit border border-gray-200 rounded-2xl">
+          <div className=" p-3 border-gray-300 flex justify-between items-center">
             <h1>Top Chat</h1>
-            <p><RiMore2Fill /></p>
+            <p>
+              <RiMore2Fill />
+            </p>
           </div>
 
           {/* chat  */}
 
-          <div className="h-[28vw] border-t border-b border-gray-300 overflow-x-auto p-3">
+          <div className="lg:h-[28vw] border-t border-b border-gray-300 overflow-x-auto p-3">
             <Message />
           </div>
 
           {/* Send Message  */}
 
-          <div >
-            <form onSubmit={handleSubmit(submitHandler)} className="flex p-3 items-center justify-center gap-3">
+          <div className="">
+            <form
+              onSubmit={handleSubmit(submitHandler)}
+              className="flex p-3 items-center justify-center gap-3"
+            >
               <div className="flex border border-gray-400 rounded-full px-2 py-1 w-60 justify-between">
-                <input type="text" placeholder="text" {...register("chat")} className="outline-0"/>
+                <input
+                  type="text"
+                  placeholder="text"
+                  {...register("chat")}
+                  className="outline-0"
+                />
                 <div>🙂</div>
               </div>
-              <button className="text-2xl"><BiSend /></button>
+              <button className="text-2xl">
+                <BiSend />
+              </button>
               <button>Submit</button>
             </form>
           </div>

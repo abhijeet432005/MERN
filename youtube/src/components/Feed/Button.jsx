@@ -40,7 +40,7 @@ const Button = () => {
   };
 
   return (
-    <div className="w-full fixed top-[4rem] h-15 bg-white flex items-center">
+    <div className="w-full fixed top-[4rem] h-15 bg-white flex items-center overflow-auto md:overflow-hidden lg:overflow-hidden ">
       <div className="w-[85vw] relative px-2">
         <div
           className={`mr-4 bg-white w-9 h-10 absolute top-0 left-0 pt-1 z-2 ${

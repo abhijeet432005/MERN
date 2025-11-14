@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 
 import {
   BiHome,
@@ -32,7 +32,7 @@ import { HiHome } from "react-icons/hi";
 import { myContext } from "../../context/Contextprovider";
 
 const Nav = () => {
-    const {open} = useContext(myContext)
+  const { open } = useContext(myContext);
   const sections = [
     {
       title: null,
@@ -108,7 +108,7 @@ const Nav = () => {
       {open ? (
         <>
           <div
-            className={`pl-6 bg-white z-99 h-[calc(100vh-4rem)] border-r border-gray-200  overflow-y-auto scroll-smooth sticky top-[4rem] mt-15 `}
+            className={`pl-6 bg-white z-50 h-[calc(100vh-4rem)] border-r border-gray-200 overflow-y-auto sticky top-[4rem] mt-15`}
           >
             {sections.map((elem, id) => (
               <div className="mb-4 border-b border-gray-200 pb-2" key={id}>
@@ -133,11 +133,13 @@ const Nav = () => {
         </>
       ) : (
         <>
-          <div className={`mt-15 border-r border-gray-300 h-[calc(100vh-4rem)]`}>
+          <div
+            className={`mt-15 border-r border-gray-300 h-[calc(100vh-4rem)] sticky top-[4rem]`}
+          >
             {sidebar.map((elem, id) => (
               <div className="flex flex-col items-center py-4 px-2" key={id}>
-                <h1 className="text-3xl">{elem.icon}</h1>
-                <h1 className="text-[0.7rem]">{elem.name}</h1>
+                <h1 className="lg:text-3xl text-xl">{elem.icon}</h1>
+                <h1 className="lg:text-[0.7rem] text-[0.5rem]">{elem.name}</h1>
               </div>
             ))}
           </div>
