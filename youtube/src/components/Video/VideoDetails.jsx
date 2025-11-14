@@ -90,7 +90,7 @@ const VideoDetails = () => {
         <SideNav side={side} />
       </div>
 
-      <div className="mt-20 lg:p-5 p-3 w-full flex flex-col lg:flex-row gap-4 overflow-hidden">
+      <div className="mt-15 lg:p-5 p-3 w-full flex flex-col lg:flex-row gap-4 overflow-hidden">
         <div className="lg:w-[68vw] w-full  flex flex-col gap-4 ">
           <div className="w-full h-[35vh] lg:h-[75vh]">
             <iframe
