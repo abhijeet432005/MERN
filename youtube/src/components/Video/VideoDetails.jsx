@@ -21,7 +21,6 @@ const VideoDetails = () => {
   const [side, setside] = useState(false);
   const ID = searchParam.get("v");
   const videoData = useSelector((state) => state.video.video) || [];
-  console.log(videoData);
   const video = videoData.find((item) => {
     const vidId = item.id?.videoId || item.id; // category search ke case me id.videoId hota hai
     return vidId === ID;
@@ -91,9 +90,9 @@ const VideoDetails = () => {
         <SideNav side={side} />
       </div>
 
-      <div className="mt-20 lg:p-5 p-2 w-full flex flex-col lg:flex-row gap-4">
+      <div className="mt-20 lg:p-5 p-3 w-full flex flex-col lg:flex-row gap-4 overflow-hidden">
         <div className="lg:w-[68vw] w-full  flex flex-col gap-4 ">
-          <div className="w-full h-[45vh] lg:h-[75vh]">
+          <div className="w-full h-[35vh] lg:h-[75vh]">
             <iframe
               width='100%'
               height="100%"
@@ -109,14 +108,15 @@ const VideoDetails = () => {
 
 
           <div>
-            <h1 className="text-2xl">{video?.snippet?.title}</h1>
+            <h1 className="lg:text-2xl text-[1.2rem] font-bold">{video?.snippet?.title}</h1>
           </div>
 
-          <div className="flex justify-between flex-col items-start lg:flex-row">
-            <div className="flex justify-center items-center gap-2">
+          <div className="flex justify-between flex-col items-start lg:flex-row w-full">
+
+            <div className="flex justify-center items-center gap-4 lg:gap-2">
               <img
                 src={`${Icon}`}
-                className="w-[2.5vw] mt-1 rounded-full"
+                className="w-10 lg:w-[2.5vw] mt-1 rounded-full"
                 alt=""
               />
 
@@ -130,9 +130,15 @@ const VideoDetails = () => {
               </button>
             </div>
 
-            <div className="flex justify-center items-center gap-2 overflow-auto lg:overflow-hidden mt-4 lg:mt-0">
+            <div className="flex justify-center items-center gap-2 w-100 lg:w-fit pl-10 lg:pl-0 overflow-x-scroll lg:overflow-hidden mt-8 lg:mt-0">
               <button className="flex items-center gap-1.5 bg-gray-200 p-2 rounded-full">
-                <GrLike /> {formatLike(video?.statistics?.likeCount)} |
+                <div className='flex gap-2 items-center'>
+                  <GrLike /> 
+                  <div>
+                    {formatLike(video?.statistics?.likeCount)} 
+                  </div>
+                  <span>|</span>
+                </div>
                 <GrDislike />
               </button>
               <button className="flex items-center gap-1.5 bg-gray-200 p-2 rounded-full">
@@ -148,6 +154,7 @@ const VideoDetails = () => {
                 <GrMore />
               </button>
             </div>
+
           </div>
 
 
