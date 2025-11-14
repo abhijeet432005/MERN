@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useSearchParams } from "react-router-dom";
-import Top from "../navbar/Top";
 import SideNav from "./SideNav";
 import { GrDislike, GrLike, GrMore } from "react-icons/gr";
 import { SlShare } from "react-icons/sl";
@@ -13,6 +12,7 @@ import { RiMore2Fill } from "react-icons/ri";
 import Message from "../Chat Messages/Message";
 import { useForm } from "react-hook-form";
 import { LiveChat } from "../../store/actions/chatAction";
+import Top from "../Navbar/Top";
 
 const VideoDetails = () => {
   const dispatch = useDispatch();
