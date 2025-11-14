@@ -20,7 +20,7 @@ const Feed = () => {
           part: "snippet,contentDetails,statistics",
           chart: "mostPopular",
           regionCode: "IN",
-          maxResults: 1,
+          maxResults: 8,
           nextPageToken: 'nextPageToken',
         }
       })
@@ -46,7 +46,7 @@ const Feed = () => {
       const res = await axios.get(`https://www.googleapis.com/youtube/v3/search`, {
         params: {
           part: "snippet",
-          maxResults: 4,
+          maxResults: 8,
           q: `${category}`,
           type: "video",
           key: API_KEY,
