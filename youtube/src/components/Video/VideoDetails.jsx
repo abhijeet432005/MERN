@@ -170,7 +170,7 @@ const VideoDetails = () => {
 
           {/* chat  */}
 
-          <div className="lg:h-[28vw] border-t border-b border-gray-300 overflow-x-auto p-3">
+          <div className="lg:h-[28vw] h-[35vh] border-t border-b border-gray-300 overflow-x-auto p-3">
             <Message />
           </div>
 
