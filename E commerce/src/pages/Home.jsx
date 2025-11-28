@@ -157,6 +157,7 @@ const Home = () => {
           <img
             ref={HeroRef}
             src="/images/Hero (1).jpeg"
+            alt="Hero Image"
             className="absolute top-0 left-0 w-full h-[120vh] object-cover will-change-transform"
             
           />
@@ -228,7 +229,7 @@ const Home = () => {
               <p className="text-[0.8rem]">Glasses</p>
             </button>
           </div>
-          <LazyLoadImage src="/category/glasses.png" alt="" className="w-1/2" />
+          <LazyLoadImage src="/category/glasses.png" alt="image" className="w-1/2" />
 
           <div className="w-full flex justify-between items-end p-4">
             <h1 className="text-sm w-[15vw] hidden lg:block">
@@ -288,7 +289,7 @@ const Home = () => {
             <div className="lg:w-[30vw] lg:h-[80vh]">
               <LazyLoadImage
                 src="/category/OurStory.png"
-                alt=""
+                alt="image"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -323,19 +324,19 @@ const Home = () => {
         <div ref={GalleryRef} className="w-full flex justify-center  mt-45 mb-30">
           <div className="relative w-1/3 hidden lg:block">
             <div ref={addToRefs} className="absolute -top-15 left-80 w-[6vw] h-[12vh] -rotate-45">
-              <LazyLoadImage src="/category/gallery-1.jpeg" className="w-full h-full object-cover" />
+              <LazyLoadImage alt="image" src="/category/gallery-1.jpeg" className="w-full h-full object-cover" />
             </div>
 
             <div ref={addToRefs} className="absolute top-10 left-20 w-[20vw] h-[35vh] rotate-15 z-9">
-              <LazyLoadImage src="/category/gallery-2.jpeg" className="w-full h-full object-cover" />
+              <LazyLoadImage alt="image" src="/category/gallery-2.jpeg" className="w-full h-full object-cover" />
             </div>
 
             <div ref={addToRefs} className="absolute top-15 left-80 w-[8vw] h-[15vh] rotate-10 z-10">
-              <LazyLoadImage src="/category/OurStory.png" className="w-full h-full object-cover" />
+              <LazyLoadImage alt="image" src="/category/OurStory.png" className="w-full h-full object-cover" />
             </div>
 
             <div ref={addToRefs} className="absolute bottom-0 left-70 w-[8vw] h-[15vh] -rotate-35 z-8">
-              <LazyLoadImage src="/category/gallery-3.jpeg" className="w-full h-full object-cover" />
+              <LazyLoadImage alt="image" src="/category/gallery-3.jpeg" className="w-full h-full object-cover" />
             </div>
           </div>
 
@@ -348,13 +349,13 @@ const Home = () => {
 
           <div className="relative w-1/3 hidden lg:block">
             <div ref={addToRightRefs} className="absolute -top-15 right-80 w-[6vw] h-[12vh] -rotate-45 z-10">
-              <LazyLoadImage src="/category/gallery-4.jpeg" alt="" className="w-full h-full object-cover" />
+              <LazyLoadImage src="/category/gallery-4.jpeg" alt="image" className="w-full h-full object-cover" />
             </div>
             <div ref={addToRightRefs} className="absolute top-10 right-20 w-[20vw] h-[35vh] rotate-10">
-              <LazyLoadImage src="/category/gallery-5.jpeg" alt="" className="w-full h-full object-cover " />
+              <LazyLoadImage src="/category/gallery-5.jpeg" alt="image" className="w-full h-full object-cover " />
             </div>
             <div ref={addToRightRefs} className="absolute bottom-0 right-95 w-[8vw] h-[15vh] -rotate-35 z-8">
-              <LazyLoadImage src="/category/gallery-7.jpeg" alt="" className="w-full h-full object-cover" />
+              <LazyLoadImage src="/category/gallery-7.jpeg" alt="image" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

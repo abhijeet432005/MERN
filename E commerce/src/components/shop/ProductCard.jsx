@@ -75,7 +75,7 @@ const ProductCard = ({ product }) => {
           src={images.length === 1 ? `${images[0]}` : `${images[1]}`}
           alt={title}
           className="w-full h-[48vh] object-contain hover:scale-104 transition-all duration-500"
-          threshold={0} // image screen ke nazdeek aaye tab load
+          threshold={0} 
         />
           {/* <img
             src={images.length === 1 ? `${images[0]}` : `${images[1]}`}

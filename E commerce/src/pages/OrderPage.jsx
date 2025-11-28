@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import gsap from "gsap";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const OrderPage = () => {
   const cartData = useSelector(state => state.cartSlice.cart);
@@ -64,7 +65,7 @@ const OrderPage = () => {
             key={prod.id}
             className="flex items-center gap-3 mb-4 p-2 rounded-xl hover:bg-gray-100 transition"
           >
-            <img
+            <LazyLoadImage
               src={prod.thumbnail}
               className="w-16 h-16 object-cover bg-white rounded-xl shadow"
               alt={prod.title}

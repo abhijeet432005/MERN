@@ -6,6 +6,7 @@ import {
   IncCartQnty,
 } from "../../store/actions/cartAction";
 import { useNavigate } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Cart = ({ toggelCart }) => {
   const dispatch = useDispatch();
@@ -44,9 +45,9 @@ const Cart = ({ toggelCart }) => {
                       toggelCart();
                     }}
                   >
-                    <img
+                    <LazyLoadImage
                       src={`${prod.thumbnail}`}
-                      alt=""
+                      alt="image"
                       className="w-full h-full object-cover rounded-full"
                     />
                   </div>

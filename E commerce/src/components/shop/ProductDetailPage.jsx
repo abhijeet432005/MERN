@@ -8,6 +8,7 @@ import {
 import ProductCard from "./ProductCard";
 import { clearSinglePro } from "../../store/reducers/productSlice";
 import { useLenis } from "lenis/react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ProductDetailPage = () => {
   const lenis = useLenis()
@@ -83,7 +84,7 @@ const ProductDetailPage = () => {
       <div className="mt-20 flex gap-8 flex-col md:flex-row">
         <div>
           <div className="shadow-md lg:w-[45vw] lg:h-[65vh]">
-            <img
+            <LazyLoadImage
               src={image || product.images[0]}
               className="w-full h-full object-contain"
               alt="Product Image"
@@ -99,7 +100,7 @@ const ProductDetailPage = () => {
                     className="w-[20vw] h-[10vh] md:w-20 lg:w-[10vw] lg:h-[18vh] border border-gray-200 shadow"
                     key={idx}
                   >
-                    <img src={`${elem}`} alt="" className="h-full w-full" />
+                    <LazyLoadImage src={`${elem}`} alt="image" className="h-full w-full" />
                   </div>
                 ))
               : ""}

@@ -101,12 +101,7 @@ const ShopMain = () => {
   };
 
   const render = product.map((product) => (
-    <Suspense
-      key={product.id}
-      fallback={
-        <ProductCardSkeleton  />
-      }
-    >
+    <Suspense key={product.id} fallback={<ProductCardSkeleton />}>
       <ProductCard product={product} />
     </Suspense>
   ));
