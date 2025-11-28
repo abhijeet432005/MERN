@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+
+@font-face {
+    font-family: "font-1";
+    src: url("/fonts/8ae_GeneralSans-Regular.otf");
+    font-display: swap;
+
+}
+@font-face {
+    font-family: "font-2";
+    src: url("/fonts/8ae_GeneralSans-Light.otf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "font-3";
+    src: url("/fonts/GeneralSans-Medium.otf");
+    font-display: swap;
+}
