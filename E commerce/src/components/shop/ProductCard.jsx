@@ -6,6 +6,7 @@ import { addCompare } from "../../store/actions/compareAction";
 import { toast } from "react-toastify";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ProductCard = ({ product }) => {
   const CardRef = useRef(null);
@@ -70,12 +71,18 @@ const ProductCard = ({ product }) => {
         className={` border cursor-default border-gray-300/40 bg-gray-200/5 rounded-3xl overflow-hidden p-4 flex flex-col items-start gap-y-4 font-[font-1]`}
       >
         <div className="w-full h-[48vh] overflow-hidden mt-8">
-          <img
+          <LazyLoadImage
+          src={images.length === 1 ? `${images[0]}` : `${images[1]}`}
+          alt={title}
+          className="w-full h-[48vh] object-contain hover:scale-104 transition-all duration-500"
+          threshold={0} // image screen ke nazdeek aaye tab load
+        />
+          {/* <img
             src={images.length === 1 ? `${images[0]}` : `${images[1]}`}
             alt=""
             className="w-full h-[48vh] object-contain hover:scale-104 transition-all duration-500"
             loading="lazy"
-          />
+          /> */}
         </div>
 
         <div className="">

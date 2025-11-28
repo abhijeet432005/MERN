@@ -23,7 +23,7 @@ const ShopMain = () => {
   }, [compareItems]);
 
   useEffect(() => {
-    lenis.scrollTo(0, { immediate: true })
+    lenis?.scrollTo(0, { immediate: true })
     // window.scrollTo(0, 0);
   }, [])
 
