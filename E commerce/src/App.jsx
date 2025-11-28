@@ -35,13 +35,7 @@ const App = () => {
       <ReactLenis
         root
         options={{
-          // smoothWheel: true,
-          // smoothTouch: true,
-          lerp: 0.065, // Smooth easing (0.05 - 0.1 recommended)
-          // wheelMultiplier: 1.1, // Scroll speed smooth
-          // touchMultiplier: 1.4, // Mobile smooth
-          // infinite: false,
-          // gestureDirection: "vertical",
+          lerp: 0.045,
         }}
       >
         <Navbar />

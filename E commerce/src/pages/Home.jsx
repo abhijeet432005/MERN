@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
 
-  
+
 
   const MostRead = [
     {
@@ -142,9 +142,9 @@ const Home = () => {
 
   })
 
-  useEffect(() => {
-    window.scrollTo(0,0)
-  }, [])
+  // useEffect(() => {
+  //   window.scrollTo(0,0)
+  // }, [])
 
   return (
     <div className="w-full mt-5 md:pl-12 md:pr-12 md:pt-5 pt-3 pl-8 pr-8 font-[font-1]">

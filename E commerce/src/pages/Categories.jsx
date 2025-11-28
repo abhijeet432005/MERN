@@ -4,6 +4,8 @@ const ProductCard = lazy(() => import('../components/shop/ProductCard'))
 import ProductCardSkeleton from '../components/shop/ProductCardSkeleton';
 import { useLocation, useParams } from 'react-router-dom';
 import { useLenis } from 'lenis/react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const Categories = () => {
     const lenis = useLenis()
@@ -34,7 +36,7 @@ const Categories = () => {
     }
 
     useEffect(() => {
-        lenis.scrollTo(0,0)
+        lenis.scrollTo(0, { immediate: true })
         catData()
     }, [])
 
@@ -42,10 +44,17 @@ const Categories = () => {
         SelectCatData()
     }, [SelectCat])
 
+    useGSAP(() => {
+        gsap.from('.text', {
+            y: 40,
+            autoAlpha: 0
+        })
+    })
+
 
     return (
         <div className='w-full mt-10 md:pl-12 md:pr-12 md:pt-5 pt-3 pl-8 pr-8 font-[font-1]'>
-            <h1 className='lg:text-9xl text-5xl '>Categories</h1>
+            <h1 className='text lg:text-9xl text-5xl '>Categories</h1>
 
             <div className='w-full mt-15'>
                 <div className='w-full h-px bg-black'></div>
