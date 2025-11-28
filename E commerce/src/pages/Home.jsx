@@ -154,6 +154,7 @@ const Home = () => {
             ref={HeroRef}
             src="/images/Hero (1).jpeg"
             className="absolute top-0 left-0 w-full h-[120vh] object-cover will-change-transform"
+            
           />
         </div>
 
