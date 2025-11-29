@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { laodCat } from "../../store/reducers/productSlice";
+import { DiVim } from "react-icons/di";
 
 
 const DropDownMenu = () => {
@@ -63,39 +64,42 @@ const DropDownMenu = () => {
   };
 
   return (
-    <div className="border-y relative font-thin">
-      <button
-        onClick={toggelDrop}
-        ref={dropDownRef}
-        className="flex gap-4 items-center justify-between p-3  w-44"
-      >
-        <span id="selected" className="text-xl font-thin capitalize">
-          {cat === null ? selectedCat : cat}
-        </span>
-        <span className="">▼</span>
-      </button>
+    <div className="w-full flex border-y justify-between font-thin items-center" >
+      <div className="relative ">
+        <button
+          onClick={toggelDrop}
+          ref={dropDownRef}
+          className="flex gap-8 items-center  p-3 w-44"
+        >
+          <span id="selected" className="text-xl font-thin capitalize">
+            {cat === null ? selectedCat : cat}
+          </span>
+          <span className="">▼</span>
+        </button>
 
-      <ul ref={dropMenuRef} className="absolute text-start border w-44 z-10">
-        {CategotyItem.map((elem, index) => {
-          return (
-            <li
-              onClick={() => {
-                setselectedCat(elem);
-                tl.current.reverse();
-                setdropOpen(false);
-                dispatch(laodCat(elem))
-              }}
-              ref={(el) => (ItemRef.current[index] = el)}
-              className={`p-3 bg-[#FFFFFF] text-[1rem] capitalize ${
-                index !== CategotyItem.length - 1 ? "border-b" : ""
-              }`}
-              key={index}
-            >
-              {elem}
-            </li>
-          );
-        })}
-      </ul>
+        <ul ref={dropMenuRef} className="absolute text-start border w-44 z-10">
+          {CategotyItem.map((elem, index) => {
+            return (
+              <li
+                onClick={() => {
+                  setselectedCat(elem);
+                  tl.current.reverse();
+                  setdropOpen(false);
+                  dispatch(laodCat(elem))
+                }}
+                ref={(el) => (ItemRef.current[index] = el)}
+                className={`p-3 bg-[#FFFFFF] text-[1rem] capitalize ${index !== CategotyItem.length - 1 ? "border-b" : ""
+                  }`}
+                key={index}
+              >
+                {elem}
+              </li>
+            );
+          })}
+        </ul>
+
+      </div>
+      <button onClick={() => dispatch(laodCat(null))} className="bg-black px-3 py-1 text-white h-fit text-sm rounded-md">Reset</button>
     </div>
   );
 };

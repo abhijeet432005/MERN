@@ -48,11 +48,11 @@ const Login = () => {
         <p>username: carterb</p>
         <p>password: carterbpass</p>
       </div>
-      <div className="flex gap-[3vw] w-[60vw] h-[45vh] md:h-full justify-center items-center border border-gray-300/70 overflow-hidden">
+      <div className="flex gap-[3vw] w-[60vw] h-full p-5 md:p-0 justify-center items-center border border-gray-300/70 overflow-hidden">
 
         <div ref={TopRef} className="flex items-center flex-col w-full justify-center">
           <p className="font-[font-1]">Aapki Dukkan</p>
-          <h1 className="font-[font-3] text-4xl tracking-wider">Welcome Back</h1>
+          <h1 className="font-[font-3] text-4xl tracking-wider text-center">Welcome Back</h1>
 
           <form onSubmit={handleSubmit(SubmitHandler)} className="flex flex-col gap-5 items-start mt-25">
             <div>

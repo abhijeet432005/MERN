@@ -10,12 +10,12 @@ const UserDetail = () => {
   const navigate = useNavigate();
 
   const LogoutHandler = () => {
+    navigate("/shop");
     localStorage.removeItem("user");
     localStorage.removeItem("compareItems");
     localStorage.removeItem("cart");
     dispatch(loadUser(null));
     toast.success("Logged out successfully 👋");
-    navigate("/shop");
   };
 
   return (
