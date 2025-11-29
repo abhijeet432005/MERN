@@ -91,7 +91,7 @@ const Navbar = () => {
             <div
               key={index}
               ref={(el) => (linkRef.current[index] = el)}
-              className="text-7xl lg:text-8xl tracking-wider  w-full lg:text-start text-center  uppercase text-gray-300 hover:text-white transition-all duration-300 font-medium"
+              className="text-6xl lg:text-8xl tracking-wider  w-full lg:text-start text-center  uppercase text-gray-300 hover:text-white transition-all duration-300 font-medium"
             >
               <NavLink
                 onClick={toggelMenu}
