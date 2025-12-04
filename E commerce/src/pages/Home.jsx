@@ -167,7 +167,7 @@ const Home = () => {
 
           <h1 className="text-1">Start Where Magic Happen.</h1>
 
-          <button className="text-2 bg-white w-fit text-black px-4 py-2 text-sm">
+          <button className="text-2 bg-white w-fit text-black px-4 py-2 text-sm" onClick={() => navigate("/shop")}>
             Shop Now
           </button>
         </div>
