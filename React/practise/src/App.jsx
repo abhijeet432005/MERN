@@ -2,6 +2,9 @@ import React from 'react'
 import { useState } from 'react';
 import Background from './component/Background';
 import Visible from './component/Visible'
+import HoverImage from './component/HoverImage';
+import From from './component/From';
+import Recipe from './component/Recipie/Recipe';
 
 const App = () => {
 
@@ -10,8 +13,8 @@ const App = () => {
 
   return (
 
-    <div className='w-full h-full flex'>
-      <div className='w-[50%]'>
+    <div className='w-full h-full flex p-6'>
+      {/* <div className='w-[50%]'>
         <Background />
 
       </div>
@@ -20,7 +23,10 @@ const App = () => {
 
       <div className='w-[50%]'>
         <Visible/>
-      </div>
+      </div> */}
+
+        {/* <From /> */}
+        <Recipe />
     </div>
 
     

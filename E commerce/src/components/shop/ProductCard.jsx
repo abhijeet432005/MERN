@@ -22,7 +22,7 @@ const ProductCard = ({ product }) => {
       y: 50,
       duration: 0.5
     })
-  })
+  }, [])
 
   const CartHandler = () => {
     if (!user) {
@@ -75,7 +75,7 @@ const ProductCard = ({ product }) => {
           src={images.length === 1 ? `${images[0]}` : `${images[1]}`}
           alt={title}
           className="w-full h-[48vh] object-contain hover:scale-104 transition-all duration-500"
-          threshold={0} 
+          threshold={300} 
         />
           {/* <img
             src={images.length === 1 ? `${images[0]}` : `${images[1]}`}
@@ -94,4 +94,4 @@ const ProductCard = ({ product }) => {
   );
 };
 
-export default ProductCard;
+export default React.memo(ProductCard);

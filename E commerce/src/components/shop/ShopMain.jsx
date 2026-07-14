@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect, useRef, useState } from "react";
+import React, { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BiSearch } from "react-icons/bi";
 import { useGSAP } from "@gsap/react";
@@ -16,11 +16,7 @@ import { useLenis } from "lenis/react";
 const ShopMain = () => {
   const lenis = useLenis()
   const compareItems = useSelector((state) => state.compareSlice.compareItems);
-  const [Comparenum, setComparenum] = useState(0);
-
-  useEffect(() => {
-    setComparenum(compareItems.length);
-  }, [compareItems]);
+  const compareNum = compareItems.length;
 
   useEffect(() => {
     lenis?.scrollTo(0, { immediate: true })
@@ -45,7 +41,7 @@ const ShopMain = () => {
   //     };
   //   }, []);
 
-  const fetch = async () => {
+  const fetch = useCallback(async () => {
     try {
       const { data } = await axios.get(`/products/search?q=${input}`);
       console.log(data);
@@ -54,7 +50,7 @@ const ShopMain = () => {
     } catch (error) {
       console.log(error);
     }
-  };
+  }, [input, dispatch]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -89,7 +85,7 @@ const ShopMain = () => {
       opacity: 0,
       ease: "back.out",
     });
-  });
+  }, []);
   const toggle = () => {
     if (SearchOpen) {
       tl.current.reverse();
@@ -100,11 +96,20 @@ const ShopMain = () => {
     setSearchOpen(!SearchOpen);
   };
 
-  const render = product.map((product) => (
-    <Suspense key={product.id} fallback={<ProductCardSkeleton />}>
-      <ProductCard product={product} />
-    </Suspense>
-  ));
+  // const render = product.map((product) => (
+  //   <Suspense key={product.id} fallback={<ProductCardSkeleton />}>
+  //     <ProductCard product={product} />
+  //   </Suspense>
+  // ));
+
+  const render = useMemo(() => {
+    return product.map((product) => (
+      <Suspense key={product.id} fallback={<ProductCardSkeleton />}>
+        <ProductCard product={product} />
+      </Suspense>
+    ))
+  }, [product])
+
   return (
     <div className="mt-35 overflow-hidden md:pl-12 md:pr-12 md:pt-5 pt-3 pl-8 pr-8">
       <div className="font-[font-1]">
@@ -118,7 +123,7 @@ const ShopMain = () => {
           >
             Compare{" "}
             <sup className="border border-dashed rounded-full px-2 py-1">
-              {Comparenum}
+              {compareNum}
             </sup>
           </button>
         </div>

@@ -8,10 +8,11 @@ const imagekit = new ImageKit({
 });
 
 
-async function FileUpload(fileUrl) {
+async function FileUpload(fileUrl, fileName) {
     return await imagekit.upload({
         file: fileUrl,
-        fileName: `${uuid()}`
+        fileName: fileName,
+        folder: "Mini-Social-Media"
     })
 }
 
