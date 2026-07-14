@@ -50,7 +50,7 @@ function initSocketServer(httpServer) {
 
             const chatHistory = await messageModel.find({
                 chat: payload.chat
-            })
+            }).sort({ createdAt: -1 }).limit(10).lean().reverse()
 
             const stream = await getGroqChatStream(chatHistory.map(item => (
                 {
