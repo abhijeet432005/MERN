@@ -2,8 +2,9 @@ const Groq = require("groq-sdk");
 const systemInstruction = require('../prompts/system.prompt')
 
 const groq = new Groq({
-    apiKey: "GROQ_API_KEY_REMOVED"
+    apiKey: process.env.GROQ_API
 });
+
 
 // async function main() {
 //     const stream = await getGroqChatStream("who are you");
