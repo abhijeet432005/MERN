@@ -33,44 +33,53 @@ function initSocketServer(httpServer) {
     io.on("connection", (socket) => {
 
         socket.on("ai-message", async (payload) => {
-            console.log(payload)
 
-            await messageModel.create({
-                user: socket.user._id,
-                chat: payload.chat,
-                content: payload.content,
-                role: "user"
-            })
-
-            const chatHistory = (await messageModel.find({
-                chat: payload.chat
-            }).sort({ createdAt: -1 }).limit(10).lean()).reverse()
-
-
-
-            const stream = await getGroqChatStream(chatHistory.map(item => ({
-                role: item.role,
-                content: item.content,
-            })))
-
-            let fullResponse = ""
-
-            for await (const chunk of stream) {
-                let text = chunk.choices[0]?.delta?.content || ""
-
-                fullResponse += text
-
-                socket.emit("ai-response", {
-                    content: text
+            try {
+                await messageModel.create({
+                    user: socket.user._id,
+                    chat: payload.chat,
+                    content: payload.content,
+                    role: "user"
                 })
-            }
 
-            await messageModel.create({
-                user: socket.user._id,
-                chat: payload.chat,
-                content: fullResponse,
-                role: "assistant"
-            })
+                const chatHistory = (await messageModel.find({
+                    chat: payload.chat
+                }).sort({ createdAt: -1 }).limit(10).lean()).reverse()
+
+
+
+                const stream = await getGroqChatStream(chatHistory.map(item => ({
+                    role: item.role,
+                    content: item.content,
+                })))
+
+                let fullResponse = ""
+
+                for await (const chunk of stream) {
+                    let text = chunk.choices[0]?.delta?.content || ""
+
+                    fullResponse += text
+
+                    socket.emit("ai-response", {
+                        content: text
+                    })
+                }
+
+                await messageModel.create({
+                    user: socket.user._id,
+                    chat: payload.chat,
+                    content: fullResponse,
+                    role: "assistant"
+                })
+            } catch (error) {
+                console.error(error);
+
+                socket.emit("ai-error", {
+
+                    message: "Something went wrong."
+
+                });
+            }
 
         })
     })
