@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* hide scrollbar of pre code also */
+pre,
+code {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+pre::-webkit-scrollbar,
+code::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/*
+ * Tailwind v4 defaults `dark:` to the OS-level `prefers-color-scheme` media
+ * query. ThemeContext toggles a `.dark` class on <html> instead (so the
+ * user's explicit choice persists and overrides the OS setting), so we
+ * repoint the `dark:` variant at that class.
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+::selection {
+  background-color: rgba(109, 93, 246, 0.25);
+}
